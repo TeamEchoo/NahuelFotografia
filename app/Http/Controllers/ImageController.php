@@ -18,7 +18,7 @@ class ImageController extends Controller
     public function index()
     {
         $image = Image::all();
-        return $image->all();
+        return view('photos.index', compact('photos'));
     }
 
     /**
