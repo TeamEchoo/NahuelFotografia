@@ -4,7 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="initial-scale=1.0">
   <title>Nahuel's Photography</title>
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+  <meta name="csrf-token" content="{{ csrf_token() }}">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js">
+  </script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 </head>
 <body>
