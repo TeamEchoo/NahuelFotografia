@@ -11,6 +11,8 @@ class ImageModel extends Model
 
     
     protected $fillable = [
-        'filename'
+        'filename',
+        'created_at',
+        'updated_at'
     ];
 }

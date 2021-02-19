@@ -33,7 +33,7 @@
         <div class="row">
           <div class="col-md-4"></div>
           <div class="form-group col-md-4">
-          <input type="file" name="filename" class="form-control">
+          <input type="file" name="filename" accept="image/*" class="form-control">
           </div>
         </div>
         <div class="row">
@@ -49,11 +49,6 @@
               <br/>
               <img src="/images/{{$image->filename}}" />
         </div>
-        <div class="col-md-4">
-            <strong>Thumbnail Image:</strong>
-            <br/>
-            <img src="/thumbnail/{{$image->filename}}"  />
-       	 </div>
    		</div>
         @endif       
   </form>

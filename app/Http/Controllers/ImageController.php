@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\ImageModel;
 use Intervention\Image\Facades\Image;
+use Illuminate\Support\Str;
+
 
 class ImageController extends Controller
 {
@@ -38,26 +40,45 @@ class ImageController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate($request, [
-            'filename' => 'image|required|mimes:jpeg,png,jpg,gif,svg'
-         ]);
-        $originalImage= $request->file('filename');
-        // $thumbnailImage = Image::make($originalImage);
-        // $thumbnailPath = public_path().'/thumbnail/';
+        // $originalImage= $request->file('filename');
+        // // $thumbnailImage = Image::make($originalImage);
+        // // $thumbnailPath = public_path().'/thumbnail/';
         // $originalPath = public_path().'/images/';
-        // $thumbnailImage->save($originalPath.time().$originalImage->getClientOriginalName());
-        // $thumbnailImage->resize(150,150);
-        // $thumbnailImage->save($thumbnailPath.time().$originalImage->getClientOriginalName()); 
+        // $originalImage->save($originalPath.time().$originalImage->getClientOriginalName());
+        // // $thumbnailImage->resize(150,150);
+        // // $thumbnailImage->save($thumbnailPath.time().$originalImage->getClientOriginalName()); 
+        
+        // ImageModel::create([
+        //         'url' => '/storage/images/' . $image
+        //     ]);
+            
+            // $imagemodel= new ImageModel();
+            // $imagemodel->filename=time().$request->getClientOriginalName();
+            // $imagemodel->save();
+            
+            // Image::make($image);
 
-        $imagemodel= new ImageModel();
-        $imagemodel->filename=time().$originalImage->getClientOriginalName();
-        $imagemodel->save();
 
-        return back()->with('success', 'Your image has been successfully Upload');
+        $request->validate([
+            'filename' => 'required|image|required|mimes:jpeg,png,jpg,gif,svg'
+            ]);
+            
+            $image = Str::random(10) . $request->file('filename')->getClientOriginalName();
+            
+            $route = public_path() . '/storage/images/' . $image;
+            
+            Image::make($request->file('filename'))
+                    ->resize(1200,null,function($constraint)
+                    {
+                        $constraint->aspectRatio();
+                    })->save($route);
 
-    }
-    /**
-     * Display the specified resource.
+                    
+                return back()->with('success', 'Your images has been successfully uploaded');
+                
+            }
+            /**
+             * Display the specified resource.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
