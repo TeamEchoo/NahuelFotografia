@@ -10,7 +10,7 @@
 </head>
 <body>
     <h2>Photo Gallery</h2>
-    @if($photos)
+    @if(isset($image) ? $image->filename : '')
         <ul>
           @foreach ($photos as $photo)
               <li><img src="/storage/images/{{$image->filename}}" /></li>
