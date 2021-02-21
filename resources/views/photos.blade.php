@@ -1,6 +1,6 @@
 @extends("layouts.navBar")
 
-@section("navBar")
+@section("nav")
 @endsection
     <h2>Photo Gallery</h2>
     @if(isset($image) ? $image->filename : '')

@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ImageController;
+use App\Http\Controllers\AdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,9 +23,13 @@ Route::get('/photos', function () {
     return view('photos');
 });
 
-Route::get('/admin', function () {
-    return view('admin.adminDashboard');
-});
+
+//ADMIN VIEW
+
+Route::get('/admin', [AdminController::class, 'index'])->name('admin');
+Route::get('/create', [AdminController::class, 'create'])->name('adminCreate');
+Route::post('/create', [AdminController::class, 'store'])->name('photoStore');
+
 
 //esto lo estoy inventando :D
 // ->Route::get('/photos',[ImageController::class, 'index'])->name('photo.index');
