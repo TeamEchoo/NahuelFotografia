@@ -15,11 +15,15 @@ use App\Http\Controllers\ImageController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 
 Route::get('/photos', function () {
     return view('photos');
+});
+
+Route::get('/admin', function () {
+    return view('admin.adminDashboard');
 });
 
 //esto lo estoy inventando :D
