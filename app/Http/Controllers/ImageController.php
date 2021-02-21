@@ -45,23 +45,23 @@ class ImageController extends Controller
             'filename' => 'required|image|required|mimes:jpeg,png,jpg,gif,svg'
             ]);
             
-            $image_path = Str::random(10) . $request->file('filename')->getClientOriginalName();
+        $image = Str::random(10) . $request->file('filename')->getClientOriginalName();
             
-            ImageModel::create([
-                    'filename' => '/storage/images/' . $image_path
-                ]);
+        ImageModel::create([
+            'filename' => '/storage/images/' . $image
+            ]);
 
-            $route = public_path() . '/storage/images/' . $image_path;
+        $image_path = public_path() . '/storage/images/' . $image;
             
-            Image::make($request->file('filename'))
-                    ->resize(1200,null,function($constraint)
-                    {
-                        $constraint->aspectRatio();
-                    })->save($route);
+        Image::make($request->file('filename'))
+                ->resize(1200,null,function($constraint)
+                {
+                    $constraint->aspectRatio();
+                })->save($image_path );
                     
-                return back()->with('success', 'Your photo has been successfully uploaded');
+        return back()->with('success', 'Your photo has been successfully uploaded');
                 
-            }
+    }
             /**
              * Display the specified resource.
      *
