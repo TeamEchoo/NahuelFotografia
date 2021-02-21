@@ -13,9 +13,12 @@
     @if(isset($image) ? $image->filename : '')
         <ul>
           @foreach ($photos as $photo)
-              <li><img src="/storage/images/{{$image->filename}}" /></li>
+            <li><img src="{{ asset('storage/images/'.$image->filename) }}" alt="" title=""></a></li>
           @endforeach
         </ul>
+    @endif
+    @if(!isset($image))
+        <h1>no hay fotos</h1>
     @endif
 </body>
 </html>
