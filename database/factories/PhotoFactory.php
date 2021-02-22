@@ -24,7 +24,7 @@ class PhotoFactory extends Factory
     {
         return [
             
-            'title' => $this->faker->text(10),
+            'title' => $this->faker->text(10)->nullable(),
             'person' => $this->faker->name->nullable(),
             'epigraph' => $this->faker->text(30)->nullable(),
             'image_path' => $this->faker->text(15)->nullable(),

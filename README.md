@@ -2,6 +2,7 @@ Installing the repo:
 
 - git clone
 - composer install
+- npm install
 - composer require intervention/image
 - php artisan vendor:publish --provider="Intervention\Image\ImageServiceProviderLaravelRecent"
 

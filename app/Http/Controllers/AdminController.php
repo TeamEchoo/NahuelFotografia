@@ -67,9 +67,10 @@ class AdminController extends Controller
      * @param  \App\Models\Photo  $dBFactory
      * @return \Illuminate\Http\Response
      */
-    public function edit(Photo $dBFactory)
+    public function edit($id)
     {
-        //
+        $photo = Photo::find($id);
+        return view('admin.editPhoto', compact('photo'));
     }
 
     /**
@@ -79,9 +80,11 @@ class AdminController extends Controller
      * @param  \App\Models\Photo  $dBFactory
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Photo $photo)
+    public function update(Request $request, $id)
     {
-        //
+        $photo= Photo::find($id);
+        $photo->update($request->all());
+        return redirect()->route('admin');
     }
 
     /**
@@ -90,8 +93,10 @@ class AdminController extends Controller
      * @param  \App\Models\Photo  $dBFactory
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Photo $photo)
+    public function destroy($id)
     {
-        //
+        $photo= Photo::find($id);
+        $photo->delete();
+        return redirect()->route('admin');
     }
 }

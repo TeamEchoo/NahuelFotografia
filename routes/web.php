@@ -29,6 +29,9 @@ Route::get('/photos', function () {
 Route::get('/admin', [AdminController::class, 'index'])->name('admin');
 Route::get('/create', [AdminController::class, 'create'])->name('adminCreate');
 Route::post('/create', [AdminController::class, 'store'])->name('photoStore');
+Route::get('/admin/{id}', [AdminController::class, 'edit'])->name('adminEdit');
+Route::put('/admin/{id}', [AdminController::class, 'update'])->name('adminUpdate');
+Route::delete('/admin/{photo}', [AdminController::class, 'destroy'])->name('adminDelete');
 
 
 //esto lo estoy inventando :D
