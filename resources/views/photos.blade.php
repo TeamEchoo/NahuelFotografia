@@ -13,7 +13,7 @@
     @if(isset($image) ? $image->filename : '')
         <ul>
           @foreach ($photos as $photo)
-            <li><img src="{{ asset('storage/images/'.$image->filename) }}" alt="" title=""></a></li>
+            <li><img src="{{ asset( $image_path->filename ) }}" alt="" title=""></a></li>
           @endforeach
         </ul>
     @endif

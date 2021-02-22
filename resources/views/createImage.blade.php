@@ -47,7 +47,7 @@
          <div class="col-md-8">
               <strong>Original Image:</strong>
               <br/>
-              <img class="photo" src="{{ asset( $image->filename ) }}" />
+              <img class="photo" src="{{ asset( $image_path->filename ) }}" />
         </div>
    		</div>
         @endif       
