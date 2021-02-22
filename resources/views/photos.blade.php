@@ -9,14 +9,17 @@
   </script>
 </head>
 <body>
+   
     <h2>Photo Gallery</h2>
-    @if(isset($image) ? $image->filename : '')
+    
         <ul>
-          @foreach ($photos as $photo)
-            <li><img src="{{ asset( $image_path->filename ) }}" alt="" title=""></a></li>
+          @foreach ($images as $image)
+          
+            <li><img src="{{ asset( $image->filename ) }}" alt="" title=""></a></li>
+            
           @endforeach
         </ul>
-    @endif
+    
     @if(!isset($image))
         <h1>no hay fotos</h1>
     @endif
