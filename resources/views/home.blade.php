@@ -23,7 +23,7 @@
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">SKATEBOARDING</a>
+                <a class="nav-link" aria-current="page" href="#">SKATEBOARDING</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">PORTRAIT</a>
@@ -42,8 +42,68 @@
         </div>
       </nav>
 
+
+      <div class="container">
+        <div class="row"> 
+          <div class="col-md-8 col-sm-12 co-xs-12 gal-item">
+            <div class="row h-50">
+                <div class="col-md-12 col-sm-12 co-xs-12 gal-item">
+                    <div class="box">
+                  <img src="http://fakeimg.pl/758x370/" class="img-ht img-fluid rounded">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row h-50">
+              <div class="col-md-6 col-sm-6 co-xs-12 gal-item">
+                <div class="box">
+                <img src="http://fakeimg.pl/748x177/" class="img-ht img-fluid rounded">
+              </div>
+              </div>
+
+              <div class="col-md-6 col-sm-6 co-xs-12 gal-item">
+              <div class="box">
+                <img src="http://fakeimg.pl/371x370/" class="img-ht img-fluid rounded">
+              </div>
+              </div>
+                  </div>
+            </div>
+
+                <div class="col-md-4 col-sm-6 co-xs-12 gal-item">
+              <div class="col-md-12 col-sm-6 co-xs-12 gal-item h-25">
+              <div class="box">
+                <img src="http://fakeimg.pl/748x177/" class="img-ht img-fluid rounded">
+              </div>
+              </div>
+
+                <div class="col-md-12 col-sm-6 co-xs-12 gal-item h-75">
+                <div class="box">
+                <img src="http://fakeimg.pl/748x177/" class="img-ht img-fluid rounded">
+              </div>
+              </div>
+                  </div>
+
+            </div>
+        <br/>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 
-   
+
 </body>
 </html>
