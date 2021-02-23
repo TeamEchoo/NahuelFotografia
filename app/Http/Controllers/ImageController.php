@@ -41,13 +41,13 @@ class ImageController extends Controller
      */
     public function store(Request $request)
     {
+        
         $request->validate([
             'filename' => 'required|image|required|mimes:jpeg,png,jpg,gif,svg'
             ]);
             
         $image = Str::random(10) . $request->file('filename')->getClientOriginalName();
-        
-            
+            //podria ser con time.now()
         ImageModel::create([
             'filename' => '/storage/images/' . $image
             ]);

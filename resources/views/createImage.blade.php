@@ -28,8 +28,9 @@
       </div>
       @endif
     <h3 class="jumbotron">Add new photo</h3>
-  <form method="post" action="{{url('photo')}}" enctype="multipart/form-data">
-        @csrf
+    <form method="post" action="{{ route('photo') }}" enctype="multipart/form-data">
+    @method('POST')
+    @csrf
         <div class="row">
           <div class="col-md-4"></div>
           <div class="form-group col-md-4">
