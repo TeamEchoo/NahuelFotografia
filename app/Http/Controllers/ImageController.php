@@ -55,7 +55,7 @@ class ImageController extends Controller
         $image_path = public_path() . '/storage/images/' . $image;
             
         Image::make($request->file('filename'))
-                ->resize(null,30,function($constraint)
+                ->resize(null,350,function($constraint)
                 {
                     $constraint->aspectRatio();
                 })->save($image_path );
