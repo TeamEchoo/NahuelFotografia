@@ -5,21 +5,18 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Photo extends Model
+class Album extends Model
 {
     use HasFactory;
 
     protected $fillable = [
         'title',
-        'epigraph',
-        'person',
-        'link',
-        'image_path',
-        'album_id'
+        'category',
+        'cover_image',
     ];
 
-    public function album()
+    public function photos()
     {
-        return $this->belongsTo('App\Models\Album');
+        return $this->hasMany('App\Models\Photo');
     }
 }

@@ -2,18 +2,17 @@
 
 namespace Database\Factories;
 
-use App\Models\Photo;
+use App\Models\Album;
 use Illuminate\Database\Eloquent\Factories\Factory;
-use Illuminate\Support\Str;
 
-class PhotoFactory extends Factory
+class AlbumFactory extends Factory
 {
     /**
      * The name of the factory's corresponding model.
      *
      * @var string
      */
-    protected $model = Photo::class;
+    protected $model = Album::class;
 
     /**
      * Define the model's default state.
@@ -23,13 +22,9 @@ class PhotoFactory extends Factory
     public function definition()
     {
         return [
-            
             'title' => $this->faker->text(10),
-            'person' => $this->faker->name(),
-            'epigraph' => $this->faker->text(30),
-            'image_path' => $this->faker->text(15),
-            'link' => $this->faker->text(20),
-            'albums_id' => $this->faker->randomDigit(),
+            'category' => $this->faker->text(10),
+            'cover_image' => $this->faker->text(5),
         ];
     }
 }

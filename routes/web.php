@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ImageController;
-use App\Http\Controllers\AdminController;
+use App\Http\Controllers\AlbumController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,12 +26,21 @@ Route::get('/photos', function () {
 
 //ADMIN VIEW
 
-Route::get('/admin', [AdminController::class, 'index'])->name('admin');
-Route::get('/create', [AdminController::class, 'create'])->name('adminCreate');
-Route::post('/create', [AdminController::class, 'store'])->name('photoStore');
-Route::get('/admin/{id}', [AdminController::class, 'edit'])->name('adminEdit');
-Route::put('/admin/{id}', [AdminController::class, 'update'])->name('adminUpdate');
-Route::delete('/admin/{photo}', [AdminController::class, 'destroy'])->name('adminDelete');
+//album
+Route::get('/admin', [AlbumController::class, 'index'])->name('admin');
+Route::get('/album', [AlbumController::class, 'create'])->name('albumCreate');
+Route::post('/album', [AlbumController::class, 'store'])->name('albumStore');
+Route::get('/admin/{id}', [AlbumController::class, 'edit'])->name('albumEdit');
+Route::put('/admin/{id}', [AlbumController::class, 'update'])->name('albumUpdate');
+Route::delete('/admin/{photo}', [AlbumController::class, 'destroy'])->name('albumDelete');
+
+// //photo
+// Route::get('/album', [AdminController::class, 'index'])->name('admin');
+// Route::get('/album-create', [AdminController::class, 'create'])->name('adminCreate');
+// Route::post('/album-create', [AdminController::class, 'store'])->name('photoStore');
+// Route::get('/album/{id}', [AdminController::class, 'edit'])->name('adminEdit');
+// Route::put('/album/{id}', [AdminController::class, 'update'])->name('adminUpdate');
+// Route::delete('/album/{photo}', [AdminController::class, 'destroy'])->name('adminDelete');
 
 
 //esto lo estoy inventando :D

@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Photo;
 use Illuminate\Http\Request;
+use App\Models\Album;
 
-class AdminController extends Controller
+class AlbumController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +14,8 @@ class AdminController extends Controller
      */
     public function index()
     {
-        $photos= Photo::all();
-        return view('admin.adminDashboard', compact('photos'));
+        $albums= Album::all();
+        return view('admin.adminDashboard', compact('albums'));
     }
 
     /**
@@ -25,7 +25,7 @@ class AdminController extends Controller
      */
     public function create()
     {
-        return view('admin.createPhoto');
+        return view('admin.createAlbum');
     }
 
     /**
@@ -36,67 +36,63 @@ class AdminController extends Controller
      */
     public function store(Request $request)
     {
-        $photo = Photo::create([
+        $album = Album::create([
             "title" => $request->title,
             "category" => $request->category,
-            "person" => $request->person,
-            "link" => $request->link,
-            "epigraph" => $request->epigraph,
-            "album" => $request->album,
-            "image_path" => $request->image_path
+            "cover_image" => $request->cover_image
         ]);
 
-        $photo->save();
+        $album->save();
         return redirect()->route('admin');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Photo  $dBFactory
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(PhotoFactory $dBFactory)
+    public function show($id)
     {
-        //
+       //
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Photo  $dBFactory
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
     {
-        $photo = Photo::find($id);
-        return view('admin.editPhoto', compact('photo'));
+        $album= Album::find($id);
+        return view('admin.editAlbum', compact('album'));
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Photo  $dBFactory
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
     {
-        $photo= Photo::find($id);
-        $photo->update($request->all());
+        $album= Album::find($id);
+        $album->update($request->all());
         return redirect()->route('admin');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Photo  $dBFactory
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
     {
-        $photo= Photo::find($id);
-        $photo->delete();
+        $album= Album::find($id);
+        $album->delete();
         return redirect()->route('admin');
     }
 }

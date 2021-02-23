@@ -9,7 +9,6 @@ class ImageModel extends Model
 {
     use HasFactory;
 
-    
     protected $fillable = [
         'filename',
         'created_at',
