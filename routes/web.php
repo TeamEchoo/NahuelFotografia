@@ -18,12 +18,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/photos', function () {
-    return view('photos');
-});
-
 //esto lo estoy inventando :D
-// ->Route::get('/photos',[ImageController::class, 'index'])->name('photo.index');
+Route::get('/photos',[ImageController::class, 'index'])->name('photo.index');
 Route::get('/photo', [ImageController::class, 'create'])->name('photoCreate');
 Route::post('/photo',[ImageController::class, 'store'])->name('photoStore');
 Route::get('/photo/{$id}',[ImageController::class, 'edit'])->name('photoEdit');
