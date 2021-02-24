@@ -1,0 +1,66 @@
+body {
+    background-color: white;
+}
+
+.contact-info .fa {
+    padding-top: 50px;
+}
+
+#paddingContact {
+    padding-top: 140px;
+    padding-left: 100px;
+}
+
+#paddingContactImage {
+    padding-top: 140px;
+}
+
+#PaddingDescription {
+    padding-top: 20px;
+}
+
+#contact .form-control {
+    border: none;
+    border-bottom: 2px solid #000000;
+    border-radius: 0px;
+    background-color: transparent;
+    box-shadow: none;
+    font-size: 18px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    -webkit-transition: all ease-in-out 0.4s;
+    transition: all ease-in-out 0.4s;
+}
+
+#contact .form-control:focus {
+    border-bottom-color: #000000;
+}
+
+#contact input {
+    height: 55px;
+}
+
+#contact button#submit {
+    background: #2b2b2b;
+    border: none;
+    border-radius: 50px;
+    color: #ffffff;
+    height: 50px;
+    margin-top: 50px;
+}
+
+#contact button#submit:hover {
+    background: #7682cc;
+    color: #ffffff;
+}
+
+@media only screen and (max-width: 768px) {
+    #paddingContact {
+        padding-left: 10px;
+        padding-top: 50px;
+    }
+    #paddingContactImage {
+        padding-top: 40px;
+        padding-left: 60px;
+    }
+}
