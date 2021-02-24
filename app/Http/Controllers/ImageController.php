@@ -18,8 +18,8 @@ class ImageController extends Controller
      */
     public function index()
     {
-        $image = Image::all();
-        return view('photos.index', compact('photos'));
+        $images = ImageModel::all();
+        return view('photos', ['images' => $images]);
     }
 
     /**
@@ -41,12 +41,13 @@ class ImageController extends Controller
      */
     public function store(Request $request)
     {
+        
         $request->validate([
             'filename' => 'required|image|required|mimes:jpeg,png,jpg,gif,svg'
             ]);
             
         $image = Str::random(10) . $request->file('filename')->getClientOriginalName();
-            
+            //podria ser con time.now()
         ImageModel::create([
             'filename' => '/storage/images/' . $image
             ]);
@@ -54,12 +55,12 @@ class ImageController extends Controller
         $image_path = public_path() . '/storage/images/' . $image;
             
         Image::make($request->file('filename'))
-                ->resize(1200,null,function($constraint)
+                ->resize(null,30,function($constraint)
                 {
                     $constraint->aspectRatio();
                 })->save($image_path );
                     
-        return back()->with('success', 'Your photo has been successfully uploaded');
+        return redirect('/photos')->with('success', 'Your photo has been successfully uploaded');
                 
     }
             /**

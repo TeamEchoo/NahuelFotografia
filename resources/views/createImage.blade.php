@@ -28,8 +28,8 @@
       </div>
       @endif
     <h3 class="jumbotron">Add new photo</h3>
-  <form method="post" action="{{url('photo')}}" enctype="multipart/form-data">
-        @csrf
+    <form method="post" action="{{ url('photo') }}" enctype="multipart/form-data">
+    @csrf
         <div class="row">
           <div class="col-md-4"></div>
           <div class="form-group col-md-4">
@@ -45,12 +45,12 @@
         @if($image)
    	    <div class="row">
          <div class="col-md-8">
-              <strong>Original Image:</strong>
+              <strong>Preview</strong>
               <br/>
-              <img class="photo" src="{{ asset( $image_path->filename ) }}" />
+              <img class="preview" src="{{ asset( $image ) }}" />
         </div>
    		</div>
-        @endif       
+        @endif    
   </form>
   </div>
 </body>
