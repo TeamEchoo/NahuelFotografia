@@ -41,3 +41,6 @@ Route::post('/photo',[ImageController::class, 'store'])->name('photoStore');
 Route::get('/photo/{$id}',[ImageController::class, 'edit'])->name('photoEdit');
 Route::put('/photo/{$id}',[ImageController::class,'update'])->name('photoUpdate');
 Route::delete('/photo/{$id}',[ImageController::class,'delete'])->name('photoDelete');
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
