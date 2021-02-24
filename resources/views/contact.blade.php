@@ -72,7 +72,10 @@
 
                     <!-- CONTACT FORM HERE -->
                     <div class="wow fadeInUp" data-wow-delay="0.4s">
-                        <form id="contact-form" action="#" method="get">
+                        <form id="contact-form" action="#" method="POST" action="{{ route('contact')}}">
+                            {{ csrf_field() }} 
+                            <!-- verificacion para ataques de identidad (419) -->
+
                             <div class="col-md-6 col-sm-6">
                                 <input type="text" class="form-control" name="name" placeholder="Name" required="">
                             </div>

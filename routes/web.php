@@ -18,9 +18,16 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/contact', function(){
-    return view('contact');
-});
+
+
+
+Route::view('/contact', 'contact')->name('contact');
+Route::post('/contact', 'App\Http\Controllers\MessagesController@store');
+
+
+
+
+
 
 
 Route::get('/photos', function () {
