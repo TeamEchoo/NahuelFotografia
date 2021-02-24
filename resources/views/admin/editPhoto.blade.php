@@ -2,7 +2,7 @@
 
 @section('adminheader')
 
-<form action=" {{ route( 'adminEdit', $photo->id ) }}"  method="POST">
+<form action=" {{ route( 'photoEdit', $photo->id ) }}"  method="POST">
         
         @method('PUT')
         @csrf
@@ -22,23 +22,14 @@
 
         <label for="image_path">Picture:</label>
         <input name="image_path" type="text" value="{{ $photo->picture }}">
-
-        <label for="category">Category:</label>
-        <select name="category" id="category">
-            <option value="Skateboarding">Skateboarding</option>
-            <option value="Portraits">Portraits</option>
-        </select>
-
-        <label for="album">Album:</label>
-        <input name="album" type="text" value="{{ $photo->album }}">
         
-        <a href="{{ route( 'adminUpdate', $photo->id ) }}">
+        <a href="{{ route( 'photoUpdate', $photo->id) }}">
         <input type="submit" value="Save">
         </a>
         
         <button type="reset">Reset</button>
     </form>
     
-        <a href="{{ route ('admin')}}">
+        <a href="{{ route ('albumEdit', $photo->album_id)}}">
             <button >Turn Back</button>
         </a>

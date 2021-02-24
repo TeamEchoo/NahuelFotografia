@@ -18,14 +18,46 @@
         <option value="Portraits">Portraits</option>
     </select>
 
+    <table>
+        <tr>
+            <th>Title</th>
+            <th>Epigraph</th>
+            <th>Person</th>
+            <th>Link</th>
+            <th>Picture</th>
+        </tr>
+        
+        @foreach($photos as $photo)
+        
+        <tr>
+            <td> {{ $photo->title }} </td>
+            <td> {{ $photo->epigraph }} </td>
+            <td>{{ $photo->person }} </td> 
+            <td> {{ $photo->link }} </td>
+            <td> {{ $photo->image_path }} </td>
+            <td><a href="{{ route('photoEdit', $photo->id) }}"><i class="far fa-edit"></i></td></a>
+            <td>
+                <form method='POST' action=" {{ route( 'photoDelete', $photo->id) }}">
+                    @csrf
+                    @method('DELETE')
+                    <button type="submit"><i class="far fa-trash-alt"></i></input>
+                </form>
+            </td>
+        </tr>
+        
+        
+        @endforeach 
+    </table>
+
+
+
     
     <a href="{{ route( 'albumUpdate', $album->id ) }}">
         <input type="submit" value="Edit">
     </a>
 
 
-        Add new Photo
-    </a>
+    <a href="{{ route('photoCreate', $album->id) }}">Add new Photo</a>
 
 
     </form>

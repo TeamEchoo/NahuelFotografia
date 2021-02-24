@@ -3,10 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Models\Photo;
+use App\Models\Album;
 use Illuminate\Http\Request;
 
 
-class AdminController extends Controller
+class PhotoController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -24,9 +25,10 @@ class AdminController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($album)
     {
-        return view('admin.createPhoto');
+        $albumId= $album;
+        return view('admin.createPhoto', compact('albumId'));
     }
 
     /**
@@ -35,12 +37,12 @@ class AdminController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, $album)
     {
         $photo = Photo::create($request->all());
-
+        $photo->album_id = $album;
         $photo->save();
-        return redirect()->route('admin');
+        return redirect()->route('albumEdit', $album);
     }
 
     /**
@@ -77,7 +79,8 @@ class AdminController extends Controller
     {
         $photo= Photo::find($id);
         $photo->update($request->all());
-        return redirect()->route('admin');
+        $album= $photo->album_id;
+        return redirect()->route('albumEdit', $album);
     }
 
     /**
@@ -89,6 +92,7 @@ class AdminController extends Controller
     public function destroy($id)
     {
         $photo= Photo::find($id);
+        $photo->album_id->delete();
         $photo->delete();
         return redirect()->route('admin');
     }

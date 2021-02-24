@@ -20,7 +20,9 @@ class CreatePhotosTable extends Migration
             $table->string('person');
             $table->string('image_path');
             $table->string('link');
-            $table->unsignedBigInteger('album_id');
+
+            $table->foreign('album_id')->references('id')->on('albums');
+            $table->foreignId('album_id')->default(1);
 
             $table->timestamps();
         });
