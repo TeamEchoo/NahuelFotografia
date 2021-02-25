@@ -19,7 +19,7 @@
     <nav class="navbar navbar-expand-lg navbar-light  navbar__menu">
         <div class="container-fluid">
           <a class="navbar-brand logo" href="#"><h1><b>NAHUEL MARTINEZ</b></h1>
-            <h3>PHOTOGRAPHER</h3></a>
+            <h3><b>PHOTOGRAPHER</b></h3></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -37,7 +37,7 @@
               <li class="nav-item">
                 <a class="nav-link" href="#">CONTACT</a>
               </li>
-              <li class="nav-item">
+              <li class="nav-item1">
                 <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"></a>
               </li>
             </ul>
@@ -46,48 +46,36 @@
       </nav>
 
 
-      <div class="container">
-        <div class="row"> 
-          <div class="col-md-8 col-sm-12 co-xs-12 gal-item">
-            <div class="row h-50">
-                <div class="col-md-12 col-sm-12 co-xs-12 gal-item">
-                    <div class="box">
-                  <img src="http://fakeimg.pl/758x370/" class="img-ht img-fluid rounded">
-                    </div>
-                </div>
-            </div>
+      <div class="containerGallery">
+    <div class="column">
+      <img src="./assets/ocean.jpg">
+      <img src="./assets/mountainskies.jpg">
+      <img src="./assets/rocks.jpg">
+      <img src="./assets/underwater.jpg">
+      <img src="./assets/wedding.jpg">
+      <img src="./assets/ocean.jpg">
+      <img src="./assets/underwater.jpg">
+    </div>
+    <div class="column">
+      <img src="./assets/mountainskies.jpg">
+      <img src="./assets/rocks.jpg">
+      <img src="./assets/underwater.jpg">
+      <img src="./assets/wedding.jpg">
+      <img src="./assets/rocks.jpg">
+      <img src="./assets/underwater.jpg">
+    </div>
+    <div class="column">
+      <img src="./assets/underwater.jpg">
+      <img src="./assets/wedding.jpg">
+      <img src="./assets/ocean.jpg">
+      <img src="./assets/underwater.jpg">
+      <img src="./assets/ocean.jpg">
+      <img src="./assets/mountainskies.jpg">
+      <img src="./assets/rocks.jpg">
+    </div>
+</div>
 
-            <div class="row h-50">
-              <div class="col-md-6 col-sm-6 co-xs-12 gal-item">
-                <div class="box">
-                <img src="http://fakeimg.pl/748x177/" class="img-ht img-fluid rounded">
-              </div>
-              </div>
 
-              <div class="col-md-6 col-sm-6 co-xs-12 gal-item">
-              <div class="box">
-                <img src="http://fakeimg.pl/371x370/" class="img-ht img-fluid rounded">
-              </div>
-              </div>
-                  </div>
-            </div>
-
-                <div class="col-md-4 col-sm-6 co-xs-12 gal-item">
-              <div class="col-md-12 col-sm-6 co-xs-12 gal-item h-25">
-              <div class="box">
-                <img src="http://fakeimg.pl/748x177/" class="img-ht img-fluid rounded">
-              </div>
-              </div>
-
-                <div class="col-md-12 col-sm-6 co-xs-12 gal-item h-75">
-                <div class="box">
-                <img src="http://fakeimg.pl/748x177/" class="img-ht img-fluid rounded">
-              </div>
-              </div>
-                  </div>
-
-            </div>
-        <br/>
       </div>
 
 
