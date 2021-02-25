@@ -44,7 +44,6 @@ Route::put('/admin/{id}', [AlbumController::class, 'update'])->name('albumUpdate
 Route::delete('/admin/{photo}', [AlbumController::class, 'destroy'])->name('albumDelete');
 
 // //photo
-// Route::get('/album', [AdminController::class, 'index'])->name('admin');
 Route::get('/album/{id}/newphoto', [PhotoController::class, 'create'])->name('photoCreate');
 Route::post('/album/{id}/newphoto', [PhotoController::class, 'store'])->name('photoStore');
 Route::get('/album/photo/{id}', [PhotoController::class, 'edit'])->name('photoEdit');

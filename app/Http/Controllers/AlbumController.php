@@ -16,7 +16,8 @@ class AlbumController extends Controller
     public function index()
     {
         $albums= Album::all();
-        return view('admin.adminDashboard', compact('albums'));
+        $photos= Photo::all();
+        return view('admin.adminDashboard', compact('albums', "photos"));
     }
 
     /**
@@ -81,8 +82,7 @@ class AlbumController extends Controller
     public function update(Request $request, $id)
     {
         $album= Album::find($id);
-        $album->title = $request->title;
-        $album->category = $request->category;
+        $album= $request->all();
         return redirect()->route('admin');
     }
 

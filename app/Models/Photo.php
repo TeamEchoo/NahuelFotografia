@@ -14,7 +14,8 @@ class Photo extends Model
         'epigraph',
         'person',
         'link',
-        'image_path'
+        'image_path',
+        'album_id'
     ];
 
     public function album()

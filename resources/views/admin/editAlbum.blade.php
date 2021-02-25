@@ -25,6 +25,7 @@
             <th>Person</th>
             <th>Link</th>
             <th>Picture</th>
+            <th>Cover</th>
         </tr>
         
         @foreach($photos as $photo)
@@ -35,6 +36,7 @@
             <td>{{ $photo->person }} </td> 
             <td> {{ $photo->link }} </td>
             <td> {{ $photo->image_path }} </td>
+            <td> <input name="cover_image" type="checkbox" disabled></td>
             <td><a href="{{ route('photoEdit', $photo->id) }}"><i class="far fa-edit"></i></td></a>
             <td>
                 <form method='POST' action=" {{ route( 'photoDelete', $photo->id) }}">

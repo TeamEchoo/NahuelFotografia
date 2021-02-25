@@ -22,6 +22,9 @@
 
         <label for="image_path">Picture:</label>
         <input name="image_path" type="text" value="{{ $photo->picture }}">
+
+        <label for="cover">Cover:</label>
+        <input name="cover_image" type="checkbox">
         
         <a href="{{ route( 'photoUpdate', $photo->id) }}">
         <input type="submit" value="Save">

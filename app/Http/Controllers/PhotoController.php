@@ -91,9 +91,8 @@ class PhotoController extends Controller
      */
     public function destroy($id)
     {
-        $photo= Photo::find($id);
-        $photo->album_id->delete();
-        $photo->delete();
-        return redirect()->route('admin');
+            $photo= Photo::find($id);
+            $photo->delete();
+            return redirect()->route('albumEdit', $photo->album_id);
     }
 }
