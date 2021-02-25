@@ -30,7 +30,7 @@ class ImageController extends Controller
     public function create()
     {
         $image = ImageModel::latest()->first();
-        return view('createimage', compact('image'));
+        return view('createImage', compact('image'));
     }
 
     /**
