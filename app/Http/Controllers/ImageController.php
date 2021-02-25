@@ -18,8 +18,8 @@ class ImageController extends Controller
      */
     public function index()
     {
-        $images = ImageModel::all();
-        return view('photos', ['images' => $images]);
+        $image = ImageModel::all();
+        return view('photos', ['images' => $image]);
     }
 
     /**
@@ -30,7 +30,7 @@ class ImageController extends Controller
     public function create()
     {
         $image = ImageModel::latest()->first();
-        return view('createImage', compact('image'));
+        return view('createImage', ['images' => $image]);
     }
 
     /**
@@ -101,6 +101,7 @@ class ImageController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $this->image->delete($id);
+        return back()->with('Success', 'Your photo has been deleted successfully');
     }
 }

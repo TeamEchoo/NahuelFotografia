@@ -30,7 +30,7 @@
         </ul>
         
         @if(!isset($image))
-        <h1>no hay fotos</h1>
+        <h1>No hay fotos para mostrar</h1>
         @endif
     </div>
 </body>
