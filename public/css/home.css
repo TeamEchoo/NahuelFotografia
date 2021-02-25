@@ -1,19 +1,25 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
 }
 
 body {
     background-color: white;
 }
 
-
 .container-fluid {
     display: flex;
     justify-content: space-between;
     align-items: flex-start !important;
     background-color: white;
+}
+
+#header {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    border: 2px solid red;
 }
 
 .logo {
@@ -53,7 +59,6 @@ ul {
     padding: 0px;
 
     margin-top: 6px;
-
 }
 
 .navbar-collapse {
@@ -67,21 +72,19 @@ ul {
     margin-left: 25px;
 }
 
-.gal-item{
-	overflow: hidden;
-	padding: 8px;
+.gal-item {
+    overflow: hidden;
+    padding: 8px;
 }
-.gal-item .box{
-	height: 100%;
-	overflow: hidden;
+.gal-item .box {
+    height: 100%;
+    overflow: hidden;
 }
-.box img{
-	height: 100%;
-	width: auto;
-	object-fit:cover;
+.box img {
+    height: 100%;
+    width: auto;
+    object-fit: cover;
 }
-
-
 
 /*GALLERY*/
 
@@ -97,27 +100,27 @@ ul {
 .column {
     flex: 33.33%;
     max-width: 33.33%;
-  }
-  
-  .column img {
+}
+
+.column img {
     margin-top: 8px;
     vertical-align: middle;
     width: 100%;
     padding: 10px;
-  }
-  
-  /* Responsive layout - makes a two column-layout instead of four columns */
-  @media screen and (max-width: 800px) {
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
     .column {
-      flex: 50%;
-      max-width: 50%;
+        flex: 50%;
+        max-width: 50%;
     }
-  }
-  
-  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-  @media screen and (max-width: 600px) {
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
     .column {
-      flex: 100%;
-      max-width: 100%;
+        flex: 100%;
+        max-width: 100%;
     }
-  }
+}
