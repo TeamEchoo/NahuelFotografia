@@ -43,15 +43,6 @@
           <button type="submit" class="btn btn-success" style="margin-top:10px">Upload Image</button>
           </div>
         </div>
-        @if($image)
-   	    <div class="row">
-         <div class="col-md-8">
-              <strong>Original Image:</strong>
-              <br/>
-              <img class="photo" src="{{ asset( $image->filename ) }}" />
-        </div>
-   		</div>
-        @endif       
   </form>
   </div>
 </body>
