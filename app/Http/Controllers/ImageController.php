@@ -54,11 +54,7 @@ class ImageController extends Controller
 
         $image_path = public_path() . '/storage/images/' . $image;
             
-        Image::make($request->file('filename'))
-                ->resize(1200,null,function($constraint)
-                {
-                    $constraint->aspectRatio();
-                })->save($image_path );
+        Image::make($request->file('filename'))->save($image_path );
                     
         return redirect('/photos')->with('success', 'Your photo has been successfully uploaded');
                 
