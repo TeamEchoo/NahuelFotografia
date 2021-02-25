@@ -23,6 +23,7 @@
         </div>
     <h3 class="jumbotron">Add new photo</h3>
     <form method="post" action="{{ url('photo') }}" enctype="multipart/form-data">
+    @method('POST')
     @csrf
         <div class="row">
           <div class="col-md-4"></div>
