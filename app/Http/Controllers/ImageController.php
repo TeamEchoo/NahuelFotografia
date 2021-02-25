@@ -30,7 +30,7 @@ class ImageController extends Controller
     public function create()
     {
         $image = ImageModel::latest()->first();
-        return view('createimage', compact('image'));
+        return view('createimage', ['images' => $image]);
     }
 
     /**
@@ -71,7 +71,8 @@ class ImageController extends Controller
      */
     public function show($id)
     {
-        //
+        $image = ImageModel::retrieve($id);
+        return view('photos', ['images' => $image]);
     }
 
     /**
@@ -105,6 +106,7 @@ class ImageController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $this->image->delete($id);
+        return back();
     }
 }
