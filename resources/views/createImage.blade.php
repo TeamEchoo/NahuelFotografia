@@ -36,8 +36,8 @@
           <div class="form-group col-md-4">
           <button type="submit" class="btn btn-success" style="margin-top:10px">Upload Image</button>
           </div>
-        </div>   
-    </form>
+        </div>
+  </form>
   </div>
 </body>
 </html>
