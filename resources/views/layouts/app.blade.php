@@ -8,11 +8,11 @@
     <link rel="stylesheet" type="text/css" href="{{ url('/css/home.css') }}" />
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 
-    <title>Document</title>
+    <title>Nahuel</title>
 </head>
 <body>
 
@@ -26,10 +26,10 @@
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#">SKATEBOARDING</a>
+                <a class="nav-link" aria-current="page" href="{{ route('home') }}">SKATEBOARDING</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">PORTRAIT</a>
+                <a class="nav-link" href="{{ route('home') }}">PORTRAIT</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">STORE</a>
