@@ -1,28 +1,16 @@
 * {
     margin: 0;
     padding: 0;
-<<<<<<< HEAD
-    font-family: 'Montserrat', sans-serif;
-}
-
-body {
-    background-color: #f8fafc;
-=======
     font-family: "Montserrat", sans-serif;
 }
 
 body {
     background-color: white;
->>>>>>> moiHeader
 }
 
 .container-fluid {
     display: flex;
     justify-content: space-between;
-<<<<<<< HEAD
-    align-items: center;
-    background-color: #f8fafc;
-=======
     align-items: flex-start !important;
     background-color: white;
 }
@@ -32,45 +20,29 @@ body {
     position: sticky;
     top: 0;
     border: 2px solid red;
->>>>>>> moiHeader
 }
 
 .logo {
     display: flex;
     flex-direction: column;
-<<<<<<< HEAD
-    justify-content: center;
-    padding-left: 30px;
-    align-items: center;
-    cursor: pointer;
-=======
     margin-left: 0px;
     align-items: center;
     cursor: pointer;
     padding-left: 45px;
->>>>>>> moiHeader
 }
 
 .container-fluid h1 {
     font-size: 20px;
     margin: 0;
-<<<<<<< HEAD
-=======
     letter-spacing: 0.3px;
->>>>>>> moiHeader
 }
 
 .container-fluid h3 {
     display: flex;
     align-items: flex-end;
-<<<<<<< HEAD
-    font-size: 15px;
-    margin: 0;
-=======
     font-size: 10px;
     margin: 0;
     color: #706a5d;
->>>>>>> moiHeader
 }
 
 ul {
@@ -79,22 +51,14 @@ ul {
 
 .navbar__menu li a {
     display: flex;
-<<<<<<< HEAD
-    align-self: flex-end;
-=======
->>>>>>> moiHeader
     cursor: pointer;
     text-decoration: none;
     font-size: 15px;
     color: #706a5d;
     text-decoration: none;
-<<<<<<< HEAD
-    padding: 15px;
-=======
     padding: 0px;
 
     margin-top: 6px;
->>>>>>> moiHeader
 }
 
 .navbar-collapse {
@@ -112,25 +76,14 @@ ul {
     overflow: hidden;
     padding: 8px;
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> moiHeader
 .gal-item .box {
     height: 100%;
     overflow: hidden;
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> moiHeader
 .box img {
     height: 100%;
     width: auto;
     object-fit: cover;
-<<<<<<< HEAD
-}
-=======
 }
 
 /*GALLERY*/
@@ -171,4 +124,3 @@ ul {
         max-width: 100%;
     }
 }
->>>>>>> moiHeader
