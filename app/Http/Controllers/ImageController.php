@@ -19,7 +19,7 @@ class ImageController extends Controller
     public function index()
     {
         $image = ImageModel::all();
-        return view('photos', ['images' => $image]);
+        return view('home', ['images' => $image]);
     }
 
     /**
