@@ -1,15 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="initial-scale=1.0">
-  <title>Nahuel's Photography</title>
-  <meta name="csrf-token" content="{{ csrf_token() }}">
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js">
-  </script>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-</head>
-<body>
+@extends('layouts.app')
+
+@section('content')
   <div class="container">
         @if (count($errors) > 0)
         <div class="alert alert-danger">
@@ -38,5 +29,4 @@
         </div>   
     </form>
   </div>
-</body>
-</html>
+@endsection
