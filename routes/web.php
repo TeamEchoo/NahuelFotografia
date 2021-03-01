@@ -48,4 +48,4 @@ Route::get('/album/{id}/newphoto', [PhotoController::class, 'create'])->name('ph
 Route::post('/album/{id}/newphoto', [PhotoController::class, 'store'])->name('photoStore');
 Route::get('/album/photo/{id}', [PhotoController::class, 'edit'])->name('photoEdit');
 Route::put('/album/photo/{id}', [PhotoController::class, 'update'])->name('photoUpdate');
-Route::delete('/album/photo/{photo}', [PhotoController::class, 'destroy'])->name('photoDelete');
+Route::delete('/album/photoD/{photo}', [PhotoController::class, 'destroy'])->name('photoDelete');

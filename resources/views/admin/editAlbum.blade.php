@@ -18,6 +18,18 @@
         <option value="Portraits">Portraits</option>
     </select>
 
+    <a href="{{ route( 'albumUpdate', $album->id ) }}">
+        <input type="submit" value="Edit">
+    </a>
+
+
+    <a href="{{ route('photoCreate', $album->id) }}">Add new Photo</a>
+
+
+    </form>
+
+    <a href="{{ route('admin') }}">Cancel</a>
+
     <table>
         <tr>
             <th>Title</th>
@@ -36,13 +48,14 @@
             <td>{{ $photo->person }} </td> 
             <td> {{ $photo->link }} </td>
             <td> {{ $photo->image_path }} </td>
-            <td> <input name="cover_image" type="checkbox" disabled></td>
             <td><a href="{{ route('photoEdit', $photo->id) }}"><i class="far fa-edit"></i></td></a>
             <td>
-                <form method='POST' action=" {{ route( 'photoDelete', $photo->id) }}">
+                <form action="{{ route('photoDelete', $photo->id) }}" method="POST">
                     @csrf
-                    @method('DELETE')
-                    <button type="submit"><i class="far fa-trash-alt"></i></input>
+                    @method("DELETE")
+                    <button type="submit">
+                        <i class="far fa-trash-alt"></i>
+                    </button>
                 </form>
             </td>
         </tr>
@@ -54,17 +67,7 @@
 
 
     
-    <a href="{{ route( 'albumUpdate', $album->id ) }}">
-        <input type="submit" value="Edit">
-    </a>
-
-
-    <a href="{{ route('photoCreate', $album->id) }}">Add new Photo</a>
-
-
-    </form>
-
-    <a href="{{ route('admin') }}">Cancel</a>
+  
 
 </body>
 

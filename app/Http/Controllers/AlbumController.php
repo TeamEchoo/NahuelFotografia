@@ -82,7 +82,7 @@ class AlbumController extends Controller
     public function update(Request $request, $id)
     {
         $album= Album::find($id);
-        $album= $request->all();
+        $album->update($request->all());
         return redirect()->route('admin');
     }
 
