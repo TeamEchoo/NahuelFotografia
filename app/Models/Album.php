@@ -11,8 +11,7 @@ class Album extends Model
 
     protected $fillable = [
         'title',
-        'category',
-        'cover_image'
+        'category'
     ];
 
     public function photos()

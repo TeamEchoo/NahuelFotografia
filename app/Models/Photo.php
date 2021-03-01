@@ -15,7 +15,7 @@ class Photo extends Model
         'person',
         'link',
         'image_path',
-        'album_id'
+        'cover_image'
     ];
 
     public function album()
