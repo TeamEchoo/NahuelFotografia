@@ -5,3 +5,5 @@ use App\Http\Controllers\NahuelAdminController;
 
 
 Route::get('/',[NahuelAdminController::class, 'index'])->name('nahuelIndex');
+
+

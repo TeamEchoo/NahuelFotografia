@@ -39,32 +39,29 @@ class PhotoController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request, $album)
+    public function store(Request $request, $photo)
     {
-
-        
         $request->validate([
             'filename' => 'required|image|required|mimes:jpeg,png,jpg,gif,svg',
-            ''
+            
             ]);
             
         $image = Str::random(10) . $request->file('filename')->getClientOriginalName();
         
-        $photo= Photo::create([
+        $photo = Photo::create([
             'title' => $request->title,
             'epigraph' => $request->epigraph,
             'person' => $request->person,
             'link' => $request->link,
             'filename' => '/storage/images/' . $image,
             'cover_image' => $request->cover_image]);    
-                
-        $route = public_path() . '/storage/images/' . $image;
-                
-        Image::make($request->file('filename'));
-                
-        $photo->album_id = $album;
+            
+            $path = public_path() . '/storage/images/' . $image;
+            Image::make($request->file('filename'))->save($path);
+            
         $photo->save();
-        return redirect()->route('albumEdit', $album);
+
+        return redirect('/admin/{id}')->with('success', 'Photo added successfully');
     }
 
     /**
