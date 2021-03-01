@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Photo;
 use App\Models\Album;
 use Illuminate\Http\Request;
+use Intervention\Image\Facades\Image;
+use Illuminate\Support\Str;
 
 
 class PhotoController extends Controller
@@ -39,6 +41,19 @@ class PhotoController extends Controller
      */
     public function store(Request $request, $album)
     {
+        
+        $request->validate([
+            'filename' => 'required|image|required|mimes:jpeg,png,jpg,gif,svg'
+            ]);
+            
+        $image = Str::random(10) . $request->file('filename')->getClientOriginalName();
+        
+        Photo::create(['filename' => '/storage/images/' . $image ]);    
+                
+        $route = public_path() . '/storage/images/' . $image;
+                
+        Image::make($request->file('filename'))->save($route);
+                
         $photo = Photo::create($request->all());
         $photo->album_id = $album;
         $photo->save();

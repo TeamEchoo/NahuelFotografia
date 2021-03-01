@@ -18,7 +18,7 @@ class CreatePhotosTable extends Migration
             $table->string('title')->nullable();
             $table->string('epigraph')->nullable();
             $table->string('person')->nullable();
-            $table->string('image_path')->nullable();
+            $table->string('filename')->nullable();
             $table->string('link')->nullable();
             $table->boolean('cover_image')->nullable()->default(false);
 

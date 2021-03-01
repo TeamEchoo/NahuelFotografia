@@ -40,25 +40,6 @@ class ImageController extends Controller
      */
     public function store(Request $request)
     {
-        // $originalImage= $request->file('filename');
-        // // $thumbnailImage = Image::make($originalImage);
-        // // $thumbnailPath = public_path().'/thumbnail/';
-        // $originalPath = public_path().'/images/';
-        // $originalImage->save($originalPath.time().$originalImage->getClientOriginalName());
-        // // $thumbnailImage->resize(150,150);
-        // // $thumbnailImage->save($thumbnailPath.time().$originalImage->getClientOriginalName()); 
-        
-        // ImageModel::create([
-        //         'url' => '/storage/images/' . $image
-        //     ]);
-            
-            // $imagemodel= new ImageModel();
-            // $imagemodel->filename=time().$request->getClientOriginalName();
-            // $imagemodel->save();
-            
-            // Image::make($image);
-
-
         $request->validate([
             'filename' => 'required|image|required|mimes:jpeg,png,jpg,gif,svg'
             ]);

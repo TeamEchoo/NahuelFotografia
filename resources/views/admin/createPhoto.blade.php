@@ -4,7 +4,7 @@
 
     <h1>Dashboard</h1>
 
-    <form action=" {{ route( 'photoStore', $albumId ) }}"  method="post">
+    <form action=" {{ route( 'photoStore', $albumId ) }}"  method="post" enctype="multipart/form-data">
         
         @csrf
         
@@ -24,8 +24,11 @@
         <input name="link" type="text">
 
 
-        <label for="image_path">Picture:</label>
-        <input name="image_path" type="text">
+        <label for="filename">Photo:</label>
+        <input type="file" name="filename" accept="image/*" class="form-control">
+
+        <label for="cover_image">Cover:</label>
+        <input name="cover_image" type="checkbox" value=true>
 
 
         <input type="submit" value="Submit">
