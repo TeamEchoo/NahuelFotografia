@@ -18,7 +18,7 @@ class CreateAlbums extends Migration
             $table->string('title');
             $table->string('category');
             $table->timestamps();
-            $table->boolean('isAdmin')->default('false');
+            // $table->boolean('isAdmin')->default('false');
         });
     }
 
