@@ -11,12 +11,12 @@ class Album extends Model
 
     protected $fillable = [
         'title',
-        'category',
-        'cover_image',
+        'category'
     ];
 
     public function photos()
     {
-        return $this->hasMany('App\Models\Photo');
+        return $this->hasMany(Photo::class);
     }
+
 }

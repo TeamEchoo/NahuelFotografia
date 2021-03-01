@@ -18,7 +18,7 @@
             <tr>
                 <td> {{ $album->title }} </td>
                 <td> {{ $album->category }} </td>
-                <td> {{ $album->cover_image }} </td>
+                <td></td>
                 <td>
                     <a href="{{ route('albumEdit', $album->id) }}">
                         <i class="far fa-edit"></i>

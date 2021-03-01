@@ -41,7 +41,6 @@ class ImageController extends Controller
      */
     public function store(Request $request)
     {
-        
         $request->validate([
             'filename' => 'required|image|required|mimes:jpeg,png,jpg,gif,svg'
             ]);

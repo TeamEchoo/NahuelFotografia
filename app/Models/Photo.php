@@ -14,12 +14,13 @@ class Photo extends Model
         'epigraph',
         'person',
         'link',
-        'image_path',
-        'album_id'
+        'filename',
+        'cover_image'
     ];
+
 
     public function album()
     {
-        return $this->belongsTo('App\Models\Album');
+        return $this->belongsTo(Album::class);
     }
 }

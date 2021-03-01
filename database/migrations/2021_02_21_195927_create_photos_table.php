@@ -15,12 +15,15 @@ class CreatePhotosTable extends Migration
     {
         Schema::create('photos', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
-            $table->string('epigraph');
-            $table->string('person');
-            $table->string('image_path');
-            $table->string('link');
-            $table->unsignedBigInteger('album_id');
+            $table->string('title')->nullable();
+            $table->string('epigraph')->nullable();
+            $table->string('person')->nullable();
+            $table->string('filename')->nullable();
+            $table->string('link')->nullable();
+            $table->boolean('cover_image')->nullable()->default(false);
+
+            $table->foreign('album_id')->references('id')->on('albums');
+            $table->foreignId('album_id')->default(1);
 
             $table->timestamps();
         });

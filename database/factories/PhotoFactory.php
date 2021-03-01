@@ -21,15 +21,14 @@ class PhotoFactory extends Factory
      * @return array
      */
     public function definition()
-    {
+
         return [
             
             'title' => $this->faker->text(10),
             'person' => $this->faker->name(),
             'epigraph' => $this->faker->text(30),
-            'image_path' => $this->faker->text(15),
+            'filename' => $this->faker->text(15),
             'link' => $this->faker->text(20),
-            'albums_id' => $this->faker->randomDigit(),
         ];
     }
 }

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Album;
+use App\Models\Photo;
 
 class AlbumController extends Controller
 {
@@ -15,7 +16,8 @@ class AlbumController extends Controller
     public function index()
     {
         $albums= Album::all();
-        return view('admin.adminDashboard', compact('albums'));
+        $photos= Photo::all();
+        return view('admin.adminDashboard', compact('albums', "photos"));
     }
 
     /**
@@ -66,7 +68,8 @@ class AlbumController extends Controller
     public function edit($id)
     {
         $album= Album::find($id);
-        return view('admin.editAlbum', compact('album'));
+        $photos= Photo::where('album_id', $id)->get();
+        return view('admin.editAlbum', compact('album', 'photos'));
     }
 
     /**

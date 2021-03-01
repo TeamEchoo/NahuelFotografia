@@ -23,8 +23,7 @@ class AlbumFactory extends Factory
     {
         return [
             'title' => $this->faker->text(10),
-            'category' => $this->faker->text(10),
-            'cover_image' => $this->faker->text(5),
+            'category' => $this->faker->text(10)
         ];
     }
 }

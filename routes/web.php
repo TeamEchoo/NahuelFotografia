@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ImageController;
 use App\Http\Controllers\AlbumController;
+use App\Http\Controllers\PhotoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,19 +35,18 @@ Route::get('/admin/{id}', [AlbumController::class, 'edit'])->name('albumEdit');
 Route::put('/admin/{id}', [AlbumController::class, 'update'])->name('albumUpdate');
 Route::delete('/admin/{photo}', [AlbumController::class, 'destroy'])->name('albumDelete');
 
-// //photo
-// Route::get('/album', [AdminController::class, 'index'])->name('admin');
-// Route::get('/album-create', [AdminController::class, 'create'])->name('adminCreate');
-// Route::post('/album-create', [AdminController::class, 'store'])->name('photoStore');
-// Route::get('/album/{id}', [AdminController::class, 'edit'])->name('adminEdit');
-// Route::put('/album/{id}', [AdminController::class, 'update'])->name('adminUpdate');
-// Route::delete('/album/{photo}', [AdminController::class, 'destroy'])->name('adminDelete');
+
+// //esto lo estoy inventando :D
+// Route::get('/photos',[ImageController::class, 'index'])->name('photo.index');
+// Route::get('/photo', [ImageController::class, 'create'])->name('photoCreate');
+// Route::post('/photo',[ImageController::class, 'store'])->name('photoStore');
+// Route::get('/photo/{$id}',[ImageController::class, 'edit'])->name('photoEdit');
+// Route::put('/photo/{$id}',[ImageController::class,'update'])->name('photoUpdate');
+// Route::delete('/photo/{$id}',[ImageController::class,'delete'])->name('photoDelete');
 
 
-//esto lo estoy inventando :D
-Route::get('/photos',[ImageController::class, 'index'])->name('photo.index');
-Route::get('/photo', [ImageController::class, 'create'])->name('photoCreate');
-Route::post('/photo',[ImageController::class, 'store'])->name('photoStore');
-Route::get('/photo/{$id}',[ImageController::class, 'edit'])->name('photoEdit');
-Route::put('/photo/{$id}',[ImageController::class,'update'])->name('photoUpdate');
-Route::delete('/photo/{$id}',[ImageController::class,'delete'])->name('photoDelete');
+Route::get('/album/{id}/newphoto', [PhotoController::class, 'create'])->name('photoCreate');
+Route::post('/album/{id}/newphoto', [PhotoController::class, 'store'])->name('photoStore');
+Route::get('/album/photo/{id}', [PhotoController::class, 'edit'])->name('photoEdit');
+Route::put('/album/photo/{id}', [PhotoController::class, 'update'])->name('photoUpdate');
+Route::delete('/album/photoD/{photo}', [PhotoController::class, 'destroy'])->name('photoDelete');

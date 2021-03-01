@@ -4,13 +4,14 @@
 
     <h1>Dashboard</h1>
 
-    <form action=" {{ route( 'photoStore' ) }}"  method="post">
+    <form action=" {{ route( 'photoStore', $albumId ) }}"  method="post" enctype="multipart/form-data">
         
         @csrf
         
         <label for="title">Title:</label>
         <input name="title" type="text">
         
+
         <label for="epigraph">Epigraph:</label>
         <input name="epigraph" type="text">
 
@@ -18,26 +19,23 @@
         <label for="person">Person:</label>
         <input name="person" type="text">
         
+
         <label for="link">Link:</label>
         <input name="link" type="text">
 
-        <label for="image_path">Picture:</label>
-        <input name="image_path" type="text">
 
-        <label for="category">Category:</label>
-        <select name="category" id="category">
-            <option value="Skateboarding">Skateboarding</option>
-            <option value="Portraits">Portraits</option>
-        </select>
+        <label for="filename">Photo:</label>
+        <input type="file" name="filename" accept="image/*" class="form-control">
 
-        <label for="album">Album:</label>
-        <input name="album" type="text">
-        
+        <label for="cover_image">Cover:</label>
+        <input name="cover_image" type="checkbox" value=true>
+
+
         <input type="submit" value="Submit">
         <button type="reset">Reset</button>
     </form>
     
-        <a href="{{ route ('admin')}}">
+        <a href="{{ route ('albumEdit', $albumId)}}">
             <button >Turn Back</button>
         </a>
 
