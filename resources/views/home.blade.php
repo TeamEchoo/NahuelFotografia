@@ -1,9 +1,7 @@
-<<<<<<< HEAD
 @extends("layouts.navBar")
 
 @section("nav")
 @endsection
-=======
 @extends('layouts.app')
 
 @section('content')
@@ -27,4 +25,3 @@
     </div>
 </div>
 @endsection
->>>>>>> Routing

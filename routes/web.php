@@ -28,8 +28,8 @@ Route::get('/photos', function () {
 //ADMIN VIEW
 
 //album
-Route::get('/admin', [AlbumController::class, 'index'])->name('admin');
-Route::get('/album', [AlbumController::class, 'create'])->name('albumCreate');
+Route::get('/album', [AlbumController::class, 'index'])->name('admin');
+Route::get('/albumcreate', [AlbumController::class, 'create'])->name('albumCreate');
 Route::post('/album', [AlbumController::class, 'store'])->name('albumStore');
 Route::get('/admin/{id}', [AlbumController::class, 'edit'])->name('albumEdit');
 Route::put('/admin/{id}', [AlbumController::class, 'update'])->name('albumUpdate');

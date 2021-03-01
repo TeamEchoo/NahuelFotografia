@@ -21,7 +21,7 @@ class PhotoFactory extends Factory
      * @return array
      */
     public function definition()
-
+    {
         return [
             
             'title' => $this->faker->text(10),
