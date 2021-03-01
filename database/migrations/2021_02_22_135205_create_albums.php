@@ -19,6 +19,7 @@ class CreateAlbums extends Migration
             $table->string('category');
             $table->string('cover_image');            
             $table->timestamps();
+            $table->boolean('isAdmin')->default('false');
         });
     }
 

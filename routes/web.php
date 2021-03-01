@@ -44,9 +44,9 @@ Route::delete('/admin/{photo}', [AlbumController::class, 'destroy'])->name('albu
 
 
 //esto lo estoy inventando :D
-// ->Route::get('/photos',[ImageController::class, 'index'])->name('photo.index');
-Route::get('/photo', [ImageController::class, 'create'])->name('photo.create');
-Route::post('/photo',[ImageController::class, 'store'])->name('photo.store');
-Route::get('/photo/{$id}',[ImageController::class, 'edit'])->name('photo.edit');
-Route::put('/photo/{$id}',[ImageController::class,'update'])->name('photo.update');
-Route::delete('/photo/{$id}',[ImageController::class,'delete'])->name('photo.delete');
+Route::get('/photos',[ImageController::class, 'index'])->name('photo.index');
+Route::get('/photo', [ImageController::class, 'create'])->name('photoCreate');
+Route::post('/photo',[ImageController::class, 'store'])->name('photoStore');
+Route::get('/photo/{$id}',[ImageController::class, 'edit'])->name('photoEdit');
+Route::put('/photo/{$id}',[ImageController::class,'update'])->name('photoUpdate');
+Route::delete('/photo/{$id}',[ImageController::class,'delete'])->name('photoDelete');

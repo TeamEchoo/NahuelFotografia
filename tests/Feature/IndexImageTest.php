@@ -3,21 +3,23 @@
 namespace Tests\Feature;
 
 use Illuminate\Foundation\Testing\RefreshDatabase;
-use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
+use App\Http\Controllers\ImageController;
+
 
 class ImagesTest extends TestCase
 {
+
+    use RefreshDatabase;
     /**
      * A basic feature test example.
      *
      * @return void
      */
-    public function test_can_upload_images()
+    public function test_indexing_images()
     {
-        
-        $response = $this->get('/');
+        $this->call('GET', 'photos')
+        ->assertViewHas('images');
 
-        $response->assertStatus(200);
     }
 }

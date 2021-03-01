@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\ImageModel;
 use Intervention\Image\Facades\Image;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\DB;
 
 
 class ImageController extends Controller
@@ -17,8 +18,8 @@ class ImageController extends Controller
      */
     public function index()
     {
-        $image = Image::all();
-        return view('photos.index', compact('photos'));
+        $images = ImageModel::all();
+        return view('photos', ['images' => $images]);
     }
 
     /**
@@ -29,7 +30,7 @@ class ImageController extends Controller
     public function create()
     {
         $image = ImageModel::latest()->first();
-        return view('createimage', compact('image'));
+        return view('createimage', ['images' => $image]);
     }
 
     /**
@@ -40,43 +41,24 @@ class ImageController extends Controller
      */
     public function store(Request $request)
     {
-        // $originalImage= $request->file('filename');
-        // // $thumbnailImage = Image::make($originalImage);
-        // // $thumbnailPath = public_path().'/thumbnail/';
-        // $originalPath = public_path().'/images/';
-        // $originalImage->save($originalPath.time().$originalImage->getClientOriginalName());
-        // // $thumbnailImage->resize(150,150);
-        // // $thumbnailImage->save($thumbnailPath.time().$originalImage->getClientOriginalName()); 
         
-        // ImageModel::create([
-        //         'url' => '/storage/images/' . $image
-        //     ]);
-            
-            // $imagemodel= new ImageModel();
-            // $imagemodel->filename=time().$request->getClientOriginalName();
-            // $imagemodel->save();
-            
-            // Image::make($image);
-
-
         $request->validate([
             'filename' => 'required|image|required|mimes:jpeg,png,jpg,gif,svg'
             ]);
             
-            $image = Str::random(10) . $request->file('filename')->getClientOriginalName();
-            
-            $route = public_path() . '/storage/images/' . $image;
-            
-            Image::make($request->file('filename'))
-                    ->resize(1200,null,function($constraint)
-                    {
-                        $constraint->aspectRatio();
-                    })->save($route);
+        $image = Str::random(10) . $request->file('filename')->getClientOriginalName();
+            //podria ser con time.now()
+        ImageModel::create([
+            'filename' => '/storage/images/' . $image
+            ]);
 
+        $image_path = public_path() . '/storage/images/' . $image;
+            
+        Image::make($request->file('filename'))->save($image_path);
                     
-                return back()->with('success', 'Your images has been successfully uploaded');
+        return redirect('/photos')->with('success', 'Your photo has been successfully uploaded');
                 
-            }
+    }
             /**
              * Display the specified resource.
      *
@@ -85,7 +67,8 @@ class ImageController extends Controller
      */
     public function show($id)
     {
-        //
+        $image = ImageModel::retrieve($id);
+        return view('photos', ['images' => $image]);
     }
 
     /**
@@ -119,6 +102,7 @@ class ImageController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $this->image->delete($id);
+        return back();
     }
 }
