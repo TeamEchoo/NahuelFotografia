@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateAlbums extends Migration
+class CreateUserTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,12 @@ class CreateAlbums extends Migration
      */
     public function up()
     {
-        Schema::create('albums', function (Blueprint $table) {
+        Schema::create('user', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
-            $table->string('category');
-            $table->timestamps();
-            $table->onDelete('cascade');
-            // $table->boolean('isAdmin')->default('false');
+            $table->string('name');
+            $table->string('email');
+            $table->string('password');
+            $table->boolean('is_admin')->default(false);
         });
     }
 
@@ -30,6 +29,6 @@ class CreateAlbums extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('albums');
+        Schema::dropIfExists('user');
     }
 }
