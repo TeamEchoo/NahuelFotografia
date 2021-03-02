@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Album;
+use App\Models\Photo;
 
 class HomeController extends Controller
 {
@@ -13,7 +15,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+        
     }
 
     /**
@@ -23,6 +25,15 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('auth.login');
+        $album= Album::where('category', 'Home')->get();
+        $photos= Photo::where('album_id', $id)->get();
+        return view('home', compact('photos'));
+    }
+
+
+    public function contact(){
+
+        return view('contact');
+    
     }
 }

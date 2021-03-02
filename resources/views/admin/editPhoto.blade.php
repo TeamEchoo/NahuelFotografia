@@ -20,8 +20,8 @@
         <label for="link">Link:</label>
         <input name="link" type="text" value="{{ $photo->link }}">
 
-        <label for="image_path">Picture:</label>
-        <input name="image_path" type="text" value="{{ $photo->picture }}">
+        <label for="filename">Picture:</label>
+        <input name="filename" type="text" value="{{ $photo->filename }}">
 
         <label for="cover">Cover:</label>
         <input name="cover_image" type="checkbox">

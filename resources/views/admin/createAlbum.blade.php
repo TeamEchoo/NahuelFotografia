@@ -14,6 +14,7 @@
 
         <label for="category">Category:</label>
         <select name="category" id="category">
+            <option value="Home">Home</option>
             <option value="Skateboarding">Skateboarding</option>
             <option value="Portraits">Portraits</option>
         </select>
