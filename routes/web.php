@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AlbumController;
 use App\Http\Controllers\PhotoController;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,10 +15,6 @@ use App\Http\Controllers\PhotoController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-    return view('home');
-});
 
 Route::get('/photos', function () {
     return view('photos');
@@ -49,3 +46,8 @@ Route::post('/album/{id}/newphoto', [PhotoController::class, 'store'])->name('ph
 Route::get('/album/photo/{id}', [PhotoController::class, 'edit'])->name('photoEdit');
 Route::put('/album/photo/{id}', [PhotoController::class, 'update'])->name('photoUpdate');
 Route::delete('/album/photoD/{photo}', [PhotoController::class, 'destroy'])->name('photoDelete');
+
+///WEBPAGE
+
+Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/contact', [HomeController::class, 'contact'])->name('contact');

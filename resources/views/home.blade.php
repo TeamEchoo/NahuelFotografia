@@ -1,27 +1,37 @@
-@extends("layouts.navBar")
+@extends("layouts.navBar", "layouts.head")
 
-@section("nav")
-@endsection
-@extends('layouts.app')
+@section('head')
 
-@section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
+<body>
+@section('navBar')
 
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
 
-                    {{ __('You are logged in!') }}
-                </div>
-            </div>
-        </div>
+  <div class="containerGallery">
+    <div class="column">
+      <img src="./assets/ocean.jpg">
+      <img src="./assets/mountainskies.jpg">
+      <img src="./assets/rocks.jpg">
+      <img src="./assets/underwater.jpg">
+      <img src="./assets/wedding.jpg">
+      <img src="./assets/ocean.jpg">
+      <img src="./assets/underwater.jpg">
+      <img src="./assets/mountainskies.jpg">
+      <img src="./assets/rocks.jpg">
+      <img src="./assets/underwater.jpg">
+      <img src="./assets/wedding.jpg">
+      <img src="./assets/rocks.jpg">
+      <img src="./assets/underwater.jpg">
+      <img src="./assets/underwater.jpg">
+      <img src="./assets/wedding.jpg">
+      <img src="./assets/ocean.jpg">
+      <img src="./assets/underwater.jpg">
+      <img src="./assets/ocean.jpg">
+      <img src="./assets/mountainskies.jpg">
+      <img src="./assets/rocks.jpg">
     </div>
 </div>
-@endsection
+      </div>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+      
+</body>
+</html>
