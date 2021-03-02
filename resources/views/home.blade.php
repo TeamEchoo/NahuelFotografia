@@ -8,26 +8,9 @@
 
   <div class="containerGallery">
     <div class="column">
-      <img src="./assets/ocean.jpg">
-      <img src="./assets/mountainskies.jpg">
-      <img src="./assets/rocks.jpg">
-      <img src="./assets/underwater.jpg">
-      <img src="./assets/wedding.jpg">
-      <img src="./assets/ocean.jpg">
-      <img src="./assets/underwater.jpg">
-      <img src="./assets/mountainskies.jpg">
-      <img src="./assets/rocks.jpg">
-      <img src="./assets/underwater.jpg">
-      <img src="./assets/wedding.jpg">
-      <img src="./assets/rocks.jpg">
-      <img src="./assets/underwater.jpg">
-      <img src="./assets/underwater.jpg">
-      <img src="./assets/wedding.jpg">
-      <img src="./assets/ocean.jpg">
-      <img src="./assets/underwater.jpg">
-      <img src="./assets/ocean.jpg">
-      <img src="./assets/mountainskies.jpg">
-      <img src="./assets/rocks.jpg">
+      @foreach($photos as $photo)
+      <img src="{{ $photo->filename}}">
+      @endforeach
     </div>
 </div>
       </div>

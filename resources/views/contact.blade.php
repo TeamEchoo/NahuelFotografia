@@ -2,11 +2,11 @@
 @extends('layouts.head')
 
 @section('head')
+@endsection
 <body>
 
 @section('navBar')
 @endsection
-
 <section id="contact" class="parallax-section">
     <div class="container">
         <div class="row">
