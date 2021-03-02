@@ -5,30 +5,30 @@
 <body>
     <form action="{{ route('albumEdit', $album->id) }}" method="POST">
     
-    @method("PUT")
-    @csrf
+        @method("PUT")
+        @csrf
 
-    <label for="title"></label>
-    <input name="title" type="text" value="{{$album->title}}">
+        <label for="title"></label>
+        <input name="title" type="text" value="{{$album->title}}">
 
-    <label for="category">Category:</label>
-    <select name="category" id="category">
-        <option value="{{$album->category}}">{{$album->category}}</option>
-        <option value="Skateboarding">Skateboarding</option>
-        <option value="Portraits">Portraits</option>
-    </select>
+        <label for="category">Category:</label>
+        <select name="category" id="category">
+            <option value="{{$album->category}}">{{$album->category}}</option>
+            <option value="Skateboarding">Skateboarding</option>
+            <option value="Portraits">Portraits</option>
+        </select>
 
-    <a href="{{ route( 'albumUpdate', $album->id ) }}">
-        <input type="submit" value="Edit">
-    </a>
+        <a href="{{ route( 'albumUpdate', $album->id ) }}">
+            <input type="submit" value="Edit">
+        </a>
 
 
-    <a href="{{ route('photoCreate', $album->id) }}">Add new Photo</a>
+        <a href="{{ route('photoCreate', $album->id) }}">Add new Photo</a>
 
 
     </form>
 
-    <a href="{{ route('admin') }}">Cancel</a>
+    <a href="{{ route('album') }}">Cancel</a>
 
     <table>
         <tr>

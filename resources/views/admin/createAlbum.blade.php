@@ -26,7 +26,7 @@
         <button type="reset">Reset</button>
     </form>
         
-            <a href="{{ route ('admin')}}">
+            <a href="{{ route ('album')}}">
                 <button >Turn Back</button>
             </a>
 

@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-@extends("layouts.navBar")
-
-@section("nav")
-@endsection
-    <h2>Photo Gallery</h2>
-    @if(isset($image) ? $image->filename : '')
-=======
 @extends('layouts.app')
 
 @section('content')
@@ -16,10 +8,8 @@
         </div> 
         @endif
         
-        
         <h2>Photo Gallery</h2>
         
->>>>>>> Routing
         <ul>
           @foreach ($images as $image)
           
@@ -27,14 +17,12 @@
           
           @endforeach
         </ul>
-<<<<<<< HEAD
         
         @if(!isset($image))
         <h1>no hay fotos</h1>
         @endif
     </div>
 @endsection
-=======
     @endif
     <div class="container">
   @if(session('success'))
@@ -80,4 +68,3 @@
   </div>
 </body>
 </html>
->>>>>>> 8b9cdee64914705c8dd106a2e9b70152b1724788

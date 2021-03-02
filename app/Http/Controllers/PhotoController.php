@@ -61,7 +61,7 @@ class PhotoController extends Controller
             
         $photo->save();
 
-        return redirect('/admin/{id}')->with('success', 'Photo added successfully');
+        return view('admin.adminDashboard', compact('album'));
     }
 
     /**
@@ -96,9 +96,9 @@ class PhotoController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $photo= Photo::find($id);
+        $photo = Photo::find($id);
         $photo->update($request->all());
-        $album= $photo->album_id;
+        $album = $photo->album_id;
         return redirect()->route('albumEdit', $album);
     }
 
@@ -111,7 +111,7 @@ class PhotoController extends Controller
     public function destroy($id)
     {
             $photo= Photo::find($id);
-            $photo->delete();
+            $photo->delete('filename');
             return redirect()->route('albumEdit', $photo->album_id);
     }
 }

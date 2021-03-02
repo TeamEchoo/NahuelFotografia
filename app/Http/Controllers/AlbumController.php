@@ -45,7 +45,7 @@ class AlbumController extends Controller
         ]);
 
         $album->save();
-        return redirect()->route('admin');
+        return redirect()->route('album');
     }
 
     /**
@@ -83,7 +83,7 @@ class AlbumController extends Controller
     {
         $album= Album::find($id);
         $album->update($request->all());
-        return redirect()->route('admin');
+        return redirect()->route('album');
     }
 
     /**
@@ -96,6 +96,6 @@ class AlbumController extends Controller
     {
         $album= Album::find($id);
         $album->delete();
-        return redirect()->route('admin');
+        return redirect()->route('album');
     }
 }

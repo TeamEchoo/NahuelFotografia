@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ImageController;
 use App\Http\Controllers\AlbumController;
 use App\Http\Controllers\PhotoController;
 
@@ -28,12 +27,12 @@ Route::get('/photos', function () {
 //ADMIN VIEW
 
 //album
-Route::get('/album', [AlbumController::class, 'index'])->name('admin');
-Route::get('/albumcreate', [AlbumController::class, 'create'])->name('albumCreate');
+Route::get('/album', [AlbumController::class, 'index'])->name('album');
+Route::get('/newalbum', [AlbumController::class, 'create'])->name('albumCreate');
 Route::post('/album', [AlbumController::class, 'store'])->name('albumStore');
-Route::get('/admin/{id}', [AlbumController::class, 'edit'])->name('albumEdit');
-Route::put('/admin/{id}', [AlbumController::class, 'update'])->name('albumUpdate');
-Route::delete('/admin/{photo}', [AlbumController::class, 'destroy'])->name('albumDelete');
+Route::get('/album/{id}', [AlbumController::class, 'edit'])->name('albumEdit');
+Route::put('/album/{id}', [AlbumController::class, 'update'])->name('albumUpdate');
+Route::delete('/album/{photo}', [AlbumController::class, 'destroy'])->name('albumDelete');
 
 
 // //esto lo estoy inventando :D
