@@ -26,25 +26,27 @@ class HomeController extends Controller
     public function index()
     {
         $albums= Album::where('category', 'Home')->get();
-        $photos= Photo::where("album_id", $albums->id)->get();
-        return view('home', compact('photos'));
+        $photos= Photo::all();
+        return view('home', ['photos' => $photos, 'albums' => $albums]);
     }
 
-    // public function gallery(){
+    public function gallery($title){
 
-    //     // $album= Album::find($id);
-    //     return view('gallery');
-    // }
+        $album= Album::where($title)->get();
+        dd($album);
+        $album->$title;
+        return view('gallery');
+    }
 
-    // public function album($category){
+    public function album($category){
 
-    //     $album= Album::where('category', $category);
-    //     return view('gallery', compact('album'));
-    // }
+        $album= Album::where('category', $category)->get();
+        return view('gallery', compact('album'));
+    }
 
-    // public function contact(){
+    public function contact(){
 
-    //     return view('contact');
+        return view('contact');
     
-    // }
+    }
 }
