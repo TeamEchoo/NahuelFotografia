@@ -11,7 +11,7 @@
                         <tr>
                             <th>Title</th>
                             <th>Category</th>
-                            <th>Portada</th>
+                            <th>Cover image</th>
                         </tr>
                     </thead>
 

@@ -3,23 +3,28 @@
     padding: 0;
     font-family: "Montserrat", sans-serif;
 }
+
 body {
     background-color: white;
 }
+
 .container-fluid {
     display: flex;
     justify-content: space-between;
     align-items: flex-start !important;
     background-color: white;
 }
+
 #header {
     position: -webkit-sticky;
     position: sticky;
     top: 0;
 }
+
 .container-fluid {
     margin-top: 15px;
 }
+
 .logo {
     display: flex;
     flex-direction: column;
@@ -28,11 +33,13 @@ body {
     cursor: pointer;
     padding-left: 45px;
 }
+
 .container-fluid h1 {
     font-size: 20px;
     margin: 0;
     letter-spacing: 0.3px;
 }
+
 .container-fluid h3 {
     display: flex;
     align-items: flex-end;
@@ -40,9 +47,11 @@ body {
     margin: 0;
     color: #706a5d;
 }
+
 ul {
     list-style-type: none;
 }
+
 .navbar__menu li a {
     display: flex;
     cursor: pointer;
@@ -53,55 +62,101 @@ ul {
     padding: 0px;
     margin-top: 6px;
 }
+
 .navbar-collapse {
     display: flex;
     justify-content: flex-end;
     align-content: flex-end;
     padding-bottom: 0;
 }
+
+.adminLogo {
+    display: flex;
+    padding-top: 20px;
+    flex-direction: column;
+    margin-left: 0px;
+    align-items: left;
+    cursor: pointer;
+    padding-left: 45px;
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+
+.adminSubLogo {
+    color: black;
+    font-size: 11px;
+    margin-top: -10px;
+    padding-left: 90px;
+    
+}
+.noDeco{
+    text-decoration: none;
+}
+
 .nav-link {
     margin-left: 25px;
 }
+
 .gal-item {
     overflow: hidden;
     padding: 8px;
 }
+
 .gal-item .box {
     height: 100%;
     overflow: hidden;
 }
+
 .box img {
     height: 100%;
     width: auto;
     object-fit: cover;
 }
+
 h6 {
     margin: auto;
     padding: 15px;
 }
+
 /**********MODAL********************/
+
 #myImg1 {
     cursor: pointer;
     transition: 0.3s;
 }
+
 #myImg1:hover {
     filter: grayscale(100) opacity(0.9);
 }
+
 /* The Modal (background)  opacity: 0.7;*/
+
 .modal1 {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    padding-top: 100px;
+    /* Location of the box */
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: none; /* Enable scroll if needed */
-    background-color: rgb(0, 0, 0); /* Fallback color */
-    background-color: rgba(20, 5, 3, 0.9); /* Black w/ opacity */
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: none;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(20, 5, 3, 0.9);
+    /* Black w/ opacity */
 }
+
 /* Modal Content (image) */
+
 .modal-content1 {
     display: flex;
     margin: auto !important;
@@ -109,7 +164,9 @@ h6 {
     width: 80%;
     max-width: 800px;
 }
+
 /*    box-shadow: 6px 5px 4px -3px #F6DCB4;*/
+
 /* image text optional
   #caption {
     margin: auto;
@@ -122,14 +179,16 @@ h6 {
     height: 150px;
   }
   */
+
 /* Add Animation */
-.modal-content,
-#caption {
+
+.modal-content, #caption {
     -webkit-animation-name: zoom;
     -webkit-animation-duration: 0.6s;
     animation-name: zoom;
     animation-duration: 0.6s;
 }
+
 @-webkit-keyframes zoom {
     from {
         -webkit-transform: scale(0);
@@ -138,6 +197,7 @@ h6 {
         -webkit-transform: scale(1);
     }
 }
+
 @keyframes zoom {
     from {
         transform: scale(0);
@@ -146,7 +206,9 @@ h6 {
         transform: scale(1);
     }
 }
+
 /* The Close Button */
+
 .close {
     position: absolute;
     top: 35px;
@@ -156,19 +218,23 @@ h6 {
     font-weight: bold;
     transition: 0.3s;
 }
-.close:hover,
-.close:focus {
+
+.close:hover, .close:focus {
     color: #d4af37;
     text-decoration: none;
     cursor: pointer;
 }
+
 /* 100% Image Width on Smaller Screens */
+
 @media only screen and (max-width: 700px) {
     .modal-content {
         width: 100%;
     }
 }
+
 /*GALLERY*/
+
 .containerGallery {
     padding-left: 50px;
     padding-right: 67px;
@@ -177,6 +243,7 @@ h6 {
     margin-bottom: 20px;
     margin-top: 30px;
 }
+
 .column {
     line-height: 0;
     -webkit-column-count: 2;
@@ -186,11 +253,13 @@ h6 {
     column-count: 2;
     column-gap: 30px;
 }
+
 .column img {
     width: 100% !important;
     height: auto !important;
     margin: 15px;
 }
+
 @media screen and (max-width: 800px) {
     .column {
         line-height: 0;
@@ -202,6 +271,7 @@ h6 {
         column-gap: 30px;
     }
 }
+
 @media screen and (max-width: 600px) {
     .column {
         line-height: 0;
