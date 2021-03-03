@@ -1,0 +1,41 @@
+.createphoto-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    max-width: 600px;
+}
+
+label {
+    margin-top: 18px;
+}
+
+input {
+    max-width: 500px;
+}
+
+.buttons {
+    align-self: center;
+}
+
+.form-control1 {
+    border-radius: 2px;
+    background-color: black;
+    color: white;
+}
+
+@media only screen and (max-width: 768px) {
+    .buttons {
+        display: flex;
+        flex-direction: row;
+        align-self: center;
+        align-items: baseline;
+        padding: 0px;
+    }
+}
