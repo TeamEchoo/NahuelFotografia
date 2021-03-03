@@ -9,8 +9,8 @@
                 <table class="table">
                     <thead>
                         <tr>
-                            <th>Producto</th>
-                            <th>Cantidad</th>
+                            <th>Title</th>
+                            <th>Category</th>
                             <th>Portada</th>
                         </tr>
                     </thead>
