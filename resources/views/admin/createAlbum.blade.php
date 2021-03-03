@@ -9,14 +9,14 @@
             
              @csrf
 
-            <h1 class="section-title">Dashboard</h1>
+            <h1 class="section-title">New Album</h1>
             <div class="imputs">
                 <div>
                     <label for="title">Title:</label>
                     <input name="title" type="text">
                 </div>
 
-                <div>
+                <div class="select">
                     <label for="category">Category:</label>
                     <select name="category" id="category">
                         <option value="Home">Home</option>
