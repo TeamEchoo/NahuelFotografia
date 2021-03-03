@@ -1,6 +1,7 @@
-@extends('layouts.adminHeader')
 
-@section('adminheader')
+
+<x-head>
+<x-logoAdmin />
 
     <h1>Dashboard</h1>
 
@@ -39,4 +40,4 @@
             <button >Turn Back</button>
         </a>
 
-</html>
+</x-head>

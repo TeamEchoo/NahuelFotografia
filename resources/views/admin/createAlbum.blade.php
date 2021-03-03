@@ -1,35 +1,45 @@
-@extends('layouts.adminHeader')
+<x-head>
+<x-logoAdmin />
 
-@section('adminheader')
-<body>
+
+
     
-    <h1>Dashboard</h1>
-
-    <form action=" {{ route( 'albumStore' ) }}"  method="post">
+<div class="form-container">
+        <form class="form" action=" {{ route( 'albumStore' ) }}"  method="post">
             
-        @csrf
-            
-        <label for="title">Title:</label>
-        <input name="title" type="text">
+             @csrf
 
-        <label for="category">Category:</label>
-        <select name="category" id="category">
-            <option value="Home">Home</option>
-            <option value="Skateboarding">Skateboarding</option>
-            <option value="Portraits">Portraits</option>
-        </select>
+            <h1 class="section-title">Dashboard</h1>
+            <div class="imputs1">
+                <div>
+                    <label for="title">Title:</label>
+                    <input name="title" type="text">
+                </div>
 
+                <div class="imputs">
+                    <label for="category">Category:</label>
+                    <select name="category" id="category">
+                        <option value="Home">Home</option>
+                        <option value="Skateboarding">Skateboarding</option>
+                        <option value="Portraits">Portraits</option>
+                    </select>
+                </div>    
+            </div>
 
-        <label for="cover_image">Cover image:</label>
-        <input name="cover_image" type="text">
-            
-        <input type="submit" value="Save">
-        <button type="reset">Reset</button>
-    </form>
+            <div class="imputs">
+                <label for="cover_image">Cover image:</label>
+                <input name="cover_image" type="text">
+                <button type="submit">Save</button>
+                <button type="reset">Reset</button>           
+            </div>    
         
-            <a href="{{ route ('album')}}">
-                <button >Turn Back</button>
-            </a>
+            <div class="last-button">
+                <a href="{{ route ('album')}}">
+                    <button>Turn Back</button>
+                </a>
+            </div>    
+        </form>
+</div>
 
-</body>
-</html>
+
+</x-head>
