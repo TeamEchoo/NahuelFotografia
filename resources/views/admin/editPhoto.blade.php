@@ -18,8 +18,11 @@
         <label for="link">Link:</label>
         <input name="link" type="text" value="{{ $photo->link }}">
 
-        <label for="filename">Picture:</label>
-        <input name="filename" type="text" value="{{ $photo->filename }}">
+        <label for="filename">Photo:</label>
+        <input type="file" name="filename" accept="image/*" class="form-control">
+
+        <label for="thumbnail">Actual Picture</label>
+        <img src="{{$photo->filename}}" >
 
         <label for="cover">Cover:</label>
         <input name="cover_image" type="checkbox">

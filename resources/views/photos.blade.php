@@ -60,7 +60,7 @@
          <div class="col-md-8">
               <strong>Original Image:</strong>
               <br/>
-              <img src="/storage/images/{{$image->filename}}" />
+              <img src="{{$image->filename}}" />
         </div>
    		</div>
         @endif       
