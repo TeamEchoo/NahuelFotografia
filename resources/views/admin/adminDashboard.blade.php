@@ -1,8 +1,4 @@
-@extends('layouts.adminHeader')
-
-@section('adminheader')
-
-<body>
+<x-adminHeader>
 
     <h1>Dashboard</h1>
 
@@ -38,7 +34,5 @@
     </table>
     
     <a href="{{ route('albumCreate') }}">New Album</a>
-
-</body>
-
-</html>
+    
+</x-adminHeader>

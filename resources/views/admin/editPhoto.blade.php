@@ -1,6 +1,4 @@
-@extends('layouts.adminHeader')
-
-@section('adminheader')
+<x-adminHeader>
 
 <form action=" {{ route( 'photoEdit', $photo->id ) }}"  method="POST">
         
@@ -36,3 +34,5 @@
         <a href="{{ route ('albumEdit', $photo->album_id)}}">
             <button >Turn Back</button>
         </a>
+        
+</x-adminHeader>

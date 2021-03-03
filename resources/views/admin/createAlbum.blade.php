@@ -1,7 +1,4 @@
-@extends('layouts.adminHeader')
-
-@section('adminheader')
-<body>
+<x-adminHeader>
     
     <h1>Dashboard</h1>
 
@@ -31,5 +28,4 @@
                 <button >Turn Back</button>
             </a>
 
-</body>
-</html>
+</x-adminHeader>

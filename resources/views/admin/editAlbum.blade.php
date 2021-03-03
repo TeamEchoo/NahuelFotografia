@@ -1,6 +1,4 @@
-@extends('layouts.adminHeader')
-
-@section('adminheader')
+<x-adminHeader>
 
 <body>
     <form action="{{ route('albumEdit', $album->id) }}" method="POST">
@@ -70,7 +68,5 @@
 
     
   
-
-</body>
-
+</x-adminHeader>
     
