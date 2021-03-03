@@ -12,6 +12,7 @@
       <span class="close">&times;</span>
       <img class="modal-content1" id="img01">
     </div>
+      <!-- <img src="/storage/images/{{$image->filename}}" /> -->
       <img src="./assets/underwater.jpg">
       <img src="./assets/wedding.jpg">
       <img src="./assets/ocean.jpg">

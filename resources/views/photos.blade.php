@@ -1,6 +1,6 @@
-@extends('layouts.app')
+<x-head>
+<x-navBar />
 
-@section('content')
     <div class="container">
       @if(session('success'))
         <div class="alert alert-success">
@@ -23,7 +23,7 @@
         @endif
     </div>
 @endsection
-    @endif
+    
     <div class="container">
   @if(session('success'))
         <div class="alert alert-success">
@@ -60,11 +60,10 @@
          <div class="col-md-8">
               <strong>Original Image:</strong>
               <br/>
-              <img src="/storage/images/{{$image->filename}}" />
+             
         </div>
    		</div>
         @endif       
   </form>
   </div>
-</body>
-</html>
+</x-head>
