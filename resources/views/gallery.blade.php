@@ -1,11 +1,9 @@
-@extends('layouts.navBar')
-
-
-@section('navBar')
+<x-head>
+<x-navBar />
 
 <!-- GALLERY -->
   <div class="containerGallery">
-  <h6>NAHUEL MARTINEZ</h6>
+  <h6>{{ $album->title }}</h6>
     <div class="column">
     <!-- Trigger the Modal -->
     <img id="myImg1" src="./assets/mountainskies.jpg" alt="" >
@@ -14,6 +12,7 @@
       <span class="close">&times;</span>
       <img class="modal-content1" id="img01">
     </div>
+      <!-- <img src="/storage/images/{{$image->filename}}" /> -->
       <img src="./assets/underwater.jpg">
       <img src="./assets/wedding.jpg">
       <img src="./assets/ocean.jpg">
@@ -54,5 +53,4 @@
           modal.style.display = "none";
         }
 </script>
-</body>
-</html>
+</x-head>

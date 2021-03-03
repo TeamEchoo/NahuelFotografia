@@ -17,7 +17,7 @@
             <a class="nav-link" href="#">STORE</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">CONTACT</a>
+            <a class="nav-link" href="{{ route('contact') }}">CONTACT</a>
           </li>
           <li class="nav-item1">
             <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"></a>
