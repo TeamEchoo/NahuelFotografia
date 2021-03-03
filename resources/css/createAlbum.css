@@ -10,25 +10,31 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid red;
 }
 
 .form {
     display: flex;
     flex-direction: column;
     font-size: 18px;
-    border: 1px solid blue;
 }
 
-.imputs1 {
-    display: flex; 
+.imputs {
+    display: flex;
+    margin-bottom: 60px;
+}
+
+.imputs2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 
 
 label {
     color: #706a5d;
-    margin-left: 15px;
+    margin-left: 12px;
+    margin-right: 10px;
 }
 
 option {
@@ -42,9 +48,7 @@ option {
     color: black;
 }
 
-
 button {
-
     padding-left: 35px;
     border: none;
     color: #706a5d;
@@ -52,6 +56,7 @@ button {
     margin-top: 50px;
     background-color: transparent;
 }
+
 button:hover {
     color: #ffd000;
 }
@@ -60,9 +65,8 @@ button:hover {
     display: flex;
     align-content: center;
     align-self: center;
+    margin-top: 30px;
 }
-
-
 
 
 @media only screen and (max-width: 768px) {
@@ -80,13 +84,23 @@ button:hover {
 
     .imputs {
         display: flex;
+        flex-direction: column;
         align-self: center;
-        flex-direction: row;
+        margin: 0;
         padding: 20px;
     }
 
-    buttons {
+    .imputs2 {
         display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 20px;
+    }
+
+    .imputs3 {
+        display: flex;
+        align-self: center;
+        flex-direction: row;        
     }
 
     .last-button {
