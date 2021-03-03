@@ -577,6 +577,10 @@ input {
         align-items: baseline;
         padding: 0px;
     }
+
+    input {
+        max-width: 300px;
+    }
 }
 
 
