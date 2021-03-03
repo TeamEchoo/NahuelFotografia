@@ -67,8 +67,8 @@ class AlbumController extends Controller
      */
     public function edit($id)
     {
-        $album= Album::find($id);
-        $photos= Photo::where('album_id', $id)->get();
+        $album = Album::find($id);
+        $photos = Photo::where('album_id', $id)->get();
         return view('admin.editAlbum', compact('album', 'photos'));
     }
 

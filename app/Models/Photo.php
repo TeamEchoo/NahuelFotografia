@@ -15,12 +15,13 @@ class Photo extends Model
         'person',
         'link',
         'filename',
-        'cover_image'
+        'cover_image',
+        'album_id'
     ];
 
 
     public function album()
     {
-        return $this->belongsTo(Album::class, 'id');
+        return $this->belongsTo(Album::class);
     }
 }

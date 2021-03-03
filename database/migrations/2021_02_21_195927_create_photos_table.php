@@ -21,7 +21,10 @@ class CreatePhotosTable extends Migration
             $table->string('filename');
             $table->string('link')->nullable();
             $table->boolean('cover_image')->nullable()->default(false);
+            $table->unsignedBigInteger('album_id');
             $table->timestamps();
+
+            $table->foreign('album_id')->references('id')->on('albums');
         });
     }
 
