@@ -1,11 +1,6 @@
-@extends('layouts.navBar')
-@extends('layouts.head')
+<x-head>
+<x-navBar />
 
-@section('head')
-<body>
-
-@section('navBar')
-@endsection
 
 <section id="contact" class="parallax-section">
     <div class="container">
@@ -54,6 +49,4 @@
     </div>
 </section>
 
-</body>
-
-</html>
+</x-head>

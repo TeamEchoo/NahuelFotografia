@@ -25,9 +25,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $album= Album::where('category', 'Home')->get();
-        $photos= Photo::where('album_id', $id)->get();
-        return view('home', compact('photos'));
+        return view('home');
     }
 
 
