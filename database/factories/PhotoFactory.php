@@ -29,7 +29,8 @@ class PhotoFactory extends Factory
             'epigraph' => $this->faker->text(30),
             'filename' => $this->faker->text(15),
             'link' => $this->faker->text(20),
-            'album_id' => 1
+            'album_id' => 1,
+            'cover_image' => false
         ];
     }
 }

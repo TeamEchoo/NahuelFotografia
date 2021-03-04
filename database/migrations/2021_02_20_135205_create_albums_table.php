@@ -17,10 +17,8 @@ class CreateAlbumsTable extends Migration
             $table->id();
             $table->string('title')->nullable();
             $table->string('category')->nullable();
-            $table->unsignedTinyInteger('photo_cover_image');
             $table->timestamps();
 
-            $table->foreign('photo_cover_image')->references('photos')->on('cover_image');
         });
     }
 

@@ -16,7 +16,7 @@
 </div>
       @foreach($photos as $photo)
   <div>
-        <p>{{$photo->filename}}</p>
+        <img src="{{$photo->filename}}">
   </div>
       @endforeach
   
