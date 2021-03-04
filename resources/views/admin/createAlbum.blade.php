@@ -28,8 +28,8 @@
 
             
                 <div class="imputs2">
-                    <label for="cover_image">Cover image:</label>
-                    <input name="cover_image" type="text">
+                    <!-- <label for="cover_image">Cover image:</label>
+                    <input name="cover_image" type="text"> -->
 
                     <div class="imputs3">
                         <button type="submit">Save</button>

@@ -24,7 +24,7 @@
                         <td> {{ $photo->epigraph }} </td>
                         <td>{{ $photo->person }} </td>
                         <td> {{ $photo->link }} </td>
-                        <td> {{ $photo->image_path }} </td>
+                        <td> <img class="picture" src="{{ $photo->filename }}"> </td>
                         <td> {{ $photo->cover_image }} <input name="cover_image" type="checkbox" value=true></td>
 
                         <td><a href="{{ route('photoEdit', $photo->id) }}"><i class="far fa-edit"></i></td></a>
