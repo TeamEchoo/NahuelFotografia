@@ -20,7 +20,7 @@
 
 
         <label for="person">Person:</label>
-        <input name="person" type="text">
+        <input class="input" name="person" type="text">
         
 
         <label for="link">Link:</label>
