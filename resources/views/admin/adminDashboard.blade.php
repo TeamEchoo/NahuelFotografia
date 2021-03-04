@@ -14,9 +14,7 @@
             <tr>
                 <td> {{ $album->title }} </td>
                 <td> {{ $album->category }} </td>
-                @if($photos->cover_image == true)
-                <td> {{ $photos->filename}}</td>
-                @endif
+                
                 <td>
                     <a href="{{ route('albumEdit', $album->id) }}">
                         <i class="far fa-edit"></i>

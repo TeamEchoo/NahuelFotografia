@@ -16,6 +16,7 @@ class AlbumController extends Controller
     public function index()
     {
         $albums= Album::all();
+        $photos= Photo::all();
         return view('admin.adminDashboard', compact('albums', "photos"));
     }
 
@@ -67,7 +68,7 @@ class AlbumController extends Controller
     public function edit($id)
     {
         $album = Album::find($id);
-        $photos = Photo::where('album_id', $id)->get();
+        $photos = $album->photos()->get();
         return view('admin.editAlbum', compact('album', 'photos'));
     }
 

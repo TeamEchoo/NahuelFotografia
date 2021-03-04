@@ -2,9 +2,9 @@
 <x-navBar />
 
 <!-- GALLERY -->
-  <div class="containerGallery">
+<div class="containerGallery">
   <h6>{{ $album->title }}</h6>
-    <div class="column">
+  <div class="column">
     <!-- Trigger the Modal -->
     <img id="myImg1" src="./assets/mountainskies.jpg" alt="" >
     <!-- The Modal -->
@@ -12,14 +12,14 @@
       <span class="close">&times;</span>
       <img class="modal-content1" id="img01">
     </div>
-
-      @foreach($photos as $photo)
-        <img src="{{$photo->filename}}">
-    
-      @endforeach
-      </div>
+   </div>
 </div>
-      </div>
+      @foreach($photos as $photo)
+  <div>
+        <p>{{$photo->filename}}</p>
+  </div>
+      @endforeach
+  
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
       <script>
       // Get the modal
