@@ -1,11 +1,15 @@
-<x-adminHeader>
 
-    <h1>Dashboard</h1>
+<x-head>
+<x-logoAdmin />
+
+<div class="createphoto-container">
+    <h1>Create Photo</h1>
 
     <form action=" {{ route( 'photoStore', $albumId ) }}"  method="post" enctype="multipart/form-data">
         
         @csrf
         
+   
         <label for="title">Title:</label>
         <input name="title" type="text">
         
@@ -15,7 +19,7 @@
 
 
         <label for="person">Person:</label>
-        <input name="person" type="text">
+        <input class="input" name="person" type="text">
         
 
         <label for="link">Link:</label>
@@ -23,19 +27,25 @@
 
 
         <label for="filename">Photo:</label>
-        <input type="file" name="filename" accept="image/*" class="form-control">
 
-        <label for="cover_image">Cover:</label>
-        <input name="cover_image" type="checkbox" value=true>
+        <input  type="file" style="width: 172px"  name="filename" accept="image/*" class="form-control1">
 
-
-        <input type="submit" value="Submit">
-        
-        <button type="reset">Reset</button>
+        <div class="buttons">
+            <label for="cover_image">Cover:</label>
+            <input name="cover_image" type="checkbox" value=true>
+            <button type="submit" value="Submit">Submit</button>
+            <button type="reset">Reset</button>
+        </div>    
     </form>
     
         <a href="{{ route ('albumEdit', $albumId)}}">
             <button >Turn Back</button>
         </a>
+</div>
 
-</x-adminHeader>
+
+
+
+
+
+</x-head>

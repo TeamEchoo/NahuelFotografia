@@ -1,4 +1,5 @@
-<x-adminHeader>
+<x-head>
+<x-logoAdmin />
 
 <form action=" {{ route( 'photoEdit', $photo->id ) }}"  method="POST">
         
@@ -37,5 +38,5 @@
         <a href="{{ route ('albumEdit', $photo->album_id)}}">
             <button >Turn Back</button>
         </a>
-        
-</x-adminHeader>
+
+</x-head>

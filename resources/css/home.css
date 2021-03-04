@@ -13,12 +13,14 @@ body {
     background-color: white;
 }
 #header {
+    display: flex;
     position: -webkit-sticky;
     position: sticky;
     top: 0;
 }
+
 .container-fluid {
-    margin-top: 15px;
+    margin-top: 10px;
 }
 .logo {
     display: flex;
@@ -26,7 +28,7 @@ body {
     margin-left: 0px;
     align-items: center;
     cursor: pointer;
-    padding-left: 45px;
+    padding-left: 30px;
 }
 .container-fluid h1 {
     font-size: 20px;
@@ -51,16 +53,19 @@ ul {
     color: #706a5d;
     text-decoration: none;
     padding: 0px;
-    margin-top: 6px;
+    margin-top: 5px;
 }
+
 .navbar-collapse {
     display: flex;
     justify-content: flex-end;
     align-content: flex-end;
     padding-bottom: 0;
+
 }
 .nav-link {
     margin-left: 25px;
+
 }
 .gal-item {
     overflow: hidden;
@@ -108,6 +113,22 @@ ul {
         column-count:         2;
         column-gap:           20px;  
       }
+
+      #header.container-fluid {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .navbar__menu li a {
+        display: flex;
+        margin-top: 36px;
+    }
+
+    .navbar-collapse {
+        display: flex;
+        align-items: flex-end !important;
+    }
 }
 @media screen and (max-width: 600px) {
     .column {
@@ -119,4 +140,20 @@ ul {
         column-count:         1;
         column-gap:           20px;  
       }
+
+    #header.container-fluid {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .navbar__menu li a {
+        display: flex;
+        margin-top: 36px;
+    }
+
+    .navbar-collapse {
+        display: flex;
+        align-items: flex-end !important;
+    }
 }
