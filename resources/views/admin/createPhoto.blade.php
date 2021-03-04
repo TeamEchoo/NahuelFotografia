@@ -28,7 +28,8 @@
 
 
         <label for="filename">Photo:</label>
-        <input  type="file" name="filename" accept="image/*" class="form-control1">
+
+        <input  type="file" style="width: 172px"  name="filename" accept="image/*" class="form-control1">
 
         <div class="buttons">
             <label for="cover_image">Cover:</label>
