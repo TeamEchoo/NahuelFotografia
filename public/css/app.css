@@ -680,6 +680,7 @@ button:hover {
 
 .wrapper {
     padding-top: 50px;
+    padding-left: 175px;
     margin: 15px;
 }
 
@@ -707,7 +708,7 @@ button:hover {
 }
 
 .categoryTitleOne {
-    margin-bottom: 22px;
+    margin-bottom: 25px;
     padding-right: 20px;
     font-size: 19px;
     padding-bottom: 5px;
@@ -732,11 +733,15 @@ button:hover {
     margin-right: 200px;
     text-decoration: none;
     color: black;
+    font-weight: 500;
+    font-weight: bold;
 }
 
 .cancelButton {
     text-decoration: none;
     color: black;
+    font-weight: 500;
+    font-weight: bold;
 }
 
 .addButton:hover {

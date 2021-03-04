@@ -1,7 +1,7 @@
 <x-head>
     <x-logoAdmin />
 
-    
+
 
     <div class='wrapper'>
         <div class='row'>
@@ -28,7 +28,7 @@
                     </select>
 
                     <a href="{{ route( 'albumUpdate', $album->id ) }}">
-                        <button type="submit">
+                        <button class="cancelButton" type="submit">
                             <a>Save</a>
                         </button>
                     </a>
@@ -40,50 +40,50 @@
     </div>
 
 
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <table class="tablee">
-                        <thead>
-                            <tr>
-                                <th>Title</th>
-                                <th>Epigraph</th>
-                                <th>Person</th>
-                                <th>Link</th>
-                                <th>Picture</th>
-                                <th>Cover</th>
-                            </tr>
-                        </thead>
-
-                        @foreach($photos as $photo)
-
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <table class="tablee">
+                    <thead>
                         <tr>
-                            <td> {{ $photo->title }} </td>
-                            <td> {{ $photo->epigraph }} </td>
-                            <td>{{ $photo->person }} </td>
-                            <td> {{ $photo->link }} </td>
-                            <td> {{ $photo->image_path }} </td>
-                            <td> {{ $photo->cover_image }} <input name="cover_image" type="checkbox" value=true></td>
-
-                            <td><a href="{{ route('photoEdit', $photo->id) }}"><i class="far fa-edit"></i></td></a>
-                            <td>
-                                <form action="{{ route('photoDelete', $photo->id) }}" method="POST">
-                                    @csrf
-                                    @method("DELETE")
-                                    <button type="submit">
-                                        <i class="far fa-trash-alt"></i>
-                                    </button>
-                                </form>
-                            </td>
+                            <th>Title</th>
+                            <th>Epigraph</th>
+                            <th>Person</th>
+                            <th>Link</th>
+                            <th>Picture</th>
+                            <th>Cover</th>
                         </tr>
-                        @endforeach
-                    </table>
-                </div>
+                    </thead>
+
+                    @foreach($photos as $photo)
+
+                    <tr>
+                        <td> {{ $photo->title }} </td>
+                        <td> {{ $photo->epigraph }} </td>
+                        <td>{{ $photo->person }} </td>
+                        <td> {{ $photo->link }} </td>
+                        <td> {{ $photo->image_path }} </td>
+                        <td> {{ $photo->cover_image }} <input name="cover_image" type="checkbox" value=true></td>
+
+                        <td><a href="{{ route('photoEdit', $photo->id) }}"><i class="far fa-edit"></i></td></a>
+                        <td>
+                            <form action="{{ route('photoDelete', $photo->id) }}" method="POST">
+                                @csrf
+                                @method("DELETE")
+                                <button type="submit">
+                                    <i class="far fa-trash-alt"></i>
+                                </button>
+                            </form>
+                        </td>
+                    </tr>
+                    @endforeach
+                </table>
             </div>
         </div>
+    </div>
 
-        <div class="downButtons">
-            <a class="addButton" href="{{ route('photoCreate', $album->id) }}">Add new Photo</a>
-            <a class="cancelButton" href="{{ route('album') }}">Cancel</a>
-        </div>
+    <div class="downButtons">
+        <a class="addButton" href="{{ route('photoCreate', $album->id) }}">Add new Photo</a>
+        <a class="cancelButton" href="{{ route('album') }}">Cancel</a>
+    </div>
 </x-head>
