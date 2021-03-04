@@ -15,10 +15,6 @@
             <option value="Skateboarding">Skateboarding</option>
             <option value="Portraits">Portraits</option>
         </select>
-
-
-        <label for="cover_image">Cover image:</label>
-        <input name="cover_image" type="text">
             
         <input type="submit" value="Save">
         <button type="reset">Reset</button>

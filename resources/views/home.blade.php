@@ -5,10 +5,7 @@
   <div class="containerGallery">
     <div class="column">
     @foreach($photos as $photo)
-    @if ($photo->album_id == $albums->id)
-      <img src="{{$photo->filename}}" />
-
-    @endif
+      <img src="{{$photo}}" />
     @endforeach
     </div>
   </div>

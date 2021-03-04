@@ -41,8 +41,7 @@ Route::delete('/{album->title}/{photo}', [PhotoController::class, 'destroy'])->n
 
 ///WEBPAGE
 Route::get('/', [HomeController::class, 'index'])->name('home');
-Route::get('/{skateboarding}', [HomeController::class, 'album'])->name('skateboardAlbum');
-Route::get('/{portrait}', [HomeController::class, 'album'])->name('portraitAlbum');
+Route::get('/{category}', [HomeController::class, 'album'])->name('categoryAlbum');
 Route::get('/gallery', [HomeController::class, 'gallery'])->name('gallery');
 Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
 

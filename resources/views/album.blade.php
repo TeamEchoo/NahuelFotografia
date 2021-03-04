@@ -4,11 +4,7 @@
 
   <div class="containerGallery">
     <div class="column">
-    @foreach()
-      <a href="{{ route( 'gallery', $album->id}}">
-         <img src="">
-      </a>
-      @endforeach
+
     </div>
 </div>
       </div>
