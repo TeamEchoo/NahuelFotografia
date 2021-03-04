@@ -5,7 +5,7 @@
   <div class="containerGallery">
     <div class="column">
     @foreach($photos as $photo)
-      <img src="{{$photo->filename}}" />
+      <img src="{{$photo}}" />
     @endforeach
     </div>
   </div>
