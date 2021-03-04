@@ -626,17 +626,19 @@ button:hover {
     
 }
 
-#newAlbum {
+#bottom {
     display: flex;
     justify-content: center;
     text-decoration: none;
     color: black;
 }
 
-#newAlbum:hover {
+#bottom:hover {
     color: #ffd000;
     transition: all ease-in-out 0.4s;
 }
+
+
 .createphoto-container {
     display: flex;
     flex-direction: column;

@@ -21,15 +21,16 @@
     
 }
 
-#newAlbum {
+#bottom {
     display: flex;
     justify-content: center;
     text-decoration: none;
     color: black;
 }
 
-#newAlbum:hover {
+#bottom:hover {
     color: #ffd000;
     -webkit-transition: all ease-in-out 0.4s;
     transition: all ease-in-out 0.4s;
 }
+

@@ -35,7 +35,7 @@
                     @endforeach
                 </table>
 
-                <a id="newAlbum" href="{{ route('albumCreate') }}">New Album</a>
+                <a id="bottom" href="{{ route('albumCreate') }}">New Album</a>
 
             </div>
         </div>

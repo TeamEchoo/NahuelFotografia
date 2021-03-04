@@ -1,71 +1,78 @@
-
 <x-head>
-<x-logoAdmin />
+    <x-logoAdmin />
 
-    <form action="{{ route('albumEdit', $album->id) }}" method="POST">
-    
-        @method("PUT")
-        @csrf
+    <h1 class="dash">Edit Dashboard</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <table class="tablee">
+                    <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th>Epigraph</th>
+                            <th>Person</th>
+                            <th>Link</th>
+                            <th>Picture</th>
+                            <th>Cover</th>
+                        </tr>
+                    </thead>
 
-        <label for="title"></label>
-        <input name="title" type="text" value="{{$album->title}}">
+                    @foreach($photos as $photo)
 
-        <label for="category">Category:</label>
-        <select name="category" id="category">
-            <option value="{{$album->category}}">{{$album->category}}</option>
-            <option value="Home">Home</option>
-            <option value="Skateboarding">Skateboarding</option>
-            <option value="Portraits">Portraits</option>
-        </select>
+                    <tr>
+                        <td> {{ $photo->title }} </td>
+                        <td> {{ $photo->epigraph }} </td>
+                        <td>{{ $photo->person }} </td>
+                        <td> {{ $photo->link }} </td>
+                        <td> {{ $photo->image_path }} </td>
+                        <td> {{ $photo->cover_image }} <input name="cover_image" type="checkbox" value=true></td>
 
-        <a href="{{ route( 'albumUpdate', $album->id ) }}">
-            <input type="submit" value="Edit">
-        </a>
+                        <td><a href="{{ route('photoEdit', $photo->id) }}"><i class="far fa-edit"></i></td></a>
+                        <td>
+                            <form action="{{ route('photoDelete', $photo->id) }}" method="POST">
+                                @csrf
+                                @method("DELETE")
+                                <button type="submit">
+                                    <i class="far fa-trash-alt"></i>
+                                </button>
+                            </form>
+                        </td>
+                    </tr>
 
 
-        <a href="{{ route('photoCreate', $album->id) }}">Add new Photo</a>
+                    @endforeach
+                </table>   
+            </div>
+        </div>
+    </div>
 
 
-    </form>
 
-    <a href="{{ route('album') }}">Cancel</a>
+                <div class="leftForm">
+                <form action="{{ route('albumEdit', $album->id) }}" method="POST">
 
-    <table>
-        <tr>
-            <th>Title</th>
-            <th>Epigraph</th>
-            <th>Person</th>
-            <th>Link</th>
-            <th>Picture</th>
-            <th>Cover</th>
-        </tr>
-        
-        @foreach($photos as $photo)
-        
-        <tr>
-            <td> {{ $photo->title }} </td>
-            <td> {{ $photo->epigraph }} </td>
-            <td>{{ $photo->person }} </td> 
-            <td> {{ $photo->link }} </td>
-            <td> {{ $photo->image_path }} </td>
-            <td> {{ $photo->cover_image }} </td>
-            <td><a href="{{ route('photoEdit', $photo->id) }}"><i class="far fa-edit"></i></td></a>
-            <td>
-                <form action="{{ route('photoDelete', $photo->id) }}" method="POST">
+                    @method("PUT")
                     @csrf
-                    @method("DELETE")
-                    <button type="submit">
-                        <i class="far fa-trash-alt"></i>
-                    </button>
+ 
+                    <label for="title"></label>
+                    <input name="title" type="text" value="{{$album->title}}">
+
+                    <label for="category">Category:</label>
+                  
+                    <select name="category" id="category">
+                        <option value="{{$album->category}}">{{$album->category}}</option>
+                        <option value="Home">Home</option>
+                        <option value="Skateboarding">Skateboarding</option>
+                        <option value="Portraits">Portraits</option>
+                    </select>
+
+                    <a href="{{ route( 'albumUpdate', $album->id ) }}">
+                        <input type="submit" value="Edit">
+                    </a> 
+               
                 </form>
-            </td>
-        </tr>
-        
-        
-        @endforeach 
-    </table>
-
+ 
+                <a id="bottom" href="{{ route('photoCreate', $album->id) }}">Add new Photo</a>
+                <a id="bottom" href="{{ route('album') }}">Cancel</a>
+            </div>
 </x-head>
-
-
-    
