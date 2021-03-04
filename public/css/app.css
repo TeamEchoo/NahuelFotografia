@@ -660,7 +660,6 @@ button:hover {
     padding-bottom: 2px;
     vertical-align: top;
     border-color: #dee2e6;
-    
 }
 
 #bottom {
@@ -675,7 +674,85 @@ button:hover {
     transition: all ease-in-out 0.4s;
 }
 
+.inputTitle {
+    width: 90%;
+}
 
+.wrapper {
+    padding-top: 50px;
+    padding-left: 175px;
+    margin: 15px;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+}
+
+.title-column {
+    height: 100px;
+}
+
+.category-column {
+    height: 100px;
+    justify-content: center;
+}
+
+.categoryTitleOne {
+    margin-bottom: 25px;
+    padding-right: 20px;
+    font-size: 19px;
+    padding-bottom: 5px;
+}
+
+.categoryTitle {
+    padding-right: 20px;
+    font-size: 19px;
+    padding-bottom: 5px;
+}
+
+.categorySelect {
+    width: 55%;
+}
+
+.downButtons {
+    display: flex;
+    justify-content: center;
+}
+
+.addButton {
+    margin-right: 200px;
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    font-weight: bold;
+}
+
+.cancelButton {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    font-weight: bold;
+}
+
+.addButton:hover {
+    color: #ffd000;
+    transition: all ease-in-out 0.4s;
+}
+
+.cancelButton:hover {
+    color: #ffd000;
+    transition: all ease-in-out 0.4s;
+}
 .createphoto-container {
     display: flex;
     flex-direction: column;
