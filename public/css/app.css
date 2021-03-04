@@ -72,7 +72,7 @@ ul {
 
 .adminLogo {
     display: flex;
-    padding-top: 20px;
+    padding-top: 25px;
     flex-direction: column;
     margin-left: 0px;
     align-items: left;
@@ -85,14 +85,15 @@ ul {
 
 .adminSubLogo {
     color: black;
-    font-size: 11px;
-    margin-top: -10px;
-    padding-left: 90px;
-    
+    font-size: 10px;
+    margin-top: -7px;
+    padding-left: 100px;
+    font-weight: 200;
 }
 .noDeco{
     text-decoration: none;
 }
+
 
 .nav-link {
     margin-left: 25px;
@@ -310,7 +311,7 @@ body {
     top: 0;
 }
 .container-fluid {
-    margin-top: 15px;
+    margin-top: 10px;
 }
 .logo {
     display: flex;
@@ -318,7 +319,7 @@ body {
     margin-left: 0px;
     align-items: center;
     cursor: pointer;
-    padding-left: 45px;
+    padding-left: 30px;
 }
 .container-fluid h1 {
     font-size: 20px;
@@ -422,17 +423,17 @@ body {
     background-color: white;
 }
 .contact-info .fa {
-    padding-top: 50px;
+    padding-top: 30px;
 }
 #paddingContact {
-    padding-top: 140px;
+    padding-top: 100px;
     padding-left: 100px;
 }
 #paddingContactImage {
-    padding-top: 115px;
+    padding-top: 50px;
 }
 #PaddingDescription {
-    padding-top: 20px;
+    padding-top: 5px;
 }
 #contact .form-control {
     border: none;
@@ -452,11 +453,9 @@ body {
     height: 55px;
 }
 #contact button#submit {
-    padding-left: 10px;
-    padding: 10px;
+   padding-right: 100px;
+    
     border: none;
-    
-    
     color: #000000;
     height: 50px;
     margin-top: 50px;
@@ -466,7 +465,7 @@ body {
 }
 @media only screen and (max-width: 768px) {
     #paddingContact {
-        padding-left: 10px;
+        padding-left: 50px;
         padding-top: 50px;
     }
     #paddingContactImage {
@@ -474,7 +473,7 @@ body {
         padding-left: 60px;
     }
     #contact button#submit{
-        padding-left: 10px;
+        padding-left: 40px;
     }
 }
 body {
@@ -499,11 +498,14 @@ body {
 
 input {
     border: none;
+    background-color: transparent;
+    border-radius: 0px;
     border-bottom: 2px solid #000000;
 }
 
 select {
     border: none;
+    border-radius: 0px;
     border-bottom: 2px solid #000000;
 }
 
@@ -517,8 +519,6 @@ select {
     flex-direction: row;
     align-items: center;
 }
-
-
 
 label {
     color: #706a5d;
@@ -557,20 +557,17 @@ button:hover {
     margin-top: 30px;
 }
 
-
 @media only screen and (max-width: 768px) {
     div {
-        display: flex; 
+        display: flex;
         flex-direction: column;
         align-items: flex-start;
         margin: 0px 10px 10px 0px;
     }
-
     label {
         margin-left: 0;
         margin-bottom: 8px;
     }
-
     .imputs {
         display: flex;
         flex-direction: column;
@@ -578,34 +575,57 @@ button:hover {
         margin: 0;
         padding: 20px;
     }
-
     .imputs2 {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         padding-left: 20px;
     }
-
     .imputs3 {
         display: flex;
         align-self: center;
-        flex-direction: row;        
+        flex-direction: row;
     }
-
     .last-button {
         margin: 0;
     }
-
     .select {
         margin-top: 15px;
     }
 }
-.dash{
+.dash {
     text-align: center;
-    padding-top: 10px;
+    padding-top: 20px;
+    padding-bottom: 40px;
 }
-.table{
-    display: table;
+
+.tablee {
+    --bs-table-bg: transparent;
+    --bs-table-striped-color: #212529;
+    --bs-table-striped-bg: rgba(0, 0, 0, 0.05);
+    --bs-table-active-color: #212529;
+    --bs-table-active-bg: rgba(0, 0, 0, 0.1);
+    --bs-table-hover-color: #212529;
+    --bs-table-hover-bg: rgba(0, 0, 0, 0.075);
+    width: 100%;
+    margin-bottom: 2rem;
+    color: #212529;
+    padding-bottom: 2px;
+    vertical-align: top;
+    border-color: #dee2e6;
+    
+}
+
+#newAlbum {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    color: black;
+}
+
+#newAlbum:hover {
+    color: #ffd000;
+    transition: all ease-in-out 0.4s;
 }
 .createphoto-container {
     display: flex;

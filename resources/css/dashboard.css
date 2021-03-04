@@ -1,7 +1,35 @@
-.dash{
+.dash {
     text-align: center;
-    padding-top: 10px;
+    padding-top: 20px;
+    padding-bottom: 40px;
 }
-.table{
-    display: table;
+
+.tablee {
+    --bs-table-bg: transparent;
+    --bs-table-striped-color: #212529;
+    --bs-table-striped-bg: rgba(0, 0, 0, 0.05);
+    --bs-table-active-color: #212529;
+    --bs-table-active-bg: rgba(0, 0, 0, 0.1);
+    --bs-table-hover-color: #212529;
+    --bs-table-hover-bg: rgba(0, 0, 0, 0.075);
+    width: 100%;
+    margin-bottom: 2rem;
+    color: #212529;
+    padding-bottom: 2px;
+    vertical-align: top;
+    border-color: #dee2e6;
+    
+}
+
+#newAlbum {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    color: black;
+}
+
+#newAlbum:hover {
+    color: #ffd000;
+    -webkit-transition: all ease-in-out 0.4s;
+    transition: all ease-in-out 0.4s;
 }

@@ -72,7 +72,7 @@ ul {
 
 .adminLogo {
     display: flex;
-    padding-top: 20px;
+    padding-top: 25px;
     flex-direction: column;
     margin-left: 0px;
     align-items: left;
@@ -85,14 +85,15 @@ ul {
 
 .adminSubLogo {
     color: black;
-    font-size: 11px;
-    margin-top: -10px;
-    padding-left: 90px;
-    
+    font-size: 10px;
+    margin-top: -7px;
+    padding-left: 100px;
+    font-weight: 200;
 }
 .noDeco{
     text-decoration: none;
 }
+
 
 .nav-link {
     margin-left: 25px;

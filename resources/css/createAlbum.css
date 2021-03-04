@@ -20,11 +20,14 @@ body {
 
 input {
     border: none;
+    background-color: transparent;
+    border-radius: 0px;
     border-bottom: 2px solid #000000;
 }
 
 select {
     border: none;
+    border-radius: 0px;
     border-bottom: 2px solid #000000;
 }
 
@@ -38,8 +41,6 @@ select {
     flex-direction: row;
     align-items: center;
 }
-
-
 
 label {
     color: #706a5d;
@@ -78,20 +79,17 @@ button:hover {
     margin-top: 30px;
 }
 
-
 @media only screen and (max-width: 768px) {
     div {
-        display: flex; 
+        display: flex;
         flex-direction: column;
         align-items: flex-start;
         margin: 0px 10px 10px 0px;
     }
-
     label {
         margin-left: 0;
         margin-bottom: 8px;
     }
-
     .imputs {
         display: flex;
         flex-direction: column;
@@ -99,24 +97,20 @@ button:hover {
         margin: 0;
         padding: 20px;
     }
-
     .imputs2 {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         padding-left: 20px;
     }
-
     .imputs3 {
         display: flex;
         align-self: center;
-        flex-direction: row;        
+        flex-direction: row;
     }
-
     .last-button {
         margin: 0;
     }
-
     .select {
         margin-top: 15px;
     }
