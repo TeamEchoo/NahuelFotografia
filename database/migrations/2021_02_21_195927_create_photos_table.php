@@ -20,7 +20,7 @@ class CreatePhotosTable extends Migration
             $table->string('person')->nullable();
             $table->string('filename');
             $table->string('link')->nullable();
-            $table->boolean('cover_image')->nullable()->default(false);
+            $table->boolean('cover_image');
             $table->unsignedBigInteger('album_id');
             $table->timestamps();
 
