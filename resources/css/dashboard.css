@@ -18,7 +18,6 @@
     padding-bottom: 2px;
     vertical-align: top;
     border-color: #dee2e6;
-    
 }
 
 #bottom {
@@ -34,3 +33,79 @@
     transition: all ease-in-out 0.4s;
 }
 
+.inputTitle {
+    width: 90%;
+}
+
+.wrapper {
+    padding-top: 50px;
+    margin: 15px;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+}
+
+.title-column {
+    height: 100px;
+}
+
+.category-column {
+    height: 100px;
+    justify-content: center;
+}
+
+.categoryTitleOne {
+    margin-bottom: 22px;
+    padding-right: 20px;
+    font-size: 19px;
+    padding-bottom: 5px;
+}
+
+.categoryTitle {
+    padding-right: 20px;
+    font-size: 19px;
+    padding-bottom: 5px;
+}
+
+.categorySelect {
+    width: 55%;
+}
+
+.downButtons {
+    display: flex;
+    justify-content: center;
+}
+
+.addButton {
+    margin-right: 200px;
+    text-decoration: none;
+    color: black;
+}
+
+.cancelButton {
+    text-decoration: none;
+    color: black;
+}
+
+.addButton:hover {
+    color: #ffd000;
+    -webkit-transition: all ease-in-out 0.4s;
+    transition: all ease-in-out 0.4s;
+}
+
+.cancelButton:hover {
+    color: #ffd000;
+    -webkit-transition: all ease-in-out 0.4s;
+    transition: all ease-in-out 0.4s;
+}
