@@ -1,0 +1,116 @@
+.dash {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+
+.tablee {
+    --bs-table-bg: transparent;
+    --bs-table-striped-color: #212529;
+    --bs-table-striped-bg: rgba(0, 0, 0, 0.05);
+    --bs-table-active-color: #212529;
+    --bs-table-active-bg: rgba(0, 0, 0, 0.1);
+    --bs-table-hover-color: #212529;
+    --bs-table-hover-bg: rgba(0, 0, 0, 0.075);
+    width: 100%;
+    margin-bottom: 2rem;
+    color: #212529;
+    padding-bottom: 2px;
+    vertical-align: top;
+    border-color: #dee2e6;
+}
+
+#bottom {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    color: black;
+}
+
+#bottom:hover {
+    color: #ffd000;
+    -webkit-transition: all ease-in-out 0.4s;
+    transition: all ease-in-out 0.4s;
+}
+
+.inputTitle {
+    width: 90%;
+}
+
+.wrapper {
+    padding-top: 50px;
+    padding-left: 175px;
+    margin: 15px;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+}
+
+.title-column {
+    height: 100px;
+}
+
+.category-column {
+    height: 100px;
+    justify-content: center;
+}
+
+.categoryTitleOne {
+    margin-bottom: 25px;
+    padding-right: 20px;
+    font-size: 19px;
+    padding-bottom: 5px;
+}
+
+.categoryTitle {
+    padding-right: 20px;
+    font-size: 19px;
+    padding-bottom: 5px;
+}
+
+.categorySelect {
+    width: 55%;
+}
+
+.downButtons {
+    display: flex;
+    justify-content: center;
+}
+
+.addButton {
+    margin-right: 200px;
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    font-weight: bold;
+}
+
+.cancelButton {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    font-weight: bold;
+}
+
+.addButton:hover {
+    color: #ffd000;
+    -webkit-transition: all ease-in-out 0.4s;
+    transition: all ease-in-out 0.4s;
+}
+
+.cancelButton:hover {
+    color: #ffd000;
+    -webkit-transition: all ease-in-out 0.4s;
+    transition: all ease-in-out 0.4s;
+}

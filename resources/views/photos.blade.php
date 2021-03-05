@@ -1,23 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nahuel</title>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js">
-  </script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<x-head>
+<x-navBar />
 
-</head>
-<body>
     <div class="container">
       @if(session('success'))
         <div class="alert alert-success">
           {{ session('success') }}
         </div> 
         @endif
-        
         
         <h2>Photo Gallery</h2>
         
@@ -33,5 +22,48 @@
         <h1>No hay fotos para mostrar</h1>
         @endif
     </div>
-</body>
-</html>
+@endsection
+    
+    <div class="container">
+  @if(session('success'))
+        <div class="alert alert-success">
+          {{ session('success') }}
+        </div> 
+        @endif
+        @if (count($errors) > 0)
+      <div class="alert alert-danger">
+        <strong>Whoops!</strong> There were some problems with your input.<br><br>
+        <ul>
+          @foreach ($errors->all() as $error)
+              <li>{{ $error }}</li>
+          @endforeach
+        </ul>
+      </div>
+      @endif
+    <h3 class="jumbotron">Add new photo</h3>
+  <form method="post" action="{{url('photo')}}" enctype="multipart/form-data">
+        @csrf
+        <div class="row">
+          <div class="col-md-4"></div>
+          <div class="form-group col-md-4">
+          <input type="file" name="filename" accept="image/*" class="form-control">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4"></div>
+          <div class="form-group col-md-4">
+          <button type="submit" class="btn btn-success" style="margin-top:10px">Upload Image</button>
+          </div>
+        </div>
+        @if($image)
+   	    <div class="row">
+         <div class="col-md-8">
+              <strong>Original Image:</strong>
+              <br/>
+              <img src="{{$image->filename}}" />
+        </div>
+   		</div>
+        @endif       
+  </form>
+  </div>
+</x-head>
