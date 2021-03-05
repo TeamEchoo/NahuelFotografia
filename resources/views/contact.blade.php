@@ -1,7 +1,7 @@
 <x-head>
 <x-navBar />
-
-
+​
+​
 <section id="contact" class="parallax-section">
     <div class="container">
         <div class="row">
@@ -48,5 +48,5 @@
         </div>
     </div>
 </section>
-
+​
 </x-head>

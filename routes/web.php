@@ -20,6 +20,9 @@ Route::get('/photos', function () {
     return view('photos');
 });
 
+Route::get('/contact', function(){
+    return view('contact');
+})->name('contact');
 
 //ADMIN VIEW
 

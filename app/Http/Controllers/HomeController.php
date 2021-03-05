@@ -13,10 +13,7 @@ class HomeController extends Controller
      *
      * @return void
      */
-    public function __construct()
-    {
-        
-    }
+    
 
     /**
      * Show the application dashboard.
@@ -29,13 +26,15 @@ class HomeController extends Controller
         return view('home',['photos' => $photos]);
     }
 
-    public function album($category){
+    public function album($category)
+    {
 
         $albums= Album::where('category', $category)->get();
         return view('album', ['albums' => $albums]);
     }
 
-    public function gallery($id){
+    public function gallery($id)
+    {
 
         $album = Album::find($id);
         $photos= $album->photos()->get();
@@ -43,8 +42,10 @@ class HomeController extends Controller
     }
 
 
-    public function contact(){
+    public function contact()
+    {
 
+        dd('hola');
         return view('contact');
     
     }
