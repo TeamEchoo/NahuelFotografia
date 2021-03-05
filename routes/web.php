@@ -20,6 +20,9 @@ Route::get('/photos', function () {
     return view('photos');
 });
 
+Route::get('/contact', function(){
+    return view('contact');
+})->name('contact');
 
 //ADMIN VIEW
 
@@ -43,4 +46,5 @@ Route::delete('/album/photo/{id}', [PhotoController::class, 'destroy'])->name('p
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/{category}', [HomeController::class, 'album'])->name('categoryAlbum');
 Route::get('/gallery/{id}', [HomeController::class, 'gallery'])->name('gallery');
-Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
+
+

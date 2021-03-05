@@ -18,8 +18,8 @@ class MessagesController extends Controller
 
         Mail::to('ismaelcrespin18@gmail.com')->queue(new MessageReceived($message));
 
-       
 
-        return 'Mensaje enviado';
+
+        return back()->with('flash', 'tu mensaje fue enviado');
     }
 }

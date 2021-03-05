@@ -22,9 +22,9 @@
 
                     <select class="categorySelect" name="category" id="category">
                         <option value="{{$album->category}}">{{$album->category}}</option>
-                        <option value="Home">Home</option>
-                        <option value="Skateboarding">Skateboarding</option>
-                        <option value="Portraits">Portraits</option>
+                        <option value="Overview">Overview</option>
+                        <option value="Editorial">Editorial</option>
+                        <option value="More">More</option>
                     </select>
 
                     <a href="{{ route( 'albumUpdate', $album->id ) }}">
