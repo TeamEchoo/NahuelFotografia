@@ -81,6 +81,7 @@ ul {
     text-decoration: none;
     color: black;
     font-size: 20px;
+    letter-spacing: 1.5px;
 }
 
 .adminSubLogo {
@@ -89,6 +90,8 @@ ul {
     margin-top: -7px;
     padding-left: 100px;
     font-weight: 200;
+    letter-spacing: 1px;
+    opacity: .3;
 }
 .noDeco{
     text-decoration: none;
