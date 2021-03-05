@@ -41,10 +41,6 @@ Route::delete('/album/photo/{id}', [PhotoController::class, 'destroy'])->name('p
 
 ///WEBPAGE
 Route::get('/', [HomeController::class, 'index'])->name('home');
-Route::get('/{category}', [HomeController::class, 'album'])->name('categoryAlbum');
+Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
 Route::get('/gallery/{id}', [HomeController::class, 'gallery'])->name('gallery');
-Route::get('/contact', function(){
-    return view('contact');
-})->name('contact');
-
-
+Route::get('/Category/{category}', [HomeController::class, 'album'])->name('categoryAlbum');
