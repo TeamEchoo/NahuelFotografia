@@ -30,6 +30,7 @@ body {
     align-items: center;
     cursor: pointer;
     padding-left: 30px;
+    letter-spacing: 1.5px;
 }
 .container-fluid h1 {
     font-size: 20px;

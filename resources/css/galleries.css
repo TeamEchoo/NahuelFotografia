@@ -66,6 +66,35 @@ ul {
     align-content: flex-end;
     padding-bottom: 0;
 }
+
+.adminLogo {
+    display: flex;
+    padding-top: 25px;
+    flex-direction: column;
+    margin-left: 0px;
+    align-items: left;
+    cursor: pointer;
+    padding-left: 45px;
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    letter-spacing: 1.5px;
+}
+
+.adminSubLogo {
+    color: black;
+    font-size: 10px;
+    margin-top: -7px;
+    padding-left: 100px;
+    font-weight: 200;
+    letter-spacing: 1px;
+    opacity: .3;
+}
+.noDeco{
+    text-decoration: none;
+}
+
+
 .nav-link {
     margin-left: 25px;
 }

@@ -66,6 +66,35 @@ ul {
     align-content: flex-end;
     padding-bottom: 0;
 }
+
+.adminLogo {
+    display: flex;
+    padding-top: 25px;
+    flex-direction: column;
+    margin-left: 0px;
+    align-items: left;
+    cursor: pointer;
+    padding-left: 45px;
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    letter-spacing: 1.5px;
+}
+
+.adminSubLogo {
+    color: black;
+    font-size: 10px;
+    margin-top: -7px;
+    padding-left: 100px;
+    font-weight: 200;
+    letter-spacing: 1px;
+    opacity: .3;
+}
+.noDeco{
+    text-decoration: none;
+}
+
+
 .nav-link {
     margin-left: 25px;
 }
@@ -308,6 +337,7 @@ body {
     align-items: center;
     cursor: pointer;
     padding-left: 30px;
+    letter-spacing: 1.5px;
 }
 .container-fluid h1 {
     font-size: 20px;
@@ -559,17 +589,17 @@ body {
     background-color: white;
 }
 .contact-info .fa {
-    padding-top: 30px;
+    padding-top: 0.5vh;
 }
 #paddingContact {
-    padding-top: 100px;
-    padding-left: 100px;
+    padding-top: 10vh;
+    padding-left: 10vh;
 }
 #paddingContactImage {
-    padding-top: 50px;
+    padding-top: 8vh;
 }
 #PaddingDescription {
-    padding-top: 5px;
+    padding-top: 0.2vh;
 }
 #contact .form-control {
     border: none;
@@ -589,7 +619,7 @@ body {
     height: 55px;
 }
 #contact button#submit {
-   padding-right: 100px;
+   padding-right: 30vh;
     
     border: none;
     color: #000000;
