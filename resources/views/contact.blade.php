@@ -1,6 +1,7 @@
-@extends('layouts.app')
-@section('content')
-<link href="{{ asset('css/contactMail.css') }}" rel="stylesheet" type="text/css">
+<x-head>
+<x-navBar />
+
+
 <section id="contact" class="parallax-section">
     <div class="container">
         <div class="row">
@@ -15,21 +16,15 @@
                         <p><i class="fa fa-comment"></i> <a href="mailto:info@company.com">nahuel@nahuelmartinez</a></p>
                         <p><i class="fa fa-phone"></i>+49 (0)1637000359</p>
                         <a href="https://www.instagram.com/nahhuelmarttinezphoto/"><img src="https://image.flaticon.com/icons/png/512/87/87390.png" width="10%"></a>
-
                     </div>
                 </div>
             </div>
-
-
             <div id="paddingContact" class="col-md-7 col-sm-10">
-
-
                 <!-- CONTACT FORM HERE -->
                 <div class="wow fadeInUp" data-wow-delay="0.4s">
                     <form id="contact-form" action="#" method="POST" action="{{ route('contact')}}">
                         {{ csrf_field() }}
                         <!-- verificacion para ataques de identidad (419) -->
-
                         <div class="col-md-6 col-sm-6">
                             <input type="text" class="form-control" name="name" placeholder="Name" required="">
                         </div>
@@ -50,28 +45,8 @@
                     </form>
                 </div>
             </div>
-
-
-
         </div>
     </div>
 </section>
 
-
-
-
-
-
-
-
-
-
-
-
-
-</body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
-
-</html>
-
-@endsection
+</x-head>

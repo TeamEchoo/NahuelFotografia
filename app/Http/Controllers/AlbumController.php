@@ -3,13 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\ImageModel;
-use Intervention\Image\Facades\Image;
-use Illuminate\Support\Str;
-use Illuminate\Support\Facades\DB;
+use App\Models\Album;
+use App\Models\Photo;
 
-
-class ImageController extends Controller
+class AlbumController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -18,8 +15,9 @@ class ImageController extends Controller
      */
     public function index()
     {
-        $image = ImageModel::all();
-        return view('home', ['images' => $image]);
+        $albums= Album::all();
+        $photos = Photo::all();
+        return view('admin.adminDashboard', compact('albums', "photos"));
     }
 
     /**
@@ -29,8 +27,7 @@ class ImageController extends Controller
      */
     public function create()
     {
-        $image = ImageModel::latest()->first();
-        return view('createImage', ['images' => $image]);
+        return view('admin.createAlbum');
     }
 
     /**
@@ -41,33 +38,25 @@ class ImageController extends Controller
      */
     public function store(Request $request)
     {
-        
-        $request->validate([
-            'filename' => 'required|image|required|mimes:jpeg,png,jpg,gif,svg'
-            ]);
-            
-        $image = Str::random(10) . $request->file('filename')->getClientOriginalName();
-            //podria ser con time.now()
-        ImageModel::create([
-            'filename' => '/storage/images/' . $image
-            ]);
+        $album = Album::create([
+            "title" => $request->title,
+            "category" => $request->category,
+            "cover_image" => $request->cover_image
+        ]);
 
-        $image_path = public_path() . '/storage/images/' . $image;
-            
-        Image::make($request->file('filename'))->save($image_path );
-                    
-        return redirect('/photos')->with('success', 'Your photo has been successfully uploaded');
-                
+        $album->save();
+        return redirect()->route('album');
     }
-            /**
-             * Display the specified resource.
+
+    /**
+     * Display the specified resource.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function show($id)
     {
-        //
+       //
     }
 
     /**
@@ -78,7 +67,9 @@ class ImageController extends Controller
      */
     public function edit($id)
     {
-        //
+        $album = Album::find($id);
+        $photos = $album->photos()->get();
+        return view('admin.editAlbum', compact('album', 'photos'));
     }
 
     /**
@@ -90,7 +81,9 @@ class ImageController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $album= Album::find($id);
+        $album->update($request->all());
+        return redirect()->route('album');
     }
 
     /**
@@ -101,7 +94,8 @@ class ImageController extends Controller
      */
     public function destroy($id)
     {
-        $this->image->delete($id);
-        return back()->with('Success', 'Your photo has been deleted successfully');
+        $album= Album::find($id);
+        $album->delete();
+        return redirect()->route('album');
     }
 }

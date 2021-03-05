@@ -7,7 +7,7 @@ use Tests\TestCase;
 use App\Http\Controllers\ImageController;
 
 
-class ImagesTest extends TestCase
+class IndexImageTest extends TestCase
 {
 
     use RefreshDatabase;

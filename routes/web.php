@@ -1,8 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ImageController;
-use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\AlbumController;
+use App\Http\Controllers\PhotoController;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,31 +16,35 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 
-Route::get('/', [ImageController::class, 'index'])->name('home');
-
-
-
-
-Route::view('/contact', 'contact')->name('contact');
-Route::post('/contact', 'App\Http\Controllers\MessagesController@store');
-
-
-
-
-
-
-
 Route::get('/photos', function () {
     return view('photos');
 });
 
-//esto lo estoy inventando :D
-Route::get('/photos',[ImageController::class, 'index'])->name('photoIndex');
-Route::get('/photo', [ImageController::class, 'create'])->name('photoCreate');
-Route::post('/photo',[ImageController::class, 'store'])->name('photoStore');
-Route::get('/photo/{$id}',[ImageController::class, 'edit'])->name('photoEdit');
-Route::put('/photo/{$id}',[ImageController::class,'update'])->name('photoUpdate');
-Route::delete('/photo/{$id}',[ImageController::class,'delete'])->name('photoDelete');
-Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+//ADMIN VIEW
+
+//album
+
+Route::get('/album', [AlbumController::class, 'index'])->name('album');
+Route::get('/newalbum', [AlbumController::class, 'create'])->name('albumCreate');
+Route::post('/album', [AlbumController::class, 'store'])->name('albumStore');
+Route::get('/album/{id}', [AlbumController::class, 'edit'])->name('albumEdit');
+Route::put('/album/{id}', [AlbumController::class, 'update'])->name('albumUpdate');
+Route::delete('/album/{id}', [AlbumController::class, 'destroy'])->name('albumDelete');
+
+//PHOTOS
+Route::get('/album/{id}/newphoto', [PhotoController::class, 'create'])->name('photoCreate');
+Route::post('/album/{id}/newphoto', [PhotoController::class, 'store'])->name('photoStore');
+Route::get('/album/photo/{id}', [PhotoController::class, 'edit'])->name('photoEdit');
+Route::put('/album/photo/{id}', [PhotoController::class, 'update'])->name('photoUpdate');
+Route::delete('/album/photo/{id}', [PhotoController::class, 'destroy'])->name('photoDelete');
+
+///WEBPAGE
+Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/{category}', [HomeController::class, 'album'])->name('categoryAlbum');
+Route::get('/gallery/{id}', [HomeController::class, 'gallery'])->name('gallery');
+Route::get('/contact', function(){
+    return view('contact');
+})->name('contact');
+
+
