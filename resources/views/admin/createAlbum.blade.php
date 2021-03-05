@@ -19,9 +19,9 @@
                 <div class="select">
                     <label for="category">Category:</label>
                     <select name="category" id="category">
-                        <option value="Home">Home</option>
-                        <option value="Skateboarding">Skateboarding</option>
-                        <option value="Portraits">Portraits</option>
+                        <option value="Overview">Overview</option>
+                        <option value="Skateboarding">Editorial</option>
+                        <option value="More">More</option>
                     </select>
                 </div>    
             </div>
