@@ -44,5 +44,3 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/{category}', [HomeController::class, 'album'])->name('categoryAlbum');
 Route::get('/gallery/{id}', [HomeController::class, 'gallery'])->name('gallery');
 Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
-
-
