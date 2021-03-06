@@ -22,6 +22,7 @@ body {
 .container-fluid {
     margin-top: 10px;
 }
+
 .logo {
     display: flex;
     flex-direction: column;
@@ -29,12 +30,14 @@ body {
     align-items: center;
     cursor: pointer;
     padding-left: 30px;
+    letter-spacing: 1.5px;
 }
 .container-fluid h1 {
     font-size: 20px;
     margin: 0;
     letter-spacing: 0.3px;
 }
+
 .container-fluid h3 {
     display: flex;
     align-items: flex-end;
@@ -42,9 +45,11 @@ body {
     margin: 0;
     color: #706a5d;
 }
+
 ul {
     list-style-type: none;
 }
+
 .navbar__menu li a {
     display: flex;
     cursor: pointer;
@@ -61,11 +66,9 @@ ul {
     justify-content: flex-end;
     align-content: flex-end;
     padding-bottom: 0;
-
 }
 .nav-link {
     margin-left: 25px;
-
 }
 .gal-item {
     overflow: hidden;
@@ -80,7 +83,12 @@ ul {
     width: auto;
     object-fit: cover;
 }
-/*GALLERY*/
+/********GALLERY************/
+#galleryTitle {
+    display: flex;
+    justify-content: center;
+}
+
 .containerGallery {
     padding-left: 50px;
     padding-right: 67px;
@@ -89,32 +97,137 @@ ul {
     margin-bottom: 20px;
     margin-top: 30px;
 }
-.column {
+
+#photos {
     line-height: 0;
     -webkit-column-count: 3;
-    -webkit-column-gap:   10px;
-    -moz-column-count:    3;
-    -moz-column-gap:      10px;
-    column-count:         3;
-    column-gap:           20px;  
-  }
-  .column img {
+    -webkit-column-gap: 10px;
+    -moz-column-count: 3;
+    -moz-column-gap: 10px;
+    column-count: 3;
+    column-gap: 20px;
+}
+#photos img {
     width: 100% !important;
     height: auto !important;
     margin: 10px;
-  }
+}
+
+#photos img:hover {
+    filter: grayscale(100) opacity(0.9);
+}
+
+
+/**********MODAL********************/
+#myImg {
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#myImg:hover {
+    filter: grayscale(100) opacity(0.9);
+}
+
+/* The Modal (background)  opacity: 0.7;*/
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    padding-top: 100px;
+    /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: none;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(20, 5, 3, 0.9);
+    /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+    display: flex;
+    margin: auto !important;
+    padding: 0;
+
+    max-width: 500px;
+}
+
+
+/* Add Animation */
+.modal-content, #caption {
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {
+        -webkit-transform: scale(0);
+    }
+    to {
+        -webkit-transform: scale(1);
+    }
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 35px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 60px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover, .close:focus {
+    color: #d4af37;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px) {
+    .modal-content {
+        width: 100%;
+    }
+}
+
+
+
+/*******RESPONSIVE*******/
+
 @media screen and (max-width: 800px) {
-    .column {
+    #photos {
         line-height: 0;
         -webkit-column-count: 2;
-        -webkit-column-gap:   10px;
-        -moz-column-count:    3;
-        -moz-column-gap:      10px;
-        column-count:         2;
-        column-gap:           20px;  
-      }
+        -webkit-column-gap: 10px;
+        -moz-column-count: 3;
+        -moz-column-gap: 10px;
+        column-count: 2;
+        column-gap: 20px;
+    }
 
-      #header.container-fluid {
+    #header.container-fluid {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -130,16 +243,17 @@ ul {
         align-items: flex-end !important;
     }
 }
+
 @media screen and (max-width: 600px) {
-    .column {
+    #photos {
         line-height: 0;
         -webkit-column-count: 1;
-        -webkit-column-gap:   10px;
-        -moz-column-count:    3;
-        -moz-column-gap:      10px;
-        column-count:         1;
-        column-gap:           20px;  
-      }
+        -webkit-column-gap: 10px;
+        -moz-column-count: 3;
+        -moz-column-gap: 10px;
+        column-count: 1;
+        column-gap: 20px;
+    }
 
     #header.container-fluid {
         display: flex;

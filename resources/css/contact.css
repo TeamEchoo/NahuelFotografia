@@ -2,17 +2,17 @@ body {
     background-color: white;
 }
 .contact-info .fa {
-    padding-top: 30px;
+    padding-top: 0.5vh;
 }
 #paddingContact {
-    padding-top: 100px;
-    padding-left: 100px;
+    padding-top: 10vh;
+    padding-left: 10vh;
 }
 #paddingContactImage {
-    padding-top: 50px;
+    padding-top: 8vh;
 }
 #PaddingDescription {
-    padding-top: 5px;
+    padding-top: 0.2vh;
 }
 #contact .form-control {
     border: none;
@@ -33,7 +33,7 @@ body {
     height: 55px;
 }
 #contact button#submit {
-   padding-right: 100px;
+   padding-right: 30vh;
     
     border: none;
     color: #000000;

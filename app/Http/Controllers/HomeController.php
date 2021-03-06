@@ -45,7 +45,7 @@ class HomeController extends Controller
     public function contact()
     {
 
-        dd('hola');
+        
         return view('contact');
     
     }

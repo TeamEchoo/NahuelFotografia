@@ -3,14 +3,15 @@
 namespace App\Http\Controllers;
 
 use App\Models\Photo;
-use App\Models\Album;
 use Illuminate\Http\Request;
 use Intervention\Image\Facades\Image;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Storage;
 
 
 class PhotoController extends Controller
 {
+    
     /**
      * Display a listing of the resource.
      *
@@ -100,6 +101,10 @@ class PhotoController extends Controller
     {
         $photo = Photo::find($id);
         $photo->update($request->all());
+
+        $productImage = str_replace('/storage', '', $photo->image_path);
+        Storage::delete('/public' . $productImage);
+
         $album = $photo->album_id;
         return redirect()->route('albumEdit', $album);
     }
@@ -114,6 +119,10 @@ class PhotoController extends Controller
     {
             $photo= Photo::find($id);
             $photo->delete();
+
+            $storagePhoto = str_replace('/storage', '', $photo->image_path);
+
+            Storage::delete('/public/images' . $storagePhoto);
             return redirect()->route('albumEdit', $photo->album_id);
     }
 }
