@@ -118,6 +118,7 @@ class PhotoController extends Controller
     public function destroy($id)
     {
             $photo= Photo::find($id);
+            Storage::delete($photo);
             $photo->delete();
 
             $storagePhoto = str_replace('/storage', '', $photo->image_path);
