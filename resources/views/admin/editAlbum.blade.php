@@ -63,8 +63,13 @@
                         <td>{{ $photo->person }} </td>
                         <td> {{ $photo->link }} </td>
                         <td> <img class="picture" src="{{ $photo->filename }}"> </td>
-                        <td> {{ $photo->cover_image }} <input name="cover_image" type="checkbox" value=true></td>
-
+                        <td> 
+                        @if($photo->cover_image == true)
+                        <input name="cover_image" type="checkbox" checked disabled>
+                        @else
+                        <input name="cover_image" type="checkbox" disabled>
+                        @endif
+                        </td>
                         <td><a href="{{ route('photoEdit', $photo->id) }}"><i class="far fa-edit"></i></td></a>
                         <td>
                             <form action="{{ route('photoDelete', $photo->id) }}" method="POST">

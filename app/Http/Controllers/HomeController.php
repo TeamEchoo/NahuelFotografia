@@ -22,7 +22,12 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $photos= Photo::all();
+        $albums= Album::where('category', 'Overview');
+        $photos= [];
+        foreach($albums as $album){
+            array_push($photos, $album->photos());
+        }
+
         return view('home',['photos' => $photos]);
     }
 
