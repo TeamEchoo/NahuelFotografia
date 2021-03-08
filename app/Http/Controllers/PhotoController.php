@@ -100,13 +100,15 @@ class PhotoController extends Controller
     public function update(Request $request, $id)
     {
         $photo = Photo::find($id);
-        $photo->update($request->all());
+        $photo->update();
 
-        $productImage = str_replace('/storage', '', $photo->image_path);
-        Storage::delete('/public' . $productImage);
+        $path = $request->file('filename')->store('images');
+        dd($path);
+        // $productImage = str_replace('/storage', '', $photo->image_path);
+        // Storage::delete('/public' . $productImage);
 
-        $album = $photo->album_id;
-        return redirect()->route('albumEdit', $album);
+        // $album = $photo->album_id;
+        return redirect()->route('albumEdit', $path);
     }
 
     /**
@@ -117,12 +119,14 @@ class PhotoController extends Controller
      */
     public function destroy($id)
     {
-            $photo= Photo::find($id);
+        $photo = Photo::find($id);
+        if(Storage::disk('local')->exists('images'))
+        {
+            Storage::disk('local')->delete('images');
+        }
+dd();
             $photo->delete();
 
-            $storagePhoto = str_replace('/storage', '', $photo->image_path);
-
-            Storage::delete('/public/images' . $storagePhoto);
-            return redirect()->route('albumEdit', $photo->album_id);
+        return redirect()->route('albumEdit', $photo->album_id);
     }
 }
