@@ -141,20 +141,12 @@ ul {
     margin: 10px;
 }
 
-#photos img:hover {
-    filter: grayscale(100) opacity(0.9);
-}
-
-
 /**********MODAL********************/
 #myImg {
     cursor: pointer;
     transition: 0.3s;
 }
 
-#myImg:hover {
-    filter: grayscale(100) opacity(0.9);
-}
 
 /* The Modal (background)  opacity: 0.7;*/
 .modal {
