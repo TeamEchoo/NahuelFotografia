@@ -9,7 +9,7 @@
 
   @foreach($photos[0] as $photo)
   <div id="photos">
-      <img id="myImg" src="{{ $photo->filename }}" onclick="openModal();"/>
+      <img id="myImg" src="{{ asset($photo->filename) }}" onclick="openModal();"/>
   <div>
     @endforeach
     
