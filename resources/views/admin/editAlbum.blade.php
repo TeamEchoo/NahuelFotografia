@@ -29,7 +29,7 @@
 
                     <a href="{{ route( 'albumUpdate', $album->id ) }}">
                         <button class="cancelButton" type="submit">
-                            <a>Save</a>
+                        Save
                         </button>
                     </a>
 
@@ -65,12 +65,12 @@
                         <td> <img class="picture" src="{{ $photo->filename }}"> </td>
                         <td> 
                         @if($photo->cover_image == true)
-                        <input name="cover_image" type="checkbox" checked disabled>
+                            <input name="cover_image" type="checkbox" checked disabled>
                         @else
-                        <input name="cover_image" type="checkbox" disabled>
+                            <input name="cover_image" type="checkbox" disabled>
                         @endif
                         </td>
-                        <td><a href="{{ route('photoEdit', $photo->id) }}"><i class="far fa-edit"></i></td></a>
+                        <td><a href="{{ route('photoEdit', $photo->id) }}"><i class="far fa-edit"></i></a></td>
                         <td>
                             <form action="{{ route('photoDelete', $photo->id) }}" method="POST">
                                 @csrf

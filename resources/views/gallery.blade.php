@@ -6,10 +6,9 @@
 
 
 <div class="containerGallery">
-  foreach($photos as $photo)
+  @foreach($photos as $photo)
   <div id="photos">
     <img id="myImg" src="{{$photo->filename}}" onclick="openModal();">
-  @endforeach
 
   <div>
 
@@ -20,6 +19,7 @@
   </div>
 </div>
 
+  @endforeach
 
 
   <script>

@@ -22,10 +22,10 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $albums= Album::where('category', 'Overview');
+        $albums= Album::where('category', 'Overview')->get();
         $photos= [];
         foreach($albums as $album){
-            array_push($photos, $album->photos());
+            array_push($photos, $album->photos()->get());
         }
 
         return view('home',['photos' => $photos]);
@@ -35,6 +35,7 @@ class HomeController extends Controller
     {
 
         $albums= Album::where('category', $category)->get();
+        
         return view('album', ['albums' => $albums]);
     }
 
