@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Album;
 
 class NahuelAdminController extends Controller
 {
@@ -14,9 +15,9 @@ class NahuelAdminController extends Controller
     public function dashboard()
     {
         if(! Auth()){
-            return back()->with('Wrong credentials, plese try again');
+            return back()->flash('Wrong credentials, plese try again');
         }
-        return view('admin.adminDashboard');
+        return view('admin.adminDashboard', compact('albums'));
     }
 
 }

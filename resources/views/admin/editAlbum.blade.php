@@ -38,8 +38,12 @@
             </div>
         </div>
     </div>
-
-
+    
+    @if(!$photos)
+    <h1>Upload photos!</h1>
+    
+    
+    @else(asset($photos))
     <div class="container">
         <div class="row">
             <div class="col">
@@ -54,20 +58,17 @@
                             <th>Cover</th>
                         </tr>
                     </thead>
-
                     @foreach($photos as $photo)
 
                     <tr>
                         <td> {{ $photo->title }} </td>
                         <td> {{ $photo->epigraph }} </td>
-                        <td>{{ $photo->person }} </td>
+                        <td> {{ $photo->person }} </td>
                         <td> {{ $photo->link }} </td>
                         <td> <img class="picture" src="{{ $photo->filename }}"> </td>
                         <td> 
-                        @if($photo->cover_image == true)
-                            <input name="cover_image" type="checkbox" checked disabled>
-                        @else
-                            <input name="cover_image" type="checkbox" disabled>
+                        @if(!$photo->cover_image == true)
+                            <input name="cover_image" type="checkbox" abled>
                         @endif
                         </td>
                         <td><a href="{{ route('photoEdit', $photo->id) }}"><i class="far fa-edit"></i></a></td>
@@ -86,6 +87,9 @@
             </div>
         </div>
     </div>
+    @endif
+
+    
 
     <div class="downButtons">
         <a class="addButton" href="{{ route('photoCreate', $album->id) }}">Add new Photo</a>
