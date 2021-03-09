@@ -30,7 +30,8 @@ body {
     margin-left: 0px;
     align-items: center;
     cursor: pointer;
-    padding-left: 30px;
+    padding-left: 55px;
+    letter-spacing: 1.5px;
 }
 .container-fluid h1 {
     font-size: 20px;
@@ -113,6 +114,8 @@ ul {
     -o-object-fit: cover;
        object-fit: cover;
 }
+
+
 /********GALLERY************/
 #galleryTitle {
     display: flex;
@@ -144,9 +147,7 @@ ul {
     margin: 10px;
 }
 
-.photos img:hover {
-    filter: grayscale(100) opacity(0.9);
-}
+
 
 
 /**********MODAL********************/
@@ -333,7 +334,7 @@ body {
     margin-left: 0px;
     align-items: center;
     cursor: pointer;
-    padding-left: 30px;
+    padding-left: 55px;
     letter-spacing: 1.5px;
 }
 .container-fluid h1 {
@@ -415,14 +416,12 @@ ul {
     width: 100% !important;
     height: auto !important;
     margin: 10px;
-    max-width: 300px;
-    height: auto;
+
+
     border: 2px solid red;
 }
 
-#photos img:hover {
-    filter: grayscale(100) opacity(0.9);
-}
+
 
 
 /**********MODAL********************/

@@ -30,7 +30,8 @@ body {
     margin-left: 0px;
     align-items: center;
     cursor: pointer;
-    padding-left: 30px;
+    padding-left: 55px;
+    letter-spacing: 1.5px;
 }
 .container-fluid h1 {
     font-size: 20px;
@@ -112,6 +113,8 @@ ul {
     width: auto;
     object-fit: cover;
 }
+
+
 /********GALLERY************/
 #galleryTitle {
     display: flex;
@@ -142,9 +145,7 @@ ul {
     margin: 10px;
 }
 
-.photos img:hover {
-    filter: grayscale(100) opacity(0.9);
-}
+
 
 
 /**********MODAL********************/

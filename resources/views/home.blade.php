@@ -7,17 +7,15 @@
 <!-- GALLERY -->
 <div class="containerGallery">
 
-
   <div id="photos">
       @foreach($photos as $photo)
       <img class="myImg" src="{{ $photo->filename }}" onclick="openModal();"/>
       @endforeach
   <div>
-</div>
-<!--    
-  <div id="myModal" class="modal">
+
+  <div class="myModal modal">
     <span class="close">&times;</span>
-    <img class="modal-content" class="img01">
+    <img class="modal-content img01">
     <div class="caption"></div>
   </div>
 </div>
@@ -47,6 +45,6 @@
         }
   </script>
 
-      -->
+  
 
 </x-head>
