@@ -1,9 +1,10 @@
 <?php
-
+use App\Http\Controllers\NahuelAdminController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AlbumController;
 use App\Http\Controllers\PhotoController;
 use App\Http\Controllers\HomeController;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,6 +26,8 @@ Route::get('/contact', function(){
 })->name('contact');
 
 //ADMIN VIEW
+Auth::routes();
+Route::get('/admin', [App\Http\Controllers\NahuelAdminController::class,'index'])->name('admin');
 
 //album
 
