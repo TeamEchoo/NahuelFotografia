@@ -66,7 +66,22 @@ ul {
     align-content: flex-end;
     padding-bottom: 0;
 }
-
+.cardLogin{
+    border: none;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border-radius: .25rem;
+}
+.noDeco{
+    text-decoration: none;
+    margin-top: 20vh;
+    margin-left: 75vh;
+}
 .adminLogo {
     display: flex;
     padding-top: 25px;
@@ -74,10 +89,10 @@ ul {
     margin-left: 0px;
     align-items: left;
     cursor: pointer;
-    padding-left: 45px;
+    padding-left: 20px;
     text-decoration: none;
     color: black;
-    font-size: 20px;
+    font-size: 25px;
     letter-spacing: 1.5px;
 }
 
@@ -90,9 +105,7 @@ ul {
     letter-spacing: 1px;
     opacity: .3;
 }
-.noDeco{
-    text-decoration: none;
-}
+
 
 
 .nav-link {
