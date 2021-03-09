@@ -7,29 +7,31 @@
 <!-- GALLERY -->
 <div class="containerGallery">
 
-  @foreach($photos[0] as $photo)
+
   <div id="photos">
-      <img id="myImg" src="{{ $photo->filename }}" onclick="openModal();"/>
+      @foreach($photos as $photo)
+      <img class="myImg" src="{{ $photo->filename }}" onclick="openModal();"/>
+      @endforeach
   <div>
-    @endforeach
-    
+</div>
+<!--    
   <div id="myModal" class="modal">
     <span class="close">&times;</span>
-    <img class="modal-content" id="img01">
-    <div id="caption"></div>
-    </div>
+    <img class="modal-content" class="img01">
+    <div class="caption"></div>
   </div>
+</div>
 
 
 
   <script>
         // Get the modal
-        var modal = document.getElementById("myModal");
+        var modal = document.querySelector('.myModal');
 
         // Get the image and insert it inside the modal - use its "alt" text as a caption
-        var img = document.getElementById("myImg");
-        var modalImg = document.getElementById("img01");
-        var captionText = document.getElementById("caption");
+        var img = document.querySelector('.myImg');
+        var modalImg = document.querySelector('.img01');
+        var captionText = document.querySelector('.caption');
         img.onclick = function(){
           modal.style.display = "block";
           modalImg.src = this.src;
@@ -44,5 +46,7 @@
           modal.style.display = "none";
         }
   </script>
+
+      -->
 
 </x-head>

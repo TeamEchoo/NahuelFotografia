@@ -1,3 +1,4 @@
+
 * {
     margin: 0;
     padding: 0;
@@ -126,7 +127,7 @@ ul {
     margin-top: 30px;
 }
 
-#photos {
+.photos {
     line-height: 0;
     -webkit-column-count: 3;
     -webkit-column-gap: 10px;
@@ -135,25 +136,21 @@ ul {
     column-count: 3;
     column-gap: 20px;
 }
-#photos img {
+.photos img {
     width: 100% !important;
     height: auto !important;
     margin: 10px;
 }
 
-#photos img:hover {
+.photos img:hover {
     filter: grayscale(100) opacity(0.9);
 }
 
 
 /**********MODAL********************/
-#myImg {
+.myImg {
     cursor: pointer;
     transition: 0.3s;
-}
-
-#myImg:hover {
-    filter: grayscale(100) opacity(0.9);
 }
 
 /* The Modal (background)  opacity: 0.7;*/
@@ -191,7 +188,7 @@ ul {
 
 
 /* Add Animation */
-.modal-content, #caption {
+.modal-content, .caption {
     -webkit-animation-name: zoom;
     -webkit-animation-duration: 0.6s;
     animation-name: zoom;
@@ -245,7 +242,7 @@ ul {
 /*******RESPONSIVE*******/
 
 @media screen and (max-width: 800px) {
-    #photos {
+    .photos {
         line-height: 0;
         -webkit-column-count: 2;
         -webkit-column-gap: 10px;
@@ -273,7 +270,7 @@ ul {
 }
 
 @media screen and (max-width: 600px) {
-    #photos {
+    .photos {
         line-height: 0;
         -webkit-column-count: 1;
         -webkit-column-gap: 10px;

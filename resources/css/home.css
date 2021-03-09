@@ -84,10 +84,6 @@ ul {
     object-fit: cover;
 }
 /********GALLERY************/
-#galleryTitle {
-    display: flex;
-    justify-content: center;
-}
 
 .containerGallery {
     padding-left: 50px;
@@ -96,6 +92,7 @@ ul {
     flex-wrap: wrap;
     margin-bottom: 20px;
     margin-top: 30px;
+    border: 2px solid green;
 }
 
 #photos {
@@ -106,11 +103,15 @@ ul {
     -moz-column-gap: 10px;
     column-count: 3;
     column-gap: 20px;
+    border: 3px solid blue;
 }
 #photos img {
     width: 100% !important;
     height: auto !important;
     margin: 10px;
+    max-width: 300px;
+    height: auto;
+    border: 2px solid red;
 }
 
 #photos img:hover {
@@ -119,14 +120,11 @@ ul {
 
 
 /**********MODAL********************/
-#myImg {
+.myImg {
     cursor: pointer;
     transition: 0.3s;
 }
 
-#myImg:hover {
-    filter: grayscale(100) opacity(0.9);
-}
 
 /* The Modal (background)  opacity: 0.7;*/
 .modal {
@@ -163,7 +161,7 @@ ul {
 
 
 /* Add Animation */
-.modal-content, #caption {
+.modal-content, .caption {
     -webkit-animation-name: zoom;
     -webkit-animation-duration: 0.6s;
     animation-name: zoom;
