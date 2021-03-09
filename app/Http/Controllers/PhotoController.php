@@ -54,12 +54,12 @@ class PhotoController extends Controller
             'epigraph' => $request->epigraph,
             'person' => $request->person,
             'link' => $request->link,
-            'filename' => '/storage/images/' . $image,
+            'filename' => public_path() . $image,
             'cover_image' => $request->cover_image,
             'album_id' => $album
             ]);    
             
-            $path = public_path() . '/storage/images/' . $image;
+            $path = public_path() . $image;
             Image::make($request->file('filename'))->save($path);
             
         $photo->save();

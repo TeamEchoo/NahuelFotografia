@@ -5,7 +5,7 @@
 <div class="createphoto-container">
     <h1>Create Photo</h1>
 
-    <form action=" {{ route( 'photoStore', $albumId ) }}"  method="post" enctype="multipart/form-data">
+    <form action=" {{ route( 'photoStore', $albumId ) }}"  method="POST" enctype="multipart/form-data">
         
         @csrf
         

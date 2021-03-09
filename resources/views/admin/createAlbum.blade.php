@@ -20,7 +20,7 @@
                     <label for="category">Category:</label>
                     <select name="category" id="category">
                         <option value="Overview">Overview</option>
-                        <option value="Skateboarding">Editorial</option>
+                        <option value="Editorial">Editorial</option>
                         <option value="More">More</option>
                     </select>
                 </div>    
