@@ -15,12 +15,37 @@
 
   <div class="myModal modal">
     <span class="close">&times;</span>
+    <img class="modalImage" id="img01" />
+  </div>
+
+
+<!--
+  <div class="myModal modal">
+    <span class="close">&times;</span>
     <img class="modal-content img01">
     <div class="caption"></div>
   </div>
 </div>
+-->
 
 
+  <script>
+    var modalEle = document.querySelector(".modal");
+    var modalImage = document.querySelector(".modalImage");
+    Array.from(document.querySelectorAll(".myImg")).forEach(item => {
+      item.addEventListener("click", event => {
+          modalEle.style.display = "block";
+          modalImage.src = event.target.src;
+      });
+    });
+    document.querySelector(".close").addEventListener("click", () => {
+      modalEle.style.display = "none";
+    });
+</script>
+
+
+
+<!--
 
   <script>
         // Get the modal
@@ -45,6 +70,6 @@
         }
   </script>
 
-  
+  -->
 
 </x-head>

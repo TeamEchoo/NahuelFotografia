@@ -11,6 +11,7 @@ body {
     justify-content: space-between;
     align-items: flex-start !important;
     background-color: white;
+
 }
 #header {
     display: flex;
@@ -29,7 +30,7 @@ body {
     margin-left: 0px;
     align-items: center;
     cursor: pointer;
-    padding-left: 55px;
+    padding-left: 48px;
     letter-spacing: 1.5px;
 }
 .container-fluid h1 {
@@ -83,6 +84,13 @@ ul {
     width: auto;
     object-fit: cover;
 }
+
+.navbar-toggler {
+    margin-right: 48px !important;
+}
+
+
+
 /********GALLERY************/
 
 .containerGallery {
@@ -92,7 +100,6 @@ ul {
     flex-wrap: wrap;
     margin-bottom: 20px;
     margin-top: 30px;
-    border: 2px solid green;
 }
 
 #photos {
@@ -103,15 +110,12 @@ ul {
     -moz-column-gap: 10px;
     column-count: 3;
     column-gap: 20px;
-    border: 3px solid blue;
 }
+
 #photos img {
     width: 100% !important;
     height: auto !important;
     margin: 10px;
-
-
-    border: 2px solid red;
 }
 
 
@@ -120,7 +124,7 @@ ul {
 /**********MODAL********************/
 .myImg {
     cursor: pointer;
-    transition: 0.3s;
+    transition: 0.2s;
 }
 
 
@@ -132,7 +136,7 @@ ul {
     /* Stay in place */
     z-index: 1;
     /* Sit on top */
-    padding-top: 100px;
+    padding-top: 60px;
     /* Location of the box */
     left: 0;
     top: 0;
@@ -149,17 +153,16 @@ ul {
 }
 
 /* Modal Content (image) */
-.modal-content {
+.modalImage {
     display: flex;
     margin: auto !important;
     padding: 0;
-
-    max-width: 500px;
+    max-width: 75%;
 }
 
 
 /* Add Animation */
-.modal-content, .caption {
+.modalImaget, .caption {
     -webkit-animation-name: zoom;
     -webkit-animation-duration: 0.6s;
     animation-name: zoom;
