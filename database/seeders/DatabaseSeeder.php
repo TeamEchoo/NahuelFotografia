@@ -15,11 +15,11 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         \App\Models\Album::factory(10)->create();
-        // \App\Models\User::factory()->create([
-        //     'isAdmin' => true,
-        //     'email' => 'admin@admin.com',
-        //     'password' => Hash::make("12345678"),
-        // ]);
+        \App\Models\User::factory()->create([
+            'is_admin' => true,
+            'email' => 'admin@admin.com',
+            'password' => Hash::make("12345678"),
+        ]);
         \App\Models\Photo::factory(10)->create();
     }
 }
