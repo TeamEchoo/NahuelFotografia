@@ -40,7 +40,6 @@ class AlbumController extends Controller
     {
         $album = Album::create([
             "title" => $request->title,
-            "category" => $request->category,
             "cover_image" => $request->cover_image
         ]);
 

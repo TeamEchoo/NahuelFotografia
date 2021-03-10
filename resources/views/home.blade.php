@@ -7,7 +7,7 @@
 <!-- GALLERY -->
 <div class="containerGallery">
 
-  @foreach($photos[0] as $photo)
+  @foreach($photos as $photo)
   <div id="photos">
       <img id="myImg" src="{{ $photo->filename }}" onclick="openModal();"/>
   <div>

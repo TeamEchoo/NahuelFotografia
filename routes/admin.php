@@ -1,14 +1,12 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\NahuelAdminController;
+use App\Http\Controllers\AlbumController;
+use App\Http\Controllers\PhotoController;
+use Illuminate\Support\Facades\Auth; 
 
+Auth::routes();
 
-Route::get('/photos', function () {
-    return view('auth.login');
-});
-
-//ALBUMS
-
+//album
 
 

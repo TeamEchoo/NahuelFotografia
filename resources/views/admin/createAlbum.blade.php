@@ -14,16 +14,7 @@
                 <div>
                     <label for="title">Title:</label>
                     <input name="title" type="text">
-                </div>
-
-                <div class="select">
-                    <label for="category">Category:</label>
-                    <select name="category" id="category">
-                        <option value="Overview">Overview</option>
-                        <option value="Editorial">Editorial</option>
-                        <option value="More">More</option>
-                    </select>
-                </div>    
+                </div>  
             </div>
 
             
@@ -36,13 +27,13 @@
                         <button type="reset">Reset</button>  
                     </div>         
                 </div>    
-            
                 <div class="last-button">
                     <a href="{{ route ('album')}}">
-                        <button>Turn Back</button>
+                        <button type="button">Turn Back</button>
                     </a>
                 </div>    
         </form>
+            
 </div>
 
 
