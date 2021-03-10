@@ -24,7 +24,7 @@
                             <div class="form-group row">
 
                                 <div class="col-md-6">
-                                    <input size="20" id="password" placeholder="password" type="password" class="logForm @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
+                                    <input size="20" id="password" placeholder="Password" type="password" class="logForm @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
 
                                     @error('password')
                                     <span class="invalid-feedback" role="alert">

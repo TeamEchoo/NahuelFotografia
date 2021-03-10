@@ -34,7 +34,7 @@ body {
 
 .cardBody {
     display: flex;
-    margin-right: 10vh;
+    margin-right: 8vh;
     margin-top: 7vh;
     size: 20vh;
 }
@@ -74,8 +74,7 @@ body {
     margin-bottom: 10px;
     -webkit-transition: all ease-in-out 0.4s;
     transition: all ease-in-out 0.4s;
-    
-    margin-left: 5vh;
+    margin-left: 7vh;
 }
 
 #contact .form-control:focus {
@@ -109,5 +108,12 @@ body {
     }
     #contact button#submit {
         padding-left: 40px;
+    }
+    .cardLogin{
+        margin-left: 8vh;
+    }
+    .noDeco{
+        margin-top: 8vh;
+        margin-left: 2vh;
     }
 }
