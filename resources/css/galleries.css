@@ -66,20 +66,10 @@ ul {
     align-content: flex-end;
     padding-bottom: 0;
 }
-.cardLogin{
-    border: none;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    min-width: 0;
-    word-wrap: break-word;
-    background-color: #fff;
-    background-clip: border-box;
-    border-radius: .25rem;
-}
+
 .noDeco{
     text-decoration: none;
-    margin-top: 20vh;
+    margin-top: 16vh;
     margin-left: 75vh;
 }
 .adminLogo {

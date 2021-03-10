@@ -1,59 +1,60 @@
 <x-head>
-<x-logoAdmin></x-logoAdmin>
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="cardLogin">
-                <div class="card-body">
-                    <form method="POST" action="{{ route('login') }}">
-                        @csrf
+    <x-logoAdmin></x-logoAdmin>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="cardLogin">
+                    <div class="cardBody">
+                        <form method="POST" action="{{ route('login') }}">
+                            @csrf
 
-                        <div class="col-md-7 col-sm-10">
-                            <div class="col-md-6 col-sm-6">
-                                <input id="contact-form" placeholder="Email" type="email" class="form-control" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                            <div class="col-md-7 col-sm-10">
+                                <div class="col-md-6 col-sm-6">
+                                    <input id="contact-form" placeholder="Email" type="email" class="logForm" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
 
-                                @error('email')
+                                    @error('email')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
-                                @enderror
+                                    @enderror
+                                </div>
                             </div>
-                        </div>
 
 
-                        <div class="form-group row">
-                        
-                            <div class="col-md-6">
-                                <input id="password" placeholder="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
+                            <div class="form-group row">
 
-                                @error('password')
+                                <div class="col-md-6">
+                                    <input size="20" id="password" placeholder="password" type="password" class="logForm @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
+
+                                    @error('password')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
-                                @enderror
+                                    @enderror
+                                </div>
                             </div>
-                        </div>
 
-                       
 
-                        <div class="col-md-7 col-sm-10">
-                            <div class="col-md-offset-8 col-md-4 col-sm-offset-6 col-sm-6">
-                                <button type="submit" class="form-control">
-                                    {{ __('Login') }}
-                                </button>
 
-                                @if (Route::has('password.request'))
-                                    <a class="btn btn-link" href="{{ route('password.request') }}">
+                            <div class="col-md-7 col-sm-10">
+                                <div class="col-md-offset-8 col-md-4 col-sm-offset-6 col-sm-6">
+                                    <button type="submit" class="buttonForm">
+                                        {{ __('Login') }}
+                                    </button>
+<!--                                 
+                                    @if (Route::has('password.request'))
+                                    
+                                    <a class="buttonForm" href="{{ route('password.request') }}">
                                         {{ __('Forgot Your Password?') }}
                                     </a>
-                                @endif
+                                    @endif -->
+                                </div>
                             </div>
-                        </div>
-                    </form>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
 </x-head>
