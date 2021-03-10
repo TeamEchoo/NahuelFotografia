@@ -24,6 +24,10 @@ Route::get('/contact', function(){
     return view('contact');
 })->name('contact');
 
+Route::get('/comoquieran', function () {
+    return view('admin.comoQuieran');
+});
+
 //ADMIN VIEW
 
 //album
@@ -35,12 +39,17 @@ Route::get('/album/{id}', [AlbumController::class, 'edit'])->name('albumEdit');
 Route::put('/album/{id}', [AlbumController::class, 'update'])->name('albumUpdate');
 Route::delete('/album/{id}', [AlbumController::class, 'destroy'])->name('albumDelete');
 
+
+
 //PHOTOS
 Route::get('/album/{id}/newphoto', [PhotoController::class, 'create'])->name('photoCreate');
 Route::post('/album/{id}/newphoto', [PhotoController::class, 'store'])->name('photoStore');
 Route::get('/album/photo/{id}', [PhotoController::class, 'edit'])->name('photoEdit');
 Route::put('/album/photo/{id}', [PhotoController::class, 'update'])->name('photoUpdate');
 Route::delete('/album/photo/{id}', [PhotoController::class, 'destroy'])->name('photoDelete');
+
+
+
 
 ///WEBPAGE
 Route::get('/', [HomeController::class, 'index'])->name('home');

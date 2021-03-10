@@ -9,13 +9,14 @@
 
   <div id="photos">
       @foreach($photos as $photo)
-      <img class="myImg" src="{{ $photo->filename }}" onclick="openModal();"/>
+      <img class="myImg" alt="Photo Text" src="{{ $photo->filename }}" onclick="openModal();"/>
       @endforeach
   <div>
 
   <div class="myModal modal">
     <span class="close">&times;</span>
     <img class="modalImage" id="img01" />
+    <div class="caption"></div>
   </div>
 
 
@@ -32,10 +33,12 @@
   <script>
     var modalEle = document.querySelector(".modal");
     var modalImage = document.querySelector(".modalImage");
+    var captionText = document.querySelector(".caption");
     Array.from(document.querySelectorAll(".myImg")).forEach(item => {
       item.addEventListener("click", event => {
           modalEle.style.display = "block";
           modalImage.src = event.target.src;
+          captionText.innerHTML = event.target.alt;
       });
     });
     document.querySelector(".close").addEventListener("click", () => {

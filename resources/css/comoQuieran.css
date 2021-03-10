@@ -1,0 +1,34 @@
+.albums-container {
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 600px;
+    margin-top: 50px;
+}
+
+.albums-categories {
+    display: flex;
+    flex-direction: row;
+}
+
+.overview, .editorial {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px;
+    cursor: pointer;
+}
+
+.albums-categories img {
+    width: 100px;
+    margin-top: 15px;
+}
+
+.more:hover {
+    color: #ffd000;
+    cursor: pointer;
+    -webkit-transition: all ease-in-out 0.1s;
+    transition: all ease-in-out 0.1s;
+}

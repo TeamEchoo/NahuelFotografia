@@ -4,6 +4,8 @@
     padding: 0;
     font-family: "Montserrat", sans-serif;
 }
+
+
 * {
     margin: 0;
     padding: 0;
@@ -168,6 +170,18 @@ ul {
     max-width: 75%;
 }
 
+/* Modal Text */
+.caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+    margin-top: 5px;
+  }
 
 /* Add Animation */
 .modalImaget, .caption {
@@ -628,6 +642,39 @@ input {
 
 .picture{
     width: 50px;
+}
+.albums-container {
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 600px;
+    margin-top: 50px;
+}
+
+.albums-categories {
+    display: flex;
+    flex-direction: row;
+}
+
+.overview, .editorial {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px;
+    cursor: pointer;
+}
+
+.albums-categories img {
+    width: 100px;
+    margin-top: 15px;
+}
+
+.more:hover {
+    color: #ffd000;
+    cursor: pointer;
+    transition: all ease-in-out 0.1s;
 }
 
 
