@@ -70,6 +70,15 @@ ul {
 .nav-link {
     margin-left: 25px;
 }
+
+
+
+
+.container{
+    margin-top: 2vh;
+}
+
+
 .gal-item {
     overflow: hidden;
     padding: 8px;

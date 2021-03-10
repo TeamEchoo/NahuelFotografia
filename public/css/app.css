@@ -67,6 +67,11 @@ ul {
     padding-bottom: 0;
 }
 
+.noDeco{
+    text-decoration: none;
+    margin-top: 16vh;
+    margin-left: 75vh;
+}
 .adminLogo {
     display: flex;
     padding-top: 25px;
@@ -74,10 +79,10 @@ ul {
     margin-left: 0px;
     align-items: left;
     cursor: pointer;
-    padding-left: 45px;
+    padding-left: 20px;
     text-decoration: none;
     color: black;
-    font-size: 20px;
+    font-size: 25px;
     letter-spacing: 1.5px;
 }
 
@@ -90,9 +95,7 @@ ul {
     letter-spacing: 1px;
     opacity: .3;
 }
-.noDeco{
-    text-decoration: none;
-}
+
 
 
 .nav-link {
@@ -369,6 +372,15 @@ ul {
 .nav-link {
     margin-left: 25px;
 }
+
+
+
+
+.container{
+    margin-top: 2vh;
+}
+
+
 .gal-item {
     overflow: hidden;
     padding: 8px;
@@ -575,19 +587,24 @@ ul {
 body {
     background-color: white;
 }
+
 .contact-info .fa {
     padding-top: 0.5vh;
 }
+
 #paddingContact {
     padding-top: 10vh;
     padding-left: 10vh;
 }
+
 #paddingContactImage {
     padding-top: 8vh;
 }
+
 #PaddingDescription {
     padding-top: 0.2vh;
 }
+
 #contact .form-control {
     border: none;
     border-bottom: 2px solid #000000;
@@ -599,23 +616,70 @@ body {
     margin-bottom: 10px;
     transition: all ease-in-out 0.4s;
 }
+
+.cardBody {
+    display: flex;
+    margin-right: 8vh;
+    margin-top: 7vh;
+    size: 20vh;
+}
+
+.cardLogin {
+    border: none;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+
+}
+
+.logForm {
+    border: none;
+    border-bottom: 2px solid #000000;
+    border-radius: 0px;
+    background-color: transparent;
+    box-shadow: none;
+    font-size: 18px;
+    margin-top: 10px;
+    transition: all ease-in-out 0.4s;
+    margin-bottom: 4vh;
+}
+
+.buttonForm {
+    border: none;
+    border-radius: 0px;
+    background-color: transparent;
+    box-shadow: none;
+    font-size: 18px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    transition: all ease-in-out 0.4s;
+    margin-left: 7vh;
+}
+
 #contact .form-control:focus {
     border-bottom-color: #000000;
 }
+
 #contact input {
     height: 55px;
 }
+
 #contact button#submit {
-   padding-right: 30vh;
-    
+    padding-right: 30vh;
     border: none;
     color: #000000;
     height: 50px;
     margin-top: 50px;
 }
+
 #contact button#submit:hover {
     color: #ffd000;
 }
+
 @media only screen and (max-width: 768px) {
     #paddingContact {
         padding-left: 50px;
@@ -625,8 +689,15 @@ body {
         padding-top: 40px;
         padding-left: 60px;
     }
-    #contact button#submit{
+    #contact button#submit {
         padding-left: 40px;
+    }
+    .cardLogin{
+        margin-left: 8vh;
+    }
+    .noDeco{
+        margin-top: 8vh;
+        margin-left: 2vh;
     }
 }
 body {
