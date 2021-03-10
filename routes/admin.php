@@ -7,6 +7,9 @@ use Illuminate\Support\Facades\Auth;
 
 Auth::routes();
 
+Route::get('/admin', [NahuelAdminController::class,'dashboard'])->name('dashboard');
+
+
 //album
 
 Route::get('/album', [AlbumController::class, 'index'])->name('album');

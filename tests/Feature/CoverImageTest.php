@@ -8,6 +8,8 @@ use Tests\TestCase;
 use App\Models\Album;
 use App\Models\Photo;
 
+use function PHPUnit\Framework\assertIsBool;
+
 class CoverImageTest extends TestCase
 {
     use RefreshDatabase;
@@ -21,13 +23,16 @@ class CoverImageTest extends TestCase
         //scenrari
         $album = Album::factory()->create();
         
-        dd($album);
         $photo = Photo::factory()->create([
             
             'album_id' => $album->id,
             'cover_image' => $album->photo_cover_image
             
             ]);
+
+            
+
+            $response = assertIsBool(true);
 
         
 

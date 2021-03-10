@@ -2,16 +2,14 @@
 
 namespace Tests\Feature;
 
-use App\Http\Controllers\ImageController;
+use App\Models\Photo;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
-use Intervention\Image\Facades\Image;
-use App\Models\ImageModel;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\UploadedFile;
 
-class CreateImageTest extends TestCase
+class CreatePhotoTest extends TestCase
 {
 
     use RefreshDatabase;
@@ -20,16 +18,20 @@ class CreateImageTest extends TestCase
      *
      * @return void
      */
-    public function test_upload_image()
+    public function test_upload_photo()
     {
         $this->withoutExceptionHandling();
 
-        $image = [
-            'filename' => 'laura.jpg',
-        ];
-        
-        $response = $this->post(route('photoStore'), $image);
+        Storage::fake('photos');
+
+        $file = UploadedFile::fake()->image('avatar.jpg');
+
+        $response = $this->post('/album/1/newphoto', [
+            'avatar' => $file,
+        ]);
+
+        Storage::disk('photos');
         $response->assertStatus(200);
-        
+
     }
 }
