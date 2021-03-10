@@ -496,9 +496,8 @@ button:hover {
     --bs-table-hover-color: #212529;
     --bs-table-hover-bg: rgba(0, 0, 0, 0.075);
     width: 100%;
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
     color: #212529;
-    padding-bottom: 2px;
     vertical-align: top;
     border-color: #dee2e6;
 }
@@ -523,6 +522,7 @@ button:hover {
     padding-top: 50px;
     padding-left: 175px;
     margin: 15px;
+    margin-bottom: 5vh;
 }
 
 .row {
@@ -568,6 +568,12 @@ button:hover {
 .downButtons {
     display: flex;
     justify-content: center;
+    position: fixed;
+    left: 0;
+    bottom: 2%;
+    width: 100%;
+    color: white;
+    text-align: center;
 }
 
 .addButton {
@@ -576,6 +582,7 @@ button:hover {
     color: black;
     font-weight: 500;
     font-weight: bold;
+    font-size: 25px;
 }
 
 .cancelButton {
@@ -583,6 +590,22 @@ button:hover {
     color: black;
     font-weight: 500;
     font-weight: bold;
+    font-size: 25px;
+}
+
+.saveButton {
+    margin-right: 200px;
+    padding-bottom: 13px;
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.saveButton:hover {
+    color: #ffd000;
+    transition: all ease-in-out 0.4s;
 }
 
 .addButton:hover {

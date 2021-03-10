@@ -26,14 +26,7 @@
                         <option value="Editorial">Editorial</option>
                         <option value="More">More</option>
                     </select>
-
-                    <a href="{{ route( 'albumUpdate', $album->id ) }}">
-                        <button class="cancelButton" type="submit">
-                        Save
-                        </button>
-                    </a>
-
-                    </form>
+                   
                 </div>
             </div>
         </div>
@@ -44,7 +37,7 @@
         <div class="row">
             <div class="col">
                 <table class="tablee">
-                    <thead>
+                    <thead class="spaceBetween">
                         <tr>
                             <th>Title</th>
                             <th>Epigraph</th>
@@ -60,7 +53,7 @@
                     <tr>
                         <td> {{ $photo->title }} </td>
                         <td> {{ $photo->epigraph }} </td>
-                        <td>{{ $photo->person }} </td>
+                         <td>{{ $photo->person }} </td>
                         <td> {{ $photo->link }} </td>
                         <td> <img class="picture" src="{{ $photo->filename }}"> </td>
                         <td> 
@@ -87,8 +80,11 @@
         </div>
     </div>
 
-    <div class="downButtons">
+    <div class="downButtons">    
+        <a  href="{{ route( 'albumUpdate', $album->id ) }}">
+        <button class="saveButton" type="submit">Save</button></a>
         <a class="addButton" href="{{ route('photoCreate', $album->id) }}">Add new Photo</a>
         <a class="cancelButton" href="{{ route('album') }}">Cancel</a>
     </div>
+    </form>
 </x-head>
