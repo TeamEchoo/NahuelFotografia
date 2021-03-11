@@ -2,7 +2,7 @@
     <x-logoAdmin />
 
 
-    <h1 class="dash">Dashboard</h1>
+    <h1 class="dash">MORE</h1>
     <div class="container">
         <div class="row">
             <div class="col">
