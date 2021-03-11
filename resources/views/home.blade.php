@@ -7,11 +7,11 @@
 <!-- GALLERY -->
 <div class="containerGallery">
 
-  @foreach($photos[0] as $photo)
   <div id="photos">
+  @foreach($photos as $photo)
       <img id="myImg" src="{{ $photo->filename }}" onclick="openModal();"/>
-  <div>
     @endforeach
+  <div>
     
   <div id="myModal" class="modal">
     <span class="close">&times;</span>

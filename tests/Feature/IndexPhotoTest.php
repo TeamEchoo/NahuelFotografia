@@ -7,6 +7,7 @@ use App\Models\Photo;
 use Tests\TestCase;
 use App\Http\Controllers\PhotoController;
 use Illuminate\Http\UploadedFile;
+use App\Models\Album;
 
 
 class IndexPhotoTest extends TestCase
@@ -18,15 +19,21 @@ class IndexPhotoTest extends TestCase
      *
      * @return void
      */
-    public function test_indexing_photos()
+    public function test_all_users_can_see_photos()
     {
         $this->withoutExceptionHandling();
-        $width = 100;
-        $height = 100;
-        
-        $response = UploadedFile::fake()->image('avatar.jpg', $width, $height)->size(100);
-        $response->assertStatus(200)
-        ->assertViewIs('admin.photoDashboard')
-        ->assertViewHas('photos');
+
+        $album = Album::factory()->create([
+            'title' => 'Hola',
+            'category' => 'Overview'
+        ]);
+
+        $photos = Photo::factory(4)->create();
+
+        $response = $this->get('/')
+        ->assertStatus(200)
+        ->assertViewIs('home')
+        ->assertViewHas(4);
+
     }
 }
