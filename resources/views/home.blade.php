@@ -17,8 +17,11 @@
     
   <div class="myModal modal">
     <span class="close">&times;</span>
-    <img class="modalImage" id="img01" />
-    <div class="caption"></div>
+    <div class="modalImage-container">
+      <img class="modalImage" id="img01" />
+      <div class="caption"></div>
+    </div>
+
   </div>
 
 

@@ -16,6 +16,7 @@ body {
     flex-wrap: wrap;
     align-items: center;
     padding: 1.25rem;
+    padding-top: 35px;
     position: relative;
   }
   
@@ -34,7 +35,7 @@ body {
     display: flex;
     align-self: flex-start;
     align-items: center;
-    margin-right: 18px;
+    margin-right: 69px;
   }
   
   .main-nav-list {
@@ -45,7 +46,7 @@ body {
   .main-nav-list-item {
     list-style: none;
     float: left;
-    padding: 0 20px;
+    padding: 0 10px;
   }
   
   .main-list-link {
@@ -58,7 +59,7 @@ body {
   
   .main-menu-button {
     display: inline-block;
-    margin-right: 38px;
+    margin-right: 80px;
   }
   
   

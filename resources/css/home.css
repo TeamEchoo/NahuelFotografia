@@ -17,7 +17,7 @@ body {
     margin-top: 3.5px;
     align-items: center;
     cursor: pointer;
-    padding-left: 43px;
+    padding-left: 78px;
     letter-spacing: 1.5px;
     text-decoration: none !important;
     color: black;
@@ -49,28 +49,28 @@ body {
 
 /********GALLERY************/
 .containerGallery {
-    padding-left: 50px;
-    padding-right: 67px;
+    padding-left: 100px;
+    padding-right: 100px;
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 20px;
-    margin-top: 30px;
+    margin-top: 80px;
 }
 
 .photos {
     line-height: 0;
     -webkit-column-count: 3;
-    -webkit-column-gap: 10px;
+    -webkit-column-gap: 40px;
     -moz-column-count: 3;
-    -moz-column-gap: 10px;
+    -moz-column-gap: 40px;
     column-count: 3;
-    column-gap: 20px;
+    column-gap: 40px;
 }
 
 .photos img {
     width: 100% !important;
     height: auto !important;
-    margin: 10px;
+    margin-bottom:40px;
 }
 
 
@@ -84,48 +84,70 @@ body {
 /* The Modal (background)  opacity: 0.7;*/
 .modal {
     display: none;
-    /* Hidden by default */
     position: fixed;
-    /* Stay in place */
     z-index: 1;
-    /* Sit on top */
-    padding-top: 80px;
-    /* Location of the box */
+    padding-top: 55px;
     left: 0;
     top: 0;
     width: 100%;
-    /* Full width */
     height: 100%;
-    /* Full height */
     overflow: none;
-    /* Enable scroll if needed */
     background-color: rgb(255, 255, 255);
-    /* Fallback color */
     background-color: rgba(255, 255, 255, 0.9);
-    /* Black w/ opacity */
 }
 
 /* Modal Content (image) */
-.modalImage {
+.modalImage-container {
     display: flex;
+    flex-direction: column;
+    margin: auto;
 
-    margin: auto !important;
-    padding: 20px;
-    max-width: 100%;
-    height: auto;
+
+
+    object-fit: contain !important;
+
+    width: 700px;
+    height: 550px;
+
+
+    border: 2px solid blue;
 }
+
+.modalImage {
+    margin: auto !important;
+    object-fit: contain !important;
+    max-width: 700px;
+    height: auto;
+    margin: 0;
+
+
+    border: 3px solid red;
+}
+
+
 
 /* Modal Text */
 .caption {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
     margin: auto;
-    display: block;
+    margin-top: 0;
+
+
+    height: 45px;
+
+
+
     width: 80%;
     max-width: 700px;
-    text-align: center;
     color: #000000;
-    padding: 10px 0;
-    height: 150px;
-    margin-top: 5px;
+
+
+
+    border: 2px solid yellow;
 }
 
 /* Add Animation */
@@ -171,14 +193,14 @@ body {
     cursor: pointer;
 }
 
-/* 100% Image Width on Smaller Screens */
+/* 100% Image Width on Smaller Screens 
 @media only screen and (max-width: 700px) {
     .modal-content {
         width: 100%;
     }
 }
 
-
+*/
 
 
 /*******RESPONSIVE*******/
@@ -186,11 +208,11 @@ body {
     #photos {
         line-height: 0;
         -webkit-column-count: 2;
-        -webkit-column-gap: 10px;
+        -webkit-column-gap: 40px;
         -moz-column-count: 3;
-        -moz-column-gap: 10px;
+        -moz-column-gap: 40px;
         column-count: 2;
-        column-gap: 20px;
+        column-gap: 40px;
     }
 }
 
@@ -198,10 +220,10 @@ body {
     #photos {
         line-height: 0;
         -webkit-column-count: 1;
-        -webkit-column-gap: 10px;
+        -webkit-column-gap: 40px;
         -moz-column-count: 3;
-        -moz-column-gap: 10px;
+        -moz-column-gap: 40px;
         column-count: 1;
-        column-gap: 20px;
+        column-gap: 40px;
     }
 }

@@ -30,9 +30,6 @@
       href="{{ route('contact', 'Contact') }}">CONTACT</a></li>
 
       <li class="main-nav-list-item"><a class="main-link main-list-link" href="#">STORE</a></li>
-
-      <li class="main-nav-list-item"><a class="main-link main-list-link" 
-      href="{{ route('contact') }}">CONTACT</a></li>
       
     </ul>
   </nav>

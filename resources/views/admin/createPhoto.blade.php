@@ -5,9 +5,17 @@
 <div class="createphoto-container">
     <h1>Create Photo</h1>
 
+
+
     <form class="form1" action=" {{ route( 'photoStore', $albumId ) }}"  method="POST" enctype="multipart/form-data">
-        
-        @csrf
+           
+    <div id="picture-uploaded">
+            <img src="https://images.unsplash.com/photo-1556103255-4443dbae8e5a?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8cGhvdG9ncmFwaGVyfGVufDB8fDB8&ixlib=rb-1.2.1&w=1000&q=80">
+        </div>
+
+
+
+
         <div class="inputs-container">
             <div class="inputs">
                 <label for="title">Title:</label>
@@ -31,7 +39,7 @@
 
             <div class="inputs">
                 <label for="filename">Photo:</label>
-                <input  type="file" style="width: 200px"  name="filename" accept="image/*" class="form-control1">
+                <input  type="file" style="width: 420px"  name="filename" accept="image/*" class="form-control1">
             <div>
     
 
@@ -48,17 +56,20 @@
             </div>    
         </div>
 
-    </form>
 
-    
+
+
+    </form>
+</div>
+
+<!--    
     <div class="picture-uploaded">
             <img src="https://images.unsplash.com/photo-1556103255-4443dbae8e5a?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8cGhvdG9ncmFwaGVyfGVufDB8fDB8&ixlib=rb-1.2.1&w=1000&q=80">
     </div>
+-->
 
 
 
-
-</div>
 
 
 </x-head>
