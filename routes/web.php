@@ -25,10 +25,6 @@ Route::get('/contact', function(){
     return view('contact');
 })->name('contact');
 
-Route::get('/comoquieran', function () {
-    return view('admin.comoQuieran');
-});
-
 //ADMIN VIEW
 Auth::routes();
 Route::get('/admin', [App\Http\Controllers\NahuelAdminController::class,'index'])->name('admin');
@@ -36,10 +32,11 @@ Route::get('/admin/album', [App\Http\Controllers\NahuelAdminController::class,'d
 
 ///WEBPAGE
 Route::get('/', [HomeController::class, 'home'], 'Overview')->name('home');
-Route::get('/Editorial', [HomeController::class, 'editorial'])->name('editorial');
+Route::get('/Category/Editorial', [HomeController::class, 'editorial'])->name('editorial');
+Route::get('/Category/More', [HomeController::class, 'more'])->name('more');
+
 Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
-Route::get('/gallery/{$id}', [HomeController::class, 'gallery'])->name('gallery');
-Route::get('/Category/{category}', [HomeController::class, 'more'])->name('categoryAlbum');
+Route::get('/gallery/{id}', [HomeController::class, 'gallery'])->name('gallery');
 
 Route::get('/album', [AlbumController::class, 'index'])->name('album');
 Route::get('/newalbum', [AlbumController::class, 'create'])->name('albumCreate');
@@ -48,10 +45,8 @@ Route::get('/album/{id}', [AlbumController::class, 'edit'])->name('albumEdit');
 Route::put('/album/{id}', [AlbumController::class, 'update'])->name('albumUpdate');
 Route::delete('/album/{id}', [AlbumController::class, 'destroy'])->name('albumDelete');
 
-
-
 //PHOTOS
-Route::get('/album/{id}/newphoto', [PhotoController::class, 'create'])->name('photoCreate')->middleware();
+Route::get('/album/{id}/newphoto', [PhotoController::class, 'create'])->name('photoCreate');
 Route::post('/album/{id}/newphoto', [PhotoController::class, 'store'])->name('photoStore');
 Route::get('/album/photo/{id}', [PhotoController::class, 'edit'])->name('photoEdit');
 Route::put('/album/photo/{id}', [PhotoController::class, 'update'])->name('photoUpdate');

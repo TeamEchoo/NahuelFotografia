@@ -19,10 +19,10 @@ class Album extends Model
         return $this->hasMany(Photo::class);
     }
 
-    // public function cover_image()
-    // {
-    //     $photos = $this->photo;
-    //     return $this->photos()->where('cover_image', true);
-    // }
+    public function getCoverImage()
+    {
+        $photos = $this->photos;
+        return $this->photos->where('cover_image', true)->first();
+    }
 
 }

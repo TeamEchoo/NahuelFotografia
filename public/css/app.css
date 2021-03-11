@@ -417,9 +417,8 @@ button:hover {
     --bs-table-hover-color: #212529;
     --bs-table-hover-bg: rgba(0, 0, 0, 0.075);
     width: 100%;
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
     color: #212529;
-    padding-bottom: 2px;
     vertical-align: top;
     border-color: #dee2e6;
 }
@@ -437,13 +436,15 @@ button:hover {
 }
 
 .inputTitle {
-    width: 90%;
+    width: 140%;
+    font-weight: bold;
 }
 
 .wrapper {
     padding-top: 50px;
     padding-left: 175px;
     margin: 15px;
+    margin-bottom: 5vh;
 }
 
 .row {
@@ -458,6 +459,7 @@ button:hover {
     flex-direction: column;
     flex-basis: 100%;
     flex: 1;
+    margin-left:440px;
 }
 
 .title-column {
@@ -489,6 +491,14 @@ button:hover {
 .downButtons {
     display: flex;
     justify-content: center;
+    position: fixed;
+    left: 0;
+    bottom: 0%;
+    height: 10%;
+    width: 100%;
+    background-color: #ffffff;
+    text-align: center;
+    padding-bottom: 5px;
 }
 
 .addButton {
@@ -497,6 +507,8 @@ button:hover {
     color: black;
     font-weight: 500;
     font-weight: bold;
+    font-size: 25px;
+    padding-top: 25px;
 }
 
 .cancelButton {
@@ -504,6 +516,23 @@ button:hover {
     color: black;
     font-weight: 500;
     font-weight: bold;
+    font-size: 25px;
+    padding-top: 25px;
+}
+
+.saveButton {
+    margin-right: 200px;
+    padding-top: 25px;
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.saveButton:hover {
+    color: #ffd000;
+    transition: all ease-in-out 0.4s;
 }
 
 .addButton:hover {

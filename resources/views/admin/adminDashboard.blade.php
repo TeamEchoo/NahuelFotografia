@@ -2,7 +2,7 @@
     <x-logoAdmin />
 
 
-    <h1 class="dash">Dashboard</h1>
+    <h1 class="dash">MORE</h1>
     <div class="container">
         <div class="row">
             <div class="col">
@@ -21,11 +21,9 @@
                         <td> {{ $album->title }} </td>
                         <td> {{ $album->category }} </td>
                         <td>
-                        @foreach($photos as $photo)
-                            @if($photo->album_id == $album->id)
-                             <img src="{{ $photo->filename }}" class="picture">
-                            @endif
-                        @endforeach
+                        @if(isset($album->getCoverImage()->filename))
+                         <img src="{{ $album->getCoverImage()->filename}}" class="picture">
+                         @endif
                         </td>
                         <td>
                             <a href="{{ route('albumEdit', $album->id) }}">

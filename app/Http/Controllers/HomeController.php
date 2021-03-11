@@ -22,44 +22,42 @@ class HomeController extends Controller
      */
     public function home()
     {
-        $albums= Album::where('category','Overview')->get();
-        $photos= [];
-        foreach($albums as $album){
-            foreach($album->photos as $photo){    
-                array_push($photos, $photo);
-            }
-        };
-      
+        $album= Album::where('category','Overview')->first();
+        $photos= $album->photos;
+        
         return view('home',['photos' => $photos]);
     }
 
     public function editorial()
     {
-        $albums= Album::where('category', 'Editorial')->get();
+            
+        $album= Album::where('category', 'Editorial')->first();
+        $photos= $album->photos;
+        return view('home', ['photos' => $photos]);
+    }
+
+
+    public function more(){
+        
+        $albums = Album::where('category', 'More')->get();
         $photos= [];
         foreach($albums as $album){
-            foreach($album->photos as $photo){    
-                array_push($photos, $photo);
-            }
-        };
-      
-        return view('home',['photos' => $photos]);
-    }
+ 
+            $albumPhotos= $album->photos;
+            foreach ($albumPhotos as $photo){
+            array_push($photos, $photo);
+        }
+        }
 
-    public function more($category)
-    {
+        return view('album', ['albums' => $albums, 'photos' => $photos]);
+        }
 
-        $albums= Album::where('category', $category)->get();
-        
-        return view('album', ['albums' => $albums]);
-    }
 
     public function gallery($id)
     {
-
-        $album = Album::find($id);
+        $galleryAlbum = Album::find($id);
         $photos= $album->photos()->get();
-        return view('gallery', ['album' => $album, 'photos' => $photos]);
+        return view('gallery', ['album' => $galleryAlbum, 'photos' => $photos]);
     }
 
 
