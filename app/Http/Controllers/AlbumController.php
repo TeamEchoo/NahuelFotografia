@@ -16,12 +16,8 @@ class AlbumController extends Controller
     public function index()
     {
         $albums= Album::all();
-        $photos= [];
-        $photoCollection= Photo::where('cover_image', true)->get();
-        foreach($photoCollection as $photo){
-            array_push($photos, $photo);
-        } 
-        return view('admin.adminDashboard', compact('albums', "photos"));
+  
+        return view('admin.adminDashboard', ['albums' => $albums]);
     }
 
     /**
@@ -71,8 +67,8 @@ class AlbumController extends Controller
     public function edit($id)
     {
         $album = Album::find($id);
-        $photos = $album->photos()->get();
-        return view('admin.editAlbum', compact('album', 'photos'));
+        $photos = $album->photos;
+        return view('admin.editAlbum', ['album'=> $album, 'photos'=> $photos]);
     }
 
     /**

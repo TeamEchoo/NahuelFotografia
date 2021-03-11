@@ -21,11 +21,7 @@
                         <td> {{ $album->title }} </td>
                         <td> {{ $album->category }} </td>
                         <td>
-                        @foreach($photos as $photo)
-                            @if($photo->album_id == $album->id)
-                             <img src="{{ $photo->filename }}" class="picture">
-                            @endif
-                        @endforeach
+                         <img src="{{ $album->getCoverImage()->filename }}" class="picture">
                         </td>
                         <td>
                             <a href="{{ route('albumEdit', $album->id) }}">
