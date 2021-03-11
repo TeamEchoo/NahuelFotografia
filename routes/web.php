@@ -31,10 +31,10 @@ Route::get('/admin', [App\Http\Controllers\NahuelAdminController::class,'index']
 Route::get('/admin/album', [App\Http\Controllers\NahuelAdminController::class,'dashboard'])->name('dashboard');
 
 ///WEBPAGE
-Route::get('/', [HomeController::class, 'home'])->name('home');
+Route::get('/', [HomeController::class, 'home'], 'Overview')->name('home');
 Route::get('/Editorial', [HomeController::class, 'editorial'])->name('editorial');
 Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
-Route::get('/gallery/{id}', [HomeController::class, 'gallery'])->name('gallery');
+Route::get('/gallery/{$id}', [HomeController::class, 'gallery'])->name('gallery');
 Route::get('/Category/{category}', [HomeController::class, 'more'])->name('categoryAlbum');
 
 Route::get('/album', [AlbumController::class, 'index'])->name('album');
@@ -45,7 +45,7 @@ Route::put('/album/{id}', [AlbumController::class, 'update'])->name('albumUpdate
 Route::delete('/album/{id}', [AlbumController::class, 'destroy'])->name('albumDelete');
 
 //PHOTOS
-Route::get('/album/{id}/newphoto', [PhotoController::class, 'create'])->name('photoCreate');
+Route::get('/album/{id}/newphoto', [PhotoController::class, 'create'])->name('photoCreate')->middleware();
 Route::post('/album/{id}/newphoto', [PhotoController::class, 'store'])->name('photoStore');
 Route::get('/album/photo/{id}', [PhotoController::class, 'edit'])->name('photoEdit');
 Route::put('/album/photo/{id}', [PhotoController::class, 'update'])->name('photoUpdate');

@@ -22,7 +22,7 @@ class HomeController extends Controller
      */
     public function home()
     {
-        $albums= Album::where('category', 'Overview')->get();
+        $albums= Album::where('category','Overview')->get();
         $photos= [];
         foreach($albums as $album){
             foreach($album->photos as $photo){    
