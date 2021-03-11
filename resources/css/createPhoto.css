@@ -5,30 +5,56 @@
     align-items: center;
 }
 
-form {
+.form1 {
+    display: flex;
+    margin: auto;
+    max-width: 800px;
+
+    border: 2px solid red;
+}
+
+.inputs-container {
     display: flex;
     flex-direction: column;
-    margin: auto;
-    max-width: 600px;
+    justify-content: flex-end;
+    margin-right: 40px;
+
+    border: 2px solid green;
 }
 
-label {
+.inputs-container label {
     margin-top: 18px;
+    margin-right: 10px;
 }
 
-input {
-    max-width: 500px;
+.inputs {
+    margin-top: 18px;
 }
 
 .buttons {
     align-self: center;
+    margin-top: 60px;
 }
+
+.picture-uploaded img {
+    margin-top: 10px;
+    max-width: 200px;
+
+    border: 2px solid blue;
+}
+
+
 
 .form-control1 {
     border-radius: 2px;
     background-color: black;
     color: white;
 }
+
+
+
+
+
 
 @media only screen and (max-width: 768px) {
     .buttons {

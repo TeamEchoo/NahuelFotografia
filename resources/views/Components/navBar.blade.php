@@ -26,6 +26,9 @@
       <li class="main-nav-list-item"><a class="main-link main-list-link" 
       href="{{ route('categoryAlbum', 'More') }}">MORE</a></li>
 
+      <li class="main-nav-list-item"><a class="main-link main-list-link" 
+      href="{{ route('contact', 'Contact') }}">CONTACT</a></li>
+
       <li class="main-nav-list-item"><a class="main-link main-list-link" href="#">STORE</a></li>
       
     </ul>
