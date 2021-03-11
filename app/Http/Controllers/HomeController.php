@@ -20,20 +20,33 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index()
+    public function home()
     {
-        $photos = Photo::all();
-
-        
-        //$albums= Album::where('category', 'Overview')->get();
-        //$photos= []; 
-        //foreach($albums as $album){ 
-        //    array_push($photos, $album->photos()->get());
-        //} 
+        $albums= Album::where('category','Overview')->get();
+        $photos= [];
+        foreach($albums as $album){
+            foreach($album->photos as $photo){    
+                array_push($photos, $photo);
+            }
+        };
+      
         return view('home',['photos' => $photos]);
     }
 
-    public function album($category)
+    public function editorial()
+    {
+        $albums= Album::where('category', 'Editorial')->get();
+        $photos= [];
+        foreach($albums as $album){
+            foreach($album->photos as $photo){    
+                array_push($photos, $photo);
+            }
+        };
+      
+        return view('home',['photos' => $photos]);
+    }
+
+    public function more($category)
     {
 
         $albums= Album::where('category', $category)->get();
@@ -52,8 +65,6 @@ class HomeController extends Controller
 
     public function contact()
     {
-
-        
         return view('contact');
     
     }

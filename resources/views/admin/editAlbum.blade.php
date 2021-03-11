@@ -18,14 +18,6 @@
             </div>
             <div class='column'>
                 <div class='category-column'>
-                    <h2 class="categoryTitle" for="category">Category:</h2>
-
-                    <select class="categorySelect" name="category" id="category">
-                        <option value="{{$album->category}}">{{$album->category}}</option>
-                        <option value="Overview">Overview</option>
-                        <option value="Editorial">Editorial</option>
-                        <option value="More">More</option>
-                    </select>
 
                     <a href="{{ route( 'albumUpdate', $album->id ) }}">
                         <button class="cancelButton" type="submit">

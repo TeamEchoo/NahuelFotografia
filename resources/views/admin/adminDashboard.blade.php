@@ -20,7 +20,13 @@
                     <tr>
                         <td> {{ $album->title }} </td>
                         <td> {{ $album->category }} </td>
-                        <td></td>
+                        <td>
+                        @foreach($photos as $photo)
+                            @if($photo->album_id == $album->id)
+                             <img src="{{ $photo->filename }}" class="picture">
+                            @endif
+                        @endforeach
+                        </td>
                         <td>
                             <a href="{{ route('albumEdit', $album->id) }}">
                                 <button type="submit"> <i class="far fa-edit"></i>
