@@ -28,18 +28,18 @@ class HomeController extends Controller
         return view('home',['photos' => $photos]);
     }
 
-    public function editorial($category)
+    public function editorial()
     {
             
-        $album= Album::where('category', $category)->first();
+        $album= Album::where('category', 'Editorial')->first();
         $photos= $album->photos;
-        return view('home',['photos' => $photos]);
+        return view('home', ['photos' => $photos]);
     }
 
 
-    public function more($category){
+    public function more(){
         
-        $albums = Album::where('category', $category)->get();
+        $albums = Album::where('category', 'More')->get();
         $photos= [];
         foreach($albums as $album){
  

@@ -12,10 +12,10 @@
             <a class="nav-link" href="{{ route('home') }}">OVERVIEW</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{ route('editorial', 'Editorial') }}">EDITORIAL</a>
+            <a class="nav-link" href="{{ route('editorial') }}">EDITORIAL</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{ route('more', 'More') }}">MORE</a>
+            <a class="nav-link" href="{{ route('more') }}">MORE</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">STORE</a>

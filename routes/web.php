@@ -32,11 +32,11 @@ Route::get('/admin/album', [App\Http\Controllers\NahuelAdminController::class,'d
 
 ///WEBPAGE
 Route::get('/', [HomeController::class, 'home'], 'Overview')->name('home');
-Route::get('/Category/{$category}', [HomeController::class, 'editorial'])->name('editorial');
-Route::get('/Category/{category}', [HomeController::class, 'more'])->name('more');
+Route::get('/Category/Editorial', [HomeController::class, 'editorial'])->name('editorial');
+Route::get('/Category/More', [HomeController::class, 'more'])->name('more');
 
 Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
-Route::get('/gallery/{$id}', [HomeController::class, 'gallery'])->name('gallery');
+Route::get('/gallery/{id}', [HomeController::class, 'gallery'])->name('gallery');
 
 Route::get('/album', [AlbumController::class, 'index'])->name('album');
 Route::get('/newalbum', [AlbumController::class, 'create'])->name('albumCreate');
