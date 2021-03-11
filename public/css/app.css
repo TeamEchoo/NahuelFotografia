@@ -514,6 +514,7 @@ button:hover {
 
 .saveButton {
     margin-right: 200px;
+    padding-bottom: 18px;
     text-decoration: none;
     color: black;
     font-weight: 500;

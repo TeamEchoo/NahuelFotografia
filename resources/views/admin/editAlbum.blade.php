@@ -76,8 +76,8 @@
     </div>
 
     <div class="downButtons">
-    <a class="saveButton" href="{{ route( 'albumUpdate', $album->id ) }}">
-                        <button class="cancelButton" type="submit">
+    <a  href="{{ route( 'albumUpdate', $album->id ) }}">
+                        <button class="saveButton" class="cancelButton" type="submit">
                         Save
                         </button>
                     </a>
@@ -86,3 +86,4 @@
     </div>
     </form>
 </x-head>
+ 
