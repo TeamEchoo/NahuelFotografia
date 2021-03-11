@@ -18,22 +18,10 @@
             </div>
             <div class='column'>
                 <div class='category-column'>
-                    <h2 class="categoryTitle" for="category">Category:</h2>
 
-                    <select class="categorySelect" name="category" id="category">
-                        <option value="{{$album->category}}">{{$album->category}}</option>
-                        <option value="Overview">Overview</option>
-                        <option value="Editorial">Editorial</option>
-                        <option value="More">More</option>
-                    </select>
+                    
 
-                    <a href="{{ route( 'albumUpdate', $album->id ) }}">
-                        <button class="cancelButton" type="submit">
-                        Save
-                        </button>
-                    </a>
-
-                    </form>
+                    
                 </div>
             </div>
         </div>
@@ -92,7 +80,14 @@
     
 
     <div class="downButtons">
+    <a  href="{{ route( 'albumUpdate', $album->id ) }}">
+                        <button class="saveButton" class="cancelButton" type="submit">
+                        Save
+                        </button>
+                    </a>
         <a class="addButton" href="{{ route('photoCreate', $album->id) }}">Add new Photo</a>
         <a class="cancelButton" href="{{ route('album') }}">Cancel</a>
     </div>
+    </form>
 </x-head>
+ 

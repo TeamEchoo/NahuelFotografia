@@ -15,19 +15,13 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 
-Route::get('/photos', function () {
-    return view('photos');
-});
-
-Route::get('/contact', function(){
-    return view('contact');
-})->name('contact');
-
 //ADMIN VIEW
 Auth::routes();
 Route::get('/nahuel', [App\Http\Controllers\NahuelAdminController::class,'index'])->name('admin');
+
 ///WEBPAGE
-Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/', [HomeController::class, 'home'])->name('home');
 Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
 Route::get('/gallery/{id}', [HomeController::class, 'gallery'])->name('gallery');
-Route::get('/Category/{category}', [HomeController::class, 'album'])->name('categoryAlbum');
+Route::get('/Category/Editorial', [HomeController::class, 'editorial'])->name('editorial');
+Route::get('/Category/More', [HomeController::class, 'more'])->name('more');

@@ -3,7 +3,7 @@
     <x-logoAdmin />
 
 
-    <h1 class="dash">Dashboard</h1>
+    <h1 class="dash">MORE</h1>
     <div class="container">
         <div class="row">
             <div class="col">
@@ -21,7 +21,11 @@
                     <tr>
                         <td> {{ $album->title }} </td>
                         <td> {{ $album->category }} </td>
-                        <td></td>
+                        <td>
+                        @if(isset($album->getCoverImage()->filename))
+                         <img src="{{ $album->getCoverImage()->filename}}" class="picture">
+                         @endif
+                        </td>
                         <td>
                             <a href="{{ route('albumEdit', $album->id) }}">
                                 <button type="submit"> <i class="far fa-edit"></i>

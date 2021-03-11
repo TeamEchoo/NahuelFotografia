@@ -47,20 +47,20 @@ class PhotoController extends Controller
             
             ]);
         
-        $image = Str::random(10) . $request->file('filename')->getClientOriginalName();
+        $image = time() . $request->file('filename')->getClientOriginalName();
         
         $photo = Photo::create([
             'title' => $request->title,
             'epigraph' => $request->epigraph,
             'person' => $request->person,
             'link' => $request->link,
-            'filename' => public_path() . $image,
-            'cover_image' => $request->cover_image,
+            'filename' => '\images/' . $image,
+            'cover_image' => $request->has('cover_image'),
             'album_id' => $album
             ]);    
             
-            $path = public_path() . $image;
-            Image::make($request->file('filename'))->save($path);
+        $path = public_path() . '\images/' . $image;
+        Image::make($request->file('filename'))->save($path);
             
         $photo->save();
 

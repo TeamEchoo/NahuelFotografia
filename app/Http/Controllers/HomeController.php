@@ -20,38 +20,49 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index()
+    public function home()
     {
-        // $albums= Album::where('category', 'Overview')->get();
-        // $photos= [];
-        // foreach($albums as $album){
-        //     array_push($photos, $album->photos()->get());
-        // }
-            $photos = Photo::all();
+        $album= Album::where('category','Overview')->first();
+        $photos= $album->photos;
+        
         return view('home',['photos' => $photos]);
     }
 
-    public function album($category)
+    public function editorial()
     {
-
-        $albums= Album::where('category', $category)->get();
-        
-        return view('album', ['albums' => $albums]);
+            
+        $album= Album::where('category', 'Editorial')->first();
+        $photos= $album->photos;
+        return view('home', ['photos' => $photos]);
     }
+
+
+    public function more(){
+        
+        $albums = Album::where('category', 'More')->get();
+        $photos= [];
+        foreach($albums as $album){
+ 
+            $albumPhotos= $album->photos;
+            foreach ($albumPhotos as $photo){
+            array_push($photos, $photo);
+        }
+        }
+
+        return view('album', ['albums' => $albums, 'photos' => $photos]);
+        }
+
 
     public function gallery($id)
     {
-
-        $album = Album::find($id);
+        $galleryAlbum = Album::find($id);
         $photos= $album->photos()->get();
-        return view('gallery', ['album' => $album, 'photos' => $photos]);
+        return view('gallery', ['album' => $galleryAlbum, 'photos' => $photos]);
     }
 
 
     public function contact()
     {
-
-        
         return view('contact');
     
     }

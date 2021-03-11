@@ -15,8 +15,9 @@ class AlbumController extends Controller
      */
     public function index()
     {
-        $albums = Album::all();
-        return view('admin.adminDashboard', compact('albums'));
+        $albums= Album::all();
+  
+        return view('admin.adminDashboard', ['albums' => $albums]);
     }
 
     /**
@@ -39,7 +40,6 @@ class AlbumController extends Controller
     {
         $album = Album::create([
             "title" => $request->title,
-            "category" => $request->category,
             "cover_image" => $request->cover_image
         ]);
 

@@ -25,7 +25,7 @@
         <label for="thumbnail">Actual Picture</label>
         <img src="{{$photo->filename}}" >
 
-        <label for="cover">Cover:</label>
+        <label for="cover_image">Cover:</label>
         <input name="cover_image" type="checkbox">
         
         <a href="{{ route( 'photoUpdate', $photo->id) }}">
