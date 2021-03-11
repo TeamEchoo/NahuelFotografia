@@ -46,7 +46,7 @@ class HomeController extends Controller
             $albumPhotos= $album->photos;
             foreach ($albumPhotos as $photo){
             array_push($photos, $photo);
-            }
+        }
         }
 
         return view('album', ['albums' => $albums, 'photos' => $photos]);

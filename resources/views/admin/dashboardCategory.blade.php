@@ -15,7 +15,9 @@
         </div>    
         
         <div class="more">
-            <span><b>MORE</b></span>
+            <a href="{{route('album', 'More')}}">
+                <span><b>MORE</b></span>
+            </a>
         </div>    
     </div>            
 

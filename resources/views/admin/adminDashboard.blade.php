@@ -21,7 +21,9 @@
                         <td> {{ $album->title }} </td>
                         <td> {{ $album->category }} </td>
                         <td>
-                         <img src="{{ $album->getCoverImage()->filename }}" class="picture">
+                        @if(isset($album->getCoverImage()->filename))
+                         <img src="{{ $album->getCoverImage()->filename}}" class="picture">
+                         @endif
                         </td>
                         <td>
                             <a href="{{ route('albumEdit', $album->id) }}">
