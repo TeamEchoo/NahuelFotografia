@@ -12,7 +12,7 @@
             <a class="nav-link" href="{{ route('home') }}">OVERVIEW</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{ route('categoryAlbum', 'Editorial') }}">EDITORIAL</a>
+            <a class="nav-link" href="{{ route('editorial') }}">EDITORIAL</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="{{ route('categoryAlbum', 'More') }}">MORE</a>

@@ -55,7 +55,7 @@ class PhotoController extends Controller
             'person' => $request->person,
             'link' => $request->link,
             'filename' => '\images/' . $image,
-            'cover_image' => $request->cover_image,
+            'cover_image' => $request->has('cover_image'),
             'album_id' => $album
             ]);    
             

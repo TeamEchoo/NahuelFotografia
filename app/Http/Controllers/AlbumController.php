@@ -16,7 +16,11 @@ class AlbumController extends Controller
     public function index()
     {
         $albums= Album::all();
-        $photos= Photo::all();
+        $photos= [];
+        $photoCollection= Photo::where('cover_image', true)->get();
+        foreach($photoCollection as $photo){
+            array_push($photos, $photo);
+        } 
         return view('admin.adminDashboard', compact('albums', "photos"));
     }
 
@@ -40,7 +44,6 @@ class AlbumController extends Controller
     {
         $album = Album::create([
             "title" => $request->title,
-            "category" => $request->category,
             "cover_image" => $request->cover_image
         ]);
 

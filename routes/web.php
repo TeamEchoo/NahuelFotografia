@@ -1,9 +1,10 @@
 <?php
-
+use App\Http\Controllers\NahuelAdminController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AlbumController;
 use App\Http\Controllers\PhotoController;
 use App\Http\Controllers\HomeController;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,8 +30,16 @@ Route::get('/comoquieran', function () {
 });
 
 //ADMIN VIEW
+Auth::routes();
+Route::get('/admin', [App\Http\Controllers\NahuelAdminController::class,'index'])->name('admin');
+Route::get('/admin/album', [App\Http\Controllers\NahuelAdminController::class,'dashboard'])->name('dashboard');
 
-//album
+///WEBPAGE
+Route::get('/', [HomeController::class, 'home'], 'Overview')->name('home');
+Route::get('/Editorial', [HomeController::class, 'editorial'])->name('editorial');
+Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
+Route::get('/gallery/{$id}', [HomeController::class, 'gallery'])->name('gallery');
+Route::get('/Category/{category}', [HomeController::class, 'more'])->name('categoryAlbum');
 
 Route::get('/album', [AlbumController::class, 'index'])->name('album');
 Route::get('/newalbum', [AlbumController::class, 'create'])->name('albumCreate');
@@ -42,17 +51,8 @@ Route::delete('/album/{id}', [AlbumController::class, 'destroy'])->name('albumDe
 
 
 //PHOTOS
-Route::get('/album/{id}/newphoto', [PhotoController::class, 'create'])->name('photoCreate');
+Route::get('/album/{id}/newphoto', [PhotoController::class, 'create'])->name('photoCreate')->middleware();
 Route::post('/album/{id}/newphoto', [PhotoController::class, 'store'])->name('photoStore');
 Route::get('/album/photo/{id}', [PhotoController::class, 'edit'])->name('photoEdit');
 Route::put('/album/photo/{id}', [PhotoController::class, 'update'])->name('photoUpdate');
 Route::delete('/album/photo/{id}', [PhotoController::class, 'destroy'])->name('photoDelete');
-
-
-
-
-///WEBPAGE
-Route::get('/', [HomeController::class, 'index'])->name('home');
-Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
-Route::get('/gallery/{id}', [HomeController::class, 'gallery'])->name('gallery');
-Route::get('/Category/{category}', [HomeController::class, 'album'])->name('categoryAlbum');
