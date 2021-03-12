@@ -8,8 +8,8 @@
 
 
 <!-- GALLERY -->
-<div class="containerGallery">
-  <div class="photos">
+<div class="containerGalleryHome">
+  <div class="photosHome">
       @foreach($photos as $photo)
       <img class="myImg" alt="Photo Text" src="{{ $photo->filename }}" onclick="openModal();"/>
       @endforeach
@@ -17,11 +17,10 @@
     
   <div class="myModal modal">
     <span class="close">&times;</span>
-    <div class="modalImage-container">
+    <div id="modalImage-container">
       <img class="modalImage" id="img01" />
       <div class="caption"></div>
     </div>
-
   </div>
 
 
