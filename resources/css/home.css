@@ -212,13 +212,32 @@ body {
     }
 
     #modalImage-container {
-        width: 200px !important;
+        width: 250px !important;
         margin: 20 !important;
         padding: 0 !important;
     }
 
 
     .modalImage {
-        max-width: 350px !important;
+        max-width: 380px !important;
     }  
+
+    .logo h1 {
+        font-size: 12px;
+        letter-spacing: 0.3px;
+        margin-bottom: 0;
+    }
+    
+    .adminLogo {
+        font-size: 15px;
+        letter-spacing: 0.3px;
+        margin-top: 10px;
+        margin-bottom: 0;
+    }
+    
+    .logo h3 {
+        font-size: 8px;
+        margin-left: 25px;
+        color: #706a5d;
+    }
 }
