@@ -1,6 +1,6 @@
 <x-head>
     <x-navBar />
-    <x-logoAdmin />
+    
 
 
     <h1 class="dash">MORE</h1>
@@ -40,7 +40,7 @@
                     @endforeach
                 </table>
 
-                <a id="bottom" href="{{ route('albumCreate') }}">New Album</a>
+                <a id="bottom" class="downButtons cancelButton" href="{{ route('albumCreate') }}">New Album</a>
 
             </div>
         </div>
