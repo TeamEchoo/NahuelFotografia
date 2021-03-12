@@ -189,7 +189,18 @@ body {
     height: 45px;
     width: 80%;
     max-width: 700px;
+
 }
+
+.titulo1 {
+    display: none;
+    color: red;
+}
+
+
+
+
+
 
 /* Add Animation */
 .modalImaget,
