@@ -15,7 +15,8 @@ class AlbumController extends Controller
      */
     public function index()
     {
-        return view('admin.dashboardCategory');
+        $albums= Album::all();
+        return view('admin.adminDashboard', ['albums' => $albums]);
     }
 
     /**
