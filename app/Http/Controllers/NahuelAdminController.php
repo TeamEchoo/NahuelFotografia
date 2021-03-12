@@ -18,7 +18,7 @@ class NahuelAdminController extends Controller
         if(! Auth()){
             return back()->flash('Wrong credentials, plese try again');
         }
-        return view('admin.adminDashboard', compact('albums'));
+        return view('admin.dashboardCategory');
     }
 
 }

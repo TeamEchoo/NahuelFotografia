@@ -41,15 +41,17 @@ class HomeController extends Controller
         
         $albums = Album::where('category', 'More')->get();
         $photos= [];
+
         foreach($albums as $album){
  
             $albumPhotos= $album->photos;
-            foreach ($albumPhotos as $photo){
-            array_push($photos, $photo);
-        }
-        }
+            array_push($photos, $albumPhotos);
+            }
+
+        $photos= collect($photos)->collapse()->all();
 
         return view('album', ['albums' => $albums, 'photos' => $photos]);
+
         }
 
 
