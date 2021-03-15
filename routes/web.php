@@ -29,11 +29,6 @@ Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
 Route::get('/gallery/{id}', [HomeController::class, 'gallery'])->name('gallery');
 Route::get('/Category/{category}', [HomeController::class, 'categoryAlbum'])->name('categoryAlbum');
 
-
-//ADMIN VIEW
-
-
-
 //album
 Route::get('/album', [AlbumController::class, 'index'])->name('album');
 Route::get('/newalbum', [AlbumController::class, 'create'])->name('albumCreate');
