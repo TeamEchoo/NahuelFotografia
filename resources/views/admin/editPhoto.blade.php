@@ -20,7 +20,7 @@
         <input name="link" type="text" value="{{ $photo->link }}">
 
         <label for="filename">Photo:</label>
-        <input  type="file" style="width: 172px"  name="filename" accept="image/*" class="form-control">
+        <input  type="file" style="width: 172px"  name="filename" accept="image/*" class="form-control1">
 
         <label for="thumbnail">Actual Picture</label>
         <img src="{{$photo->filename}}" >
