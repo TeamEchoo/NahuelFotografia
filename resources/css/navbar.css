@@ -1,183 +1,184 @@
 body {
-    margin: 0;
-  }
-  
-  /************ Main Header Styles ************/
+  margin: 0;
+}
+
+/************ Main Header Styles ************/
+.nav-header {
+  display: flex;
+  justify-content: space-between;
+  background-color: 
+  #ffffff;
+  color: #000000;
+  margin: 0;
+  max-width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 1.25rem;
+  padding-top: 35px;
+  position: relative;
+}
+
+.nav-header-logo {
+  display: inline-block;
+  font-size: 1.25rem;
+  margin: 0;
+}
+
+.main-link {
+  text-decoration: none;
+  color: #000000;
+}
+
+.main-nav {
+  display: flex;
+  align-self: flex-start;
+  align-items: center;
+  margin-right: 69px;
+}
+
+.main-nav-list {
+  margin: 0;
+  padding-left: 0px;
+}
+
+.main-nav-list-item {
+  list-style: none;
+  float: left;
+  padding: 0 10px;
+}
+
+.main-list-link {
+  font-size: 0.88rem;
+}
+
+.main-list-link:hover {
+  color: #bababa;
+}
+
+.main-menu-button {
+  display: inline-block;
+  margin-right: 80px;
+}
+
+
+/************ Mobile Header ************/
+@media (max-width: 982px) {
+
   .nav-header {
-    display: flex;
-    justify-content: space-between;
-    background-color: 
-    #ffffff;
-    color: #000000;
-    margin: 0;
-    max-width: 100%;
+    display: block;
+    padding: 0px;
+  }
+
+  .main-mobile-container {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
     align-items: center;
-    padding: 1.25rem;
-    position: relative;
+    justify-content: space-between;
+    padding: 20px;
   }
-  
+
   .nav-header-logo {
-    display: inline-block;
     font-size: 1.25rem;
     margin: 0;
   }
-  
-  .main-link {
-    text-decoration: none;
-    color: #000000;
-  }
-  
+
   .main-nav {
-    display: flex;
-    align-self: flex-start;
-    align-items: center;
-    margin-right: 18px;
+    display: none;
+    position: static;
+    text-align: center;
   }
-  
+
+  .main-nav-extras {
+    display: block;
+    position: static;
+    padding: 2% 0;;
+  }
+
+  .main-nav-button {
+    margin: 0 0 0 0;
+  }
+
+  /**** Nav Animation ****/
+  .toggle-main-nav {
+    display: block;
+    padding: 0 0 20px;
+  }
+
   .main-nav-list {
     margin: 0;
-    padding-left: 0px;
+    padding: 0;
   }
-  
+
   .main-nav-list-item {
     list-style: none;
-    float: left;
-    padding: 0 20px;
+    float: none;
+    padding: 2% 5%;
   }
-  
-  .main-list-link {
-    font-size: 0.88rem;
+
+  .main-menu-bar {
+    background-color: #000000;
+    width: 1.5rem;
+    height: 2px;
+    margin: 4px 0;
+    padding: 0;
+    
   }
-  
-  .main-list-link:hover {
-    color: #bababa;
+
+  /**** Menu Button Animation ****/
+  .hide-bar-two {
+    animation: bar-hide 1s linear forwards;
   }
-  
-  .main-menu-button {
-    display: inline-block;
-    margin-right: 38px;
+
+  @keyframes bar-hide {
+
+    0% {
+      width: 0px;
+      height: 0px;
+    }
+
+    100% {
+      width: 0px;
+      height: 0px;
+    }
   }
-  
-  
-  /************ Mobile Header ************/
-  @media (max-width: 982px) {
-  
-    .nav-header {
-      display: block;
-      padding: 0px;
-    }
-  
-    .main-mobile-container {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: space-between;
-      padding: 20px;
-    }
-  
-    .nav-header-logo {
-      font-size: 1.25rem;
-      margin: 0;
-    }
-  
-    .main-nav {
-      display: none;
-      position: static;
-      text-align: center;
-    }
-  
-    .main-nav-extras {
-      display: block;
-      position: static;
-      padding: 2% 0;;
-    }
-  
-    .main-nav-button {
-      margin: 0 0 0 0;
-    }
-  
-    /**** Nav Animation ****/
-    .toggle-main-nav {
-      display: block;
-      padding: 0 0 20px;
-    }
-  
-    .main-nav-list {
-      margin: 0;
-      padding: 0;
-    }
-  
-    .main-nav-list-item {
-      list-style: none;
-      float: none;
-      padding: 2% 5%;
-    }
-  
-    .main-menu-bar {
-      background-color: #000000;
-      width: 1.5rem;
-      height: 2px;
-      margin: 4px 0;
-      padding: 0;
-      
-    }
-  
-    /**** Menu Button Animation ****/
-    .hide-bar-two {
-      animation: bar-hide 1s linear forwards;
-    }
-  
-    @keyframes bar-hide {
-  
-      0% {
-        width: 0px;
-        height: 0px;
-      }
-  
-      100% {
-        width: 0px;
-        height: 0px;
-      }
-    }
-  
-    .cross-bar-one{
-      animation: bar-cross-left 0.5s linear forwards;
-    }
-  
-    @keyframes bar-cross-left {
-      10% {
-        transform: rotate(45deg) translate(4px, 4px);
-      }
-  
-      50% {
-        transform: rotate(45deg) translate(7px, 7px);
-      }
-  
-      100% {
-        transform: rotate(45deg) translate(3px, 2px);
-      }
-    }
-  
-    .cross-bar-three {
-      animation: bar-cross-right 0.5s linear forwards;
-    }
-  
-    @keyframes bar-cross-right {
-      10% {
-        transform: rotate(-45deg);
-      }
-  
-      60% {
-        transform: rotate(-45deg) translate(-3px, 3px);
-      }
-  
-      100% {
-        transform: rotate(-45deg) translate(1px, -2px);
-      }
-    }
-  
+
+  .cross-bar-one{
+    animation: bar-cross-left 0.5s linear forwards;
   }
+
+  @keyframes bar-cross-left {
+    10% {
+      transform: rotate(45deg) translate(4px, 4px);
+    }
+
+    50% {
+      transform: rotate(45deg) translate(7px, 7px);
+    }
+
+    100% {
+      transform: rotate(45deg) translate(3px, 2px);
+    }
+  }
+
+  .cross-bar-three {
+    animation: bar-cross-right 0.5s linear forwards;
+  }
+
+  @keyframes bar-cross-right {
+    10% {
+      transform: rotate(-45deg);
+    }
+
+    60% {
+      transform: rotate(-45deg) translate(-3px, 3px);
+    }
+
+    100% {
+      transform: rotate(-45deg) translate(1px, -2px);
+    }
+  }
+
+}
   

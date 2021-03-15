@@ -3,34 +3,63 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    
 }
 
-form {
+div#picture-uploaded   {
+    order: 2;}
+
+.form1 {
+    display: flex;
+    margin: auto;
+    max-width: 800px;
+}
+
+.inputs-container {
     display: flex;
     flex-direction: column;
-    margin: auto;
-    max-width: 600px;
+    justify-content: center;
+    margin-right: 40px;
 }
 
-label {
+.inputs-container label {
     margin-top: 18px;
+    margin-right: 10px;
 }
 
-input {
-    max-width: 500px;
+.inputs {
+    margin-top: 18px;
 }
 
 .buttons {
     align-self: center;
+    margin-top: 60px;
+}
+
+#picture-uploaded img {
+    margin-top: 40px;
+    margin-bottom: 15px;
+    max-width: 300px;
+    max-width: 250px;
 }
 
 .form-control1 {
     border-radius: 2px;
-    background-color: black;
-    color: white;
+    color: black;
+    border: none;
 }
 
+/****RESPONSIVE****/
 @media only screen and (max-width: 768px) {
+
+    .form1 {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+
+    }
+
+    
     .buttons {
         display: flex;
         flex-direction: row;
@@ -39,7 +68,28 @@ input {
         padding: 0px;
     }
 
-    input {
+    .buttons a {
+        width: 130px;
+    }
+
+    .inputs {
         max-width: 300px;
+        margin-top: 5px;
+    }
+
+    .inputs-container label {
+        margin-top: 5px;
+        margin-right: 8px;
+    }
+
+    #picture-uploaded img {
+        display: flex;
+        justify-content: center !important;
+        align-content: center;
+        align-items: center;
+        margin-top: 10px;
+        margin-bottom: 15px;
+        max-width: 200px;
+        max-width: 150px;
     }
 }
