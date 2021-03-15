@@ -131,7 +131,7 @@ class PhotoController extends Controller
     {
         $photo = Photo::find($id)->first();
 
-        $url= $photo->filename;
+        $url= str_replace('storage', 'public', $photo->filename);
 
         Storage::delete($url);
         
