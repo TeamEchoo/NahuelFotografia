@@ -36,7 +36,7 @@
     </form>
     
         <a href="{{ route ('albumEdit', $photo->album_id)}}">
-            <button >Turn Back</button>
+            <button >Cancel</button>
         </a>
 
 </x-head>
