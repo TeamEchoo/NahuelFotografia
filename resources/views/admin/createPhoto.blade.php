@@ -8,7 +8,9 @@
 
 
     <form class="form1" action=" {{ route( 'photoStore', $albumId ) }}"  method="POST" enctype="multipart/form-data">
-            @csrf
+           
+    @csrf
+
     <div id="picture-uploaded">
             <img src="https://images.unsplash.com/photo-1556103255-4443dbae8e5a?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8cGhvdG9ncmFwaGVyfGVufDB8fDB8&ixlib=rb-1.2.1&w=1000&q=80">
         </div>
@@ -51,7 +53,7 @@
                 <button type="reset">Reset</button>
                     
                 <a href="{{ route ('albumEdit', $albumId)}}">
-                <button >Turn Back</button>
+                     <button >Turn back</button>
                 </a>
             </div>    
         </div>

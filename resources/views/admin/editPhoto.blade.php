@@ -39,6 +39,8 @@
             </div>   
         
 
+        <label for="filename">Photo:</label>
+        <input  type="file" style="width: 172px"  name="filename" accept="image/*" class="form-control1">
 
 
 
