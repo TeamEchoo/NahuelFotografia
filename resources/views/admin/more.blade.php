@@ -1,6 +1,6 @@
 <x-head>
     <x-navBar />
-    
+    <x-logoAdmin />
 
 
     <h1 class="dash">MORE</h1>
@@ -15,9 +15,6 @@
                             <th>Cover image</th>
                         </tr>
                     </thead>
-                    @if(!isset($albums))
-                    <p>No hay albums creados, crea el primero!</p>
-                    @endif
 
                     @foreach($albums as $album)
 
@@ -43,7 +40,7 @@
                     @endforeach
                 </table>
 
-                <a id="bottom" class="downButtons cancelButton" href="{{ route('albumCreate') }}">New Album</a>
+                <a id="bottom" href="{{ route('albumCreate') }}">New Album</a>
 
             </div>
         </div>

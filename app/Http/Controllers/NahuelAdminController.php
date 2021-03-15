@@ -39,6 +39,7 @@ class NahuelAdminController extends Controller
         $photos= $albums->photos();
         
         return view('home',['photos' => $photos, 'albums', $albums]);
+        return view('admin.dashboardCategory');
     }
 
 }

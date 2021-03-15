@@ -22,7 +22,7 @@ class HomeController extends Controller
      */
     public function home()
     {
-        $album= Album::where('category','Overview')->get();
+        $album= Album::where('category','Overview')->first();
         $photos= $album->photos()->get();
         
         return view('home',['photos' => $photos]);
@@ -31,7 +31,7 @@ class HomeController extends Controller
     public function editorial()
     {
             
-        $album= Album::where('category', 'Editorial')->get();
+        $album= Album::where('category', 'Editorial')->first();
         $photos= $album->photos()->get();
         return view('home', ['photos' => $photos]);
     }
@@ -41,15 +41,17 @@ class HomeController extends Controller
         
         $albums = Album::where('category', 'More')->get();
         $photos= [];
+
         foreach($albums as $album){
  
             $albumPhotos= $album->photos;
-            foreach ($albumPhotos as $photo){
-            array_push($photos, $photo);
-        }
-        }
+            array_push($photos, $albumPhotos);
+            }
+
+        $photos= collect($photos)->collapse()->all();
 
         return view('album', ['albums' => $albums, 'photos' => $photos]);
+
         }
 
 

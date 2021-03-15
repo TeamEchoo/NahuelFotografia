@@ -2,8 +2,8 @@
 use App\Http\Controllers\NahuelAdminController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
-use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\AlbumController;
+use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\PhotoController;
 
 /*
