@@ -63,7 +63,7 @@ class HomeController extends Controller
     public function gallery($id)
     {
         $galleryAlbum = Album::find($id);
-        $photos= $galleryAlbum->photos()->get;
+        $photos= $galleryAlbum->photos()->get();
         return view('gallery', ['album' => $galleryAlbum, 'photos' => $photos]);
     }
 
