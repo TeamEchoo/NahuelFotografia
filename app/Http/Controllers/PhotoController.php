@@ -58,7 +58,7 @@ class PhotoController extends Controller
             'cover_image' => $request->has('cover_image'),
             'album_id' => $album
             ]);    
-      
+            
         $path = public_path() . '\images/' . $image;
         Image::make($request->file('filename'))->save($path);
             
