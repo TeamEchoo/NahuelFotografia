@@ -37,7 +37,12 @@
             </div>
         </div>
     </div>
-    
+    <a  href="{{ route( 'albumUpdate', $album->id ) }}">
+        <button class="saveButton" class="cancelButton" type="submit">Save</button>
+    </a>
+ 
+    </form>
+
     @if(!$photos)
     <h1>Upload photos!</h1>
     
@@ -93,14 +98,10 @@
     
 
     <div class="downButtons">
-    <a  href="{{ route( 'albumUpdate', $album->id ) }}">
-                        <button class="saveButton" class="cancelButton" type="submit">
-                        Save
-                        </button>
-                    </a>
+
         <a class="addButton" href="{{ route('photoCreate', $album->id) }}">Add new Photo</a>
         <a class="cancelButton" href="{{ route('album') }}">Cancel</a>
     </div>
-    </form>
+   
 </x-head>
  
