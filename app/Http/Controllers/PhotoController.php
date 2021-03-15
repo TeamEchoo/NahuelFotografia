@@ -54,12 +54,12 @@ class PhotoController extends Controller
             'epigraph' => $request->epigraph,
             'person' => $request->person,
             'link' => $request->link,
-            'filename' => '\storage\images/' . $image,
+            'filename' => '\images/' . $image,
             'cover_image' => $request->has('cover_image'),
             'album_id' => $album
             ]);    
             
-        $path = public_path() . '\storage\images/' . $image;
+        $path = public_path() . '\images/' . $image;
         Image::make($request->file('filename'))->save($path);
             
         $photo->save();
@@ -100,20 +100,9 @@ class PhotoController extends Controller
     public function update(Request $request, $id)
     {
         $photo = Photo::find($id);
-        
-        $image = time() . $request->file('filename')->getClientOriginalName();
-        
-        $photo->update([
-            'title' => $request->title,
-            'epigraph' => $request->epigraph,
-            'person' => $request->person,
-            'link' => $request->link,
-            'filename' => '\images/' . $image,
-            'cover_image' => $request->has('cover_image')
-        ]);
+        $photo->update();
 
         $path = $request->file('filename')->store('images');
-
         $productImage = str_replace('/storage', '', $photo->image_path);
         Storage::delete('/public' . $productImage);
 
@@ -129,13 +118,12 @@ class PhotoController extends Controller
      */
     public function destroy($id)
     {
-        $photo = Photo::find($id)->first();
-
-        $url= str_replace('storage', 'public', $photo->filename);
-
-        Storage::delete($url);
-        
-        $photo->delete('images');
+        $photo = Photo::find($id);
+        if(Storage::disk('local')->exists('images'))
+        {
+            Storage::disk('local')->delete('images');
+        }
+            $photo->delete();
 
         return redirect()->route('albumEdit', $photo->album_id);
     }
