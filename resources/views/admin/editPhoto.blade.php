@@ -28,11 +28,11 @@
         <label for="cover_image">Cover:</label>
         <input name="cover_image" type="checkbox">
         
+        
         <a href="{{ route( 'photoUpdate', $photo->id) }}">
         <input type="submit" value="Save">
         </a>
-        
-        <button type="reset">Reset</button>
+
     </form>
     
         <a href="{{ route ('albumEdit', $photo->album_id)}}">
