@@ -101,7 +101,6 @@ class PhotoController extends Controller
     {
         $photo = Photo::find($id);
         $photo->photoDeleteFromStore();
-        
         $image = time() . $request->file('filename')->getClientOriginalName();
         
         $photo->update([
@@ -136,7 +135,7 @@ class PhotoController extends Controller
         $photo->photoDeleteFromStore();
 
         $photo->delete();
-        
+
         return redirect()->route('albumEdit', $photo->album_id);
     }
 }
