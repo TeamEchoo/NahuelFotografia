@@ -21,10 +21,10 @@
       href="{{ route('home') }}">OVERVIEW</a></li>
 
       <li class="main-nav-list-item"><a class="main-link main-list-link" 
-      href="{{ route('editorial') }}">EDITORIAL</a></li>
+      href="{{ route('categoryAlbum', 'Editorial') }}">EDITORIAL</a></li>
 
       <li class="main-nav-list-item"><a class="main-link main-list-link" 
-      href="{{ route('more') }}">MORE</a></li>
+      href="{{ route('categoryAlbum', 'More') }}">MORE</a></li>
 
       <li class="main-nav-list-item"><a class="main-link main-list-link" href="#">STORE</a></li>
 

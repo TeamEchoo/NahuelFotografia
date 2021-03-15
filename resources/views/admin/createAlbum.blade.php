@@ -15,12 +15,19 @@
                     <label for="title">Title:</label>
                     <input name="title" type="text">
                 </div>  
+                <div class="select">
+                    <label for="category">Category:</label>
+                    <select name="category" id="category">
+                        <option value="Overview">Overview</option>
+                        <option value="Editorial">Editorial</option>
+                        <option value="More">More</option>
+                    </select>
+                </div>    
+            </div>
             </div>
 
             
                 <div class="imputs2">
-                    <!-- <label for="cover_image">Cover image:</label>
-                    <input name="cover_image" type="text"> -->
 
                     <div class="imputs3">
                         <button type="submit">Save</button>

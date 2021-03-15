@@ -22,24 +22,7 @@ class HomeController extends Controller
      */
     public function home()
     {
-        $album= Album::where('category','Overview')->first();
-        $photos= $album->photos()->get();
-        
-        return view('home',['photos' => $photos]);
-    }
-
-    public function editorial()
-    {
-            
-        $album= Album::where('category', 'Editorial')->first();
-        $photos= $album->photos()->get();
-        return view('home', ['photos' => $photos]);
-    }
-
-
-    public function more(){
-        
-        $albums = Album::where('category', 'More')->get();
+        $albums = Album::where('category', 'Overview')->get();
         $photos= [];
 
         foreach($albums as $album){
@@ -50,8 +33,30 @@ class HomeController extends Controller
 
         $photos= collect($photos)->collapse()->all();
 
-        return view('album', ['albums' => $albums, 'photos' => $photos]);
+        return view('home', ['albums' => $albums, 'photos' => $photos]);
+    }
 
+    public function categoryAlbum($category)
+    {
+        
+        $albums = Album::where('category', $category)->get();
+        $photos= [];
+
+        foreach($albums as $album){
+ 
+            $albumPhotos= $album->photos;
+            array_push($photos, $albumPhotos);
+            }
+
+        $photos= collect($photos)->collapse()->all();
+        
+        if($category == 'Editorial'){
+            return view('home', ['photos' => $photos]);
+        }
+        
+        else{
+        return view('album', ['albums' => $albums, 'photos' => $photos]);
+        }
         }
 
 
