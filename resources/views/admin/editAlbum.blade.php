@@ -55,8 +55,10 @@
                         <td> {{ $photo->link }} </td>
                         <td> <img class="picture" src="{{ $photo->filename }}"> </td>
                         <td> 
-                        @if(!$photo->cover_image == true)
-                            <input name="cover_image" type="checkbox" abled>
+                        @if($photo->cover_image == true)
+                            <input name="cover_image" type="checkbox" checked disabled>
+                        @else
+                            <input name="cover_image" type="checkbox" disabled>
                         @endif
                         </td>
                         <td><a href="{{ route('photoEdit', $photo->id) }}"><i class="far fa-edit"></i></a></td>

@@ -103,11 +103,10 @@ class PhotoController extends Controller
         $photo->update();
 
         $path = $request->file('filename')->store('images');
-        dd($path);
-        // $productImage = str_replace('/storage', '', $photo->image_path);
-        // Storage::delete('/public' . $productImage);
+        $productImage = str_replace('/storage', '', $photo->image_path);
+        Storage::delete('/public' . $productImage);
 
-        // $album = $photo->album_id;
+        $album = $photo->album_id;
         return redirect()->route('albumEdit', $path);
     }
 
@@ -124,7 +123,6 @@ class PhotoController extends Controller
         {
             Storage::disk('local')->delete('images');
         }
-dd();
             $photo->delete();
 
         return redirect()->route('albumEdit', $photo->album_id);

@@ -22,7 +22,6 @@ Auth::routes();
 Route::get('/nahuel', [NahuelAdminController::class,'index'])->name('login');
 Route::post('/nahuel', [NahuelAdminController::class,'loginOk'])->name('loginOk');
 
-Route::get('/dashboard', [NahuelAdminController::class,'dashboard'])->name('dashboard');
 
 ///WEBPAGE
 Route::get('/', [HomeController::class, 'home'])->name('home');
@@ -38,7 +37,6 @@ Route::get('/Category/More', [HomeController::class, 'more'])->name('more');
 
 
 //album
-
 Route::get('/album', [AlbumController::class, 'index'])->name('album');
 Route::get('/newalbum', [AlbumController::class, 'create'])->name('albumCreate');
 Route::post('/album', [AlbumController::class, 'store'])->name('albumStore');

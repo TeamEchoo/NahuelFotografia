@@ -30,16 +30,13 @@ class NahuelAdminController extends Controller
         if(! Auth()){
             return back()->flash('Wrong credentials, plese try again');
         }
-        return redirect()->route('dashboard');
+        return redirect()->route('album');
     }
 
-    public function dashboard()
-    {
-        $albums= Album::where('category','Overview');
-        $photos= $albums->photos();
+    // public function dashboard()
+    // {
         
-        return view('home',['photos' => $photos, 'albums', $albums]);
-        return view('admin.dashboardCategory');
-    }
+    //     return redir('admin.dashboardCategory');
+    // }
 
 }
