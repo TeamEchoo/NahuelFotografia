@@ -1,5 +1,5 @@
 <x-head>
-    <x-logoAdmin />
+    <x-logo />
     
 
 
@@ -15,9 +15,7 @@
                             <th>Cover image</th>
                         </tr>
                     </thead>
-                    @if(!isset($albums))
-                    <p>No hay albums creados, crea el primero!</p>
-                    @endif
+                    
 
                     @foreach($albums as $album)
 
