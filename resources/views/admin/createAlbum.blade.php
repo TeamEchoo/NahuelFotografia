@@ -1,5 +1,4 @@
 <x-head>
-<x-logoAdmin />
 <x-navBar />
 
 
