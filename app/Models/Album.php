@@ -22,7 +22,7 @@ class Album extends Model
     public function getCoverImage()
     {
         $photos = $this->photos;
-        return $this->photos->where('cover_image', true)->first();
+        return $photos->where('cover_image', true)->first();
     }
 
 }

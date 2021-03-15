@@ -22,8 +22,8 @@ class HomeController extends Controller
      */
     public function home()
     {
-        $album= Album::where('category','Overview')->first();
-        $photos= $album->photos;
+        $album= Album::where('category','Overview')->get();
+        $photos= $album->photos()->get();
         
         return view('home',['photos' => $photos]);
     }
@@ -31,8 +31,8 @@ class HomeController extends Controller
     public function editorial()
     {
             
-        $album= Album::where('category', 'Editorial')->first();
-        $photos= $album->photos;
+        $album= Album::where('category', 'Editorial')->get();
+        $photos= $album->photos()->get();
         return view('home', ['photos' => $photos]);
     }
 
@@ -56,7 +56,7 @@ class HomeController extends Controller
     public function gallery($id)
     {
         $galleryAlbum = Album::find($id);
-        $photos= $album->photos()->get();
+        $photos= $galleryAlbum->photos()->get;
         return view('gallery', ['album' => $galleryAlbum, 'photos' => $photos]);
     }
 

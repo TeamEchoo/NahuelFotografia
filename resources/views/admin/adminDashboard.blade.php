@@ -1,7 +1,5 @@
 <x-head>
     <x-navBar />
-    <x-logoAdmin />
-
 
     <h1 class="dash">MORE</h1>
     <div class="container">
@@ -15,6 +13,9 @@
                             <th>Cover image</th>
                         </tr>
                     </thead>
+                    @if(!isset($albums))
+                    <p>No hay albums creados, crea el primero!</p>
+                    @endif
 
                     @foreach($albums as $album)
 

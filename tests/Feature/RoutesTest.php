@@ -19,7 +19,7 @@ class RoutesTest extends TestCase
      */
     public function test_assert_login_exists()
     {
-        $response = $this->get('/login');
+        $response = $this->get('/nahuel');
 
         $response->assertStatus(200);
     }
@@ -27,7 +27,7 @@ class RoutesTest extends TestCase
     public function test_assert_login_successfully()
     {
         
-        $response = $this->withSession(['is_admin' => true])->get('/nahuel');
+        $response = $this->withSession(['is_admin' => true])->get('/album');
         $response->assertStatus(200);
 
     }
@@ -37,7 +37,7 @@ class RoutesTest extends TestCase
 
         $user = User::factory()->create();
 
-        $response = $this->actingAs($user)->get('/nahuel');
+        $response = $this->actingAs($user)->get('/album');
         $response->assertStatus(200);
     }
 

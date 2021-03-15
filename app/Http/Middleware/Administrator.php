@@ -18,7 +18,7 @@ class Administrator
     public function handle(Request $request, Closure $next)
     {
         if(!Auth::check()){
-            return route('login');
+            return route('home');
         }
         return $next($request);
     }
