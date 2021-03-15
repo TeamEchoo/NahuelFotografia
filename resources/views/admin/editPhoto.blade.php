@@ -1,10 +1,10 @@
 <x-head>
 <x-logoAdmin />
 
-<form action=" {{ route( 'photoEdit', $photo->id ) }}"  method="POST">
+<form action=" {{ route( 'photoUpdate', $photo->id ) }}"  method="POST" enctype="multipart/form-data">
         
-        @method('PUT')
         @csrf
+        @method('PUT')
 
         <label for="title">Title:</label>
         <input name="title" type="text" value="{{ $photo->title }}">
@@ -29,9 +29,8 @@
         <input name="cover_image" type="checkbox">
         
         
-        <a href="{{ route( 'photoUpdate', $photo->id) }}">
         <input type="submit" value="Save">
-        </a>
+        
 
     </form>
     
