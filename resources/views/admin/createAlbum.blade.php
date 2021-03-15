@@ -1,8 +1,13 @@
 <x-head>
 <x-logoAdmin />
+<x-navBar />
 
 
-
+@if(session('success'))
+        <div class="alert alert-success">
+          {{ session('success') }}
+        </div> 
+        @endif
     
 <div class="form-container">
         <form class="form" action=" {{ route( 'albumStore' ) }}"  method="post">

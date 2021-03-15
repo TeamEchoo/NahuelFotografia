@@ -1,8 +1,12 @@
 <x-head>
-    <x-logo />
+<x-navBar />
     
 
-
+    @if(session('success'))
+        <div class="alert alert-success">
+          {{ session('success') }}
+        </div> 
+        @endif
     <h1 class="dash">MORE</h1>
     <div class="container">
         <div class="row">

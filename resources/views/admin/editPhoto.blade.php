@@ -1,6 +1,13 @@
 <x-head>
 <x-logoAdmin />
 
+@if(session('success'))
+        <div class="alert alert-success">
+          {{ session('success') }}
+        </div> 
+        @endif
+
+
 <form action=" {{ route( 'photoEdit', $photo->id ) }}"  method="POST">
         
         @method('PUT')

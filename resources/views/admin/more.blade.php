@@ -1,7 +1,11 @@
 <x-head>
     <x-navBar />
     <x-logoAdmin />
-
+    @if(session('success'))
+        <div class="alert alert-success">
+          {{ session('success') }}
+        </div> 
+        @endif
 
     <h1 class="dash">MORE</h1>
     <div class="container">

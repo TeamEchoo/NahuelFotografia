@@ -34,10 +34,10 @@ Route::get('/Category/{category}', [HomeController::class, 'categoryAlbum'])->na
 
 Auth::routes();
 
-Route::middleware(['web', 'auth'])->group(function () {
+Route::middleware(['auth'])->group(function () {
     
     //album
-    Route::get('/album', [AlbumController::class, 'index'])->name('album');
+    Route::get('/admin', [AlbumController::class, 'index'])->name('album');
     Route::get('/newalbum', [AlbumController::class, 'create'])->name('albumCreate');
     Route::post('/album', [AlbumController::class, 'store'])->name('albumStore');
     Route::get('/album/{id}', [AlbumController::class, 'edit'])->name('albumEdit');

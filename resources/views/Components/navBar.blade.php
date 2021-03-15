@@ -30,6 +30,16 @@
 
       <li class="main-nav-list-item"><a class="main-link main-list-link" 
       href="{{ route('contact') }}">CONTACT</a></li>
+
+
+    @auth
+      <li class="main-link main-list-link"><a class="main-link main-list-link" href="{{ route('logout') }}" onclick="event.preventDefault();
+        document.getElementById('logout-form').submit();">{{ __('Logout') }}</a>
+          <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+            @csrf</form>
+      </li>
+    @endauth
+      
       
     </ul>
   </nav>

@@ -2,6 +2,12 @@
 <x-head>
 <x-logoAdmin />
 
+@if(session('success'))
+        <div class="alert alert-success">
+          {{ session('success') }}
+        </div> 
+        @endif
+
 <div class="createphoto-container">
     <h1>Create Photo</h1>
 
