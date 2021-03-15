@@ -17,6 +17,7 @@
     color: #212529;
     vertical-align: top;
     border-color: #dee2e6;
+    
 }
 
 #bottom {
@@ -33,15 +34,17 @@
 }
 
 .inputTitle {
-    width: 140%;
+    width: 140px;
     font-weight: bold;
 }
 
+
+/*WRAPPER*/
 .wrapper {
-    padding-top: 50px;
-    padding-left: 175px;
-    margin: 15px;
-    margin-bottom: 5vh;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+    margin-top: 30px;
 }
 
 .row {
@@ -53,19 +56,45 @@
 
 .column {
     display: flex;
-    flex-direction: column;
-    flex-basis: 100%;
-    flex: 1;
-    margin-left:440px;
+    justify-content: center;
+    margin-left: 50px;
 }
 
+.column h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.categorySelect1 {
+    display: flex;
+    justify-content: center;
+}
+
+.titleTwo {
+    display: flex;
+}
+
+
+
 .title-column {
-    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
 .category-column {
-    height: 100px;
+    display: flex;
+    flex-direction: row;
     justify-content: center;
+}
+
+.categoryTitleOne1 {
+
+    padding-right: 20px;
+    font-size: 19px;
+
 }
 
 .categoryTitleOne {
@@ -81,50 +110,55 @@
     padding-bottom: 5px;
 }
 
-.categorySelect {
-    width: 55%;
-}
+
+
+
+
+
+
 
 .downButtons {
     display: flex;
     justify-content: center;
+    align-content: center;
     position: fixed;
     left: 0;
     bottom: 0%;
-    height: 10%;
+    height: 11%;
     width: 100%;
     background-color: #ffffff;
     text-align: center;
-    padding-bottom: 5px;
 }
 
 .addButton {
-    margin-right: 200px;
+    align-self: center;
     text-decoration: none;
     color: black;
     font-weight: 500;
     font-weight: bold;
     font-size: 25px;
-    padding-top: 25px;
+
 }
 
 .cancelButton {
+    align-self: center;
     text-decoration: none;
     color: black;
     font-weight: 500;
     font-weight: bold;
     font-size: 25px;
-    padding-top: 25px;
+    margin-left: 60px;
+    margin-right: 60px;
 }
 
 .saveButton {
-    margin-right: 200px;
-    padding-top: 25px;
+    align-self: center;
     text-decoration: none;
     color: black;
     font-weight: 500;
     font-weight: bold;
     font-size: 25px;
+
 }
 
 .saveButton:hover {
