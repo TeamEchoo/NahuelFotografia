@@ -25,8 +25,13 @@
         <label for="thumbnail">Actual Picture</label>
         <img src="{{$photo->filename}}" >
 
+        
         <label for="cover_image">Cover:</label>
-        <input name="cover_image" type="checkbox">
+        @if($photo->cover_image == true)
+            <input name="cover_image" type="checkbox" checked>
+        @else
+            <input name="cover_image" type="checkbox">
+        @endif
         
         
         <input type="submit" value="Save">
