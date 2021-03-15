@@ -94,8 +94,11 @@ class AlbumController extends Controller
     public function destroy($id)
     {
         $album= Album::find($id);
-        $album->photos()->delete();
+
+        $album->deleteAlbumPhotos();
+        
         $album->delete();
+
         return redirect()->route('album');
     }
 }

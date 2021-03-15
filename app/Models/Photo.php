@@ -4,6 +4,8 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Storage;
+
 
 class Photo extends Model
 {
@@ -23,5 +25,12 @@ class Photo extends Model
     public function album()
     {
         return $this->belongsTo(Album::class);
+    }
+
+    public function photoDeleteFromStore(){
+        
+        $url= str_replace('storage', 'public', $this->filename);
+
+        Storage::delete($url);
     }
 }

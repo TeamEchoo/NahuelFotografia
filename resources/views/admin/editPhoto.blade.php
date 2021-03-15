@@ -7,11 +7,10 @@
         </div> 
         @endif
 
-
-<form action=" {{ route( 'photoEdit', $photo->id ) }}"  method="POST">
+<form action=" {{ route( 'photoUpdate', $photo->id ) }}"  method="POST" enctype="multipart/form-data">
         
-        @method('PUT')
         @csrf
+        @method('PUT')
 
         <label for="title">Title:</label>
         <input name="title" type="text" value="{{ $photo->title }}">
@@ -27,7 +26,7 @@
         <input name="link" type="text" value="{{ $photo->link }}">
 
         <label for="filename">Photo:</label>
-        <input  type="file" style="width: 172px"  name="filename" accept="image/*" class="form-control">
+        <input  type="file" style="width: 172px"  name="filename" accept="image/*" class="form-control1">
 
         <label for="thumbnail">Actual Picture</label>
         <img src="{{$photo->filename}}" >
@@ -35,15 +34,14 @@
         <label for="cover_image">Cover:</label>
         <input name="cover_image" type="checkbox">
         
-        <a href="{{ route( 'photoUpdate', $photo->id) }}">
-        <input type="submit" value="Save">
-        </a>
         
-        <button type="reset">Reset</button>
+        <input type="submit" value="Save">
+        
+
     </form>
     
         <a href="{{ route ('albumEdit', $photo->album_id)}}">
-            <button >Turn Back</button>
+            <button >Cancel</button>
         </a>
 
 </x-head>

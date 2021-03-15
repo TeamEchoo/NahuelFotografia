@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Storage;
 
 class Album extends Model
 {
@@ -25,4 +26,18 @@ class Album extends Model
         return $photos->where('cover_image', true)->first();
     }
 
+    public function deleteAlbumPhotos()
+    {
+        $photos = $this->photos;
+        
+        foreach($photos as $photo){
+            
+            $url= str_replace('storage', 'public', $photo->filename);
+            
+            Storage::delete($url);
+            
+            $photo->delete();
+        }
+        
+    }
 }
