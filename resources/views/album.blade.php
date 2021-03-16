@@ -4,12 +4,17 @@
 <!--VISTA ÁLBUNES-->
 
 <div class="containerGallery">
+
+@if(!isset($albums))
+<h1>There are no pictures yet, come back later</h1>
+@endif
     @foreach($albums as $album)
     <div class="column">
     <a href="{{ route('gallery', $album->id) }}">
      
+      @if(isset($album->getCoverImage()->filename))
       <img src="{{ $album->getCoverImage()->filename }}">
-
+      @endif
       <p>{{$album->title}}</p>
 
     </a>

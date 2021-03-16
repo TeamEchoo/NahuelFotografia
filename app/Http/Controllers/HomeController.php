@@ -54,11 +54,23 @@ class HomeController extends Controller
       
     }
 
-    public function more(){
-        
+    public function more()
+    {
         $albums = Album::where('category', 'More')->get();
         $albumMore = Album::where('category', 'Pictures more section')->first();
-        $photos= $albumMore->photos()->get();
+        if(!isset($albums) && !isset($albumMore)){
+
+           return 'There are no pictures, come back later';
+        }
+        
+        if(isset($albumMore)){
+            $photos= $albumMore->photos;
+        }       
+        
+        else{
+            $photos = Photo::all();
+        }
+        
       
         return view('album', ['albums' => $albums->sortByDesc('created_at')->take(12), 'photos' => $photos]);
     }
