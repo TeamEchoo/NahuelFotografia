@@ -1,6 +1,8 @@
 <x-head>
 <x-navBar />
 
+<!--VISTA ÁLBUNES-->
+
 <div class="containerGallery">
     @foreach($albums as $album)
     <div class="column">
@@ -13,10 +15,11 @@
     </a>
     </div>
     @endforeach
-
-    @foreach($photos as $photo)
-    <img src="{{ $photo->filename }}">
-    @endforeach
+    
+      @foreach($photos as $photo)
+        <img src="{{ $photo->filename }}">
+      @endforeach
+    
 </div>
 
 

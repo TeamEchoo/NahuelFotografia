@@ -109,23 +109,22 @@ class PhotoController extends Controller
             'cover_image' => $request->has('cover_image')
             ]);
             
-            if($request->hasfile('filename')){
+        if($request->hasfile('filename')){
                 
-                $photo->photoDeleteFromStore();
-                $image = time() . $request->file('filename')->getClientOriginalName();
-                $photo->filename=  '/storage/images/' . $image;
-                $photo->save();
+            $photo->photoDeleteFromStore();
+            $image = time() . $request->file('filename')->getClientOriginalName();
+            $photo->filename=  '\storage\images/' . $image;
+            $photo->save();
                 
-                $path = public_path() . '/storage/images/' . $image;
-                Image::make($request->file('filename'))->save($path);
-            }
+            $path = public_path() . '\storage\images/' . $image;
+            Image::make($request->file('filename'))->save($path);
+        }
             
-            else{
-                $photo->filename = $photo->filename;
-            }
-            $album = $photo->album_id;
-            
-
+        else{
+            $photo->filename = $photo->filename;
+        }
+        
+        $album = $photo->album_id;
         return redirect()->route('albumEdit', $album);
     }
 

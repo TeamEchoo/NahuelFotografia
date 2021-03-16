@@ -5,6 +5,25 @@
     font-family: "Montserrat", sans-serif;
 }
 
+.photosHome2 {
+    line-height: 0;
+    -webkit-column-count: 2;
+    -webkit-column-gap: 75px;
+    -moz-column-count: 2;
+    -moz-column-gap: 75px;
+    column-count: 2;
+    column-gap: 75px;
+    border: 2px solid rebeccapurple !important;
+}
+
+.photosHome2 img {
+    width: 100% !important;
+    height: auto !important;
+    margin-bottom: 40px;
+    border: 2px solid rebeccapurple !important;
+}
+
+
 
 * {
     margin: 0;
@@ -269,12 +288,23 @@ body {
 }
 
 #paddingContact {
-    padding-top: 10vh;
+    padding-top: 0vh;
     padding-left: 10vh;
 }
 
+.section-title img {
+    max-height: 250px;
+    -o-object-fit: cover;
+       object-fit: cover;
+}
+
+.section-title {
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+}
+
 #paddingContactImage {
-    padding-top: 8vh;
+    padding-top: 0vh;
 }
 
 #PaddingDescription {
@@ -309,7 +339,6 @@ body {
     word-wrap: break-word;
     background-color: #fff;
     background-clip: border-box;
-
 }
 
 .logForm {
@@ -361,10 +390,7 @@ body {
         padding-left: 50px;
         padding-top: 50px;
     }
-    #paddingContactImage {
-        padding-top: 40px;
-        padding-left: 60px;
-    }
+
     #contact button#submit {
         padding-left: 40px;
     }
@@ -427,6 +453,7 @@ select:focus {
 .imputs2 {
     display: flex;
     flex-direction: row;
+    justify-content: center;
     align-items: center;
 }
 
@@ -462,6 +489,7 @@ button:hover {
 
 .last-button {
     display: flex;
+    justify-content: center;
     align-content: center;
     align-self: center;
     margin-top: 30px;
@@ -522,6 +550,7 @@ button:hover {
     color: #212529;
     vertical-align: top;
     border-color: #dee2e6;
+    
 }
 
 #bottom {
@@ -537,15 +566,17 @@ button:hover {
 }
 
 .inputTitle {
-    width: 140%;
+    width: 140px;
     font-weight: bold;
 }
 
+
+/*WRAPPER*/
 .wrapper {
-    padding-top: 50px;
-    padding-left: 175px;
-    margin: 15px;
-    margin-bottom: 5vh;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+    margin-top: 30px;
 }
 
 .row {
@@ -557,19 +588,45 @@ button:hover {
 
 .column {
     display: flex;
-    flex-direction: column;
-    flex-basis: 100%;
-    flex: 1;
-    margin-left:440px;
+    justify-content: center;
+    margin-left: 50px;
 }
 
+.column h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.categorySelect1 {
+    display: flex;
+    justify-content: center;
+}
+
+.titleTwo {
+    display: flex;
+}
+
+
+
 .title-column {
-    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
 .category-column {
-    height: 100px;
+    display: flex;
+    flex-direction: row;
     justify-content: center;
+}
+
+.categoryTitleOne1 {
+
+    padding-right: 20px;
+    font-size: 19px;
+
 }
 
 .categoryTitleOne {
@@ -585,50 +642,55 @@ button:hover {
     padding-bottom: 5px;
 }
 
-.categorySelect {
-    width: 55%;
-}
+
+
+
+
+
+
 
 .downButtons {
     display: flex;
     justify-content: center;
+    align-content: center;
     position: fixed;
     left: 0;
     bottom: 0%;
-    height: 10%;
+    height: 11%;
     width: 100%;
     background-color: #ffffff;
     text-align: center;
-    padding-bottom: 5px;
 }
 
 .addButton {
-    margin-right: 200px;
+    align-self: center;
     text-decoration: none;
     color: black;
     font-weight: 500;
     font-weight: bold;
     font-size: 25px;
-    padding-top: 25px;
+
 }
 
 .cancelButton {
+    align-self: center;
     text-decoration: none;
     color: black;
     font-weight: 500;
     font-weight: bold;
     font-size: 25px;
-    padding-top: 25px;
+    margin-left: 60px;
+    margin-right: 60px;
 }
 
 .saveButton {
-    margin-right: 200px;
-    padding-top: 25px;
+    align-self: center;
     text-decoration: none;
     color: black;
     font-weight: 500;
     font-weight: bold;
     font-size: 25px;
+
 }
 
 .saveButton:hover {
@@ -649,8 +711,7 @@ button:hover {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    
+    align-items: center;    
 }
 
 div#picture-uploaded   {
@@ -662,11 +723,22 @@ div#picture-uploaded   {
     max-width: 800px;
 }
 
+.form2 {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    max-width: 800px;
+}
+
 .inputs-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin-right: 40px;
+}
+
+.inputsGeneral {
+    display: flex;
 }
 
 .inputs-container label {
@@ -683,6 +755,7 @@ div#picture-uploaded   {
     margin-top: 60px;
 }
 
+<<<<<<< HEAD
 .photo-preview {
     width:300px;
     min-height:100px;
@@ -697,6 +770,36 @@ div#picture-uploaded   {
     color: #cccccc;
 }
 
+=======
+.buttons2 {
+
+    align-self: center;
+    margin-top: 10px;
+
+}
+
+#picture-uploaded img {
+    margin-top: 40px;
+    margin-bottom: 15px;
+    max-width: 300px;
+    max-width: 250px;
+}
+
+#picture-uploaded1 {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+#picture-uploaded1 img {
+    margin-top: 5px;
+    margin-bottom: 15px;
+    max-width: 300px;
+    max-width: 250px;
+}
+
+
+>>>>>>> adb09d4315ab71e694fd9acdcafa15f2cb0ad3ac
 
 .form-control1 {
     border-radius: 2px;
@@ -806,13 +909,11 @@ body {
   color: #000000;
   margin: 0;
   max-width: 100%;
-  display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
-  padding: 1.25rem;
-  padding-top: 35px;
-  position: relative;
+  padding: 2vw;
+  padding-top: 5vh;
 }
 
 .nav-header-logo {

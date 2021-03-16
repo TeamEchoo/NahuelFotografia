@@ -12,41 +12,60 @@
         @csrf
         @method('PUT')
 
-        <label for="title">Title:</label>
-        <input name="title" type="text" value="{{ $photo->title }}">
+
+        <div class="inputsGeneral">
+            <div class="inputs-container">
+                <div class="inputs">
+                    <label for="title">Title:</label>
+                    <input name="title" type="text" value="{{ $photo->title }}">
+                </div>    
+                
+                <div class="inputs">
+                    <label for="epigraph">Epigraph:</label>
+                    <input name="epigraph" type="text" value="{{ $photo->epigraph }}">
+                </div>
+
+                <div class="inputs">
+                    <label for="person">Person:</label>
+                    <input name="person" type="text" value="{{ $photo->person }}">
+                </div>
+                    
+                <div class="inputs">
+                    <label for="link">Link:</label>
+                    <input name="link" type="text" value="{{ $photo->link }}">
+                </div>
+
+                <div class="inputs">
+                    <label for="filename">Photo:</label>
+                    <input  type="file" style="width: 172px"  name="filename" accept="image/*" class="form-control">
+                </div>
+            </div>  
         
-        <label for="epigraph">Epigraph:</label>
-        <input name="epigraph" type="text" value="{{ $photo->epigraph }}">
+        
+
+            <div id="picture-uploaded1">   
+                <label for="thumbnail">Actual Picture</label>
+                <img src="{{$photo->filename}}" >
+            </div>    
+        </div>
 
 
-        <label for="person">Person:</label>
-        <input name="person" type="text" value="{{ $photo->person }}">
-        
-        <label for="link">Link:</label>
-        <input name="link" type="text" value="{{ $photo->link }}">
-
-        <label for="filename">Photo:</label>
-        <input  type="file" style="width: 172px"  name="filename" accept="image/*" class="form-control1" value="{{$photo->filename}}">
-
-        <label for="thumbnail">Actual Picture</label>
-        <img src="{{$photo->filename}}" >
-
-        
-        <label for="cover_image">Cover:</label>
-        @if($photo->cover_image == true)
-            <input name="cover_image" type="checkbox" checked>
-        @else
-            <input name="cover_image" type="checkbox">
-        @endif
-        
-        
-        <input type="submit" value="Save">
-        
-
-    </form>
-    
-        <a href="{{ route ('albumEdit', $photo->album_id)}}">
+            <div class="buttons2">  
+            
+            <label for="cover_image">Cover:</label>
+            @if($photo->cover_image == true)
+                <input name="cover_image" type="checkbox" checked>
+            @else
+                <input name="cover_image" type="checkbox">
+            @endif
+            
+            </div>    
+            <input type="submit" value="Save">
+            <a href="{{ route ('albumEdit', $photo->album_id)}}">
             <button >Cancel</button>
-        </a>
+                </a>
+        
+    </form>
+
 
 </x-head>

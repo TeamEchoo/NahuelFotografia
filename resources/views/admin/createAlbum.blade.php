@@ -25,6 +25,7 @@
                         <option value="Overview">Overview</option>
                         <option value="Editorial">Editorial</option>
                         <option value="More">More</option>
+                        <option value="Pictures more section">Pictures more section</option>
                     </select>
                 </div>    
             </div>

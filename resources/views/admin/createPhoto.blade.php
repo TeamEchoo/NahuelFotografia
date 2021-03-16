@@ -11,9 +11,7 @@
     <h1>Create Photo</h1>
 
     <form class="form1" action=" {{ route( 'photoStore', $albumId ) }}"  method="POST" enctype="multipart/form-data">
-           
-    @csrf
-
+            @csrf
     <div id="picture-uploaded">
         <label for="filename">Photo:</label>
         <input type="file" style="width: 420px" name= "filename" id="inpPhoto" accept="image/*" class="form-control1">
@@ -52,18 +50,20 @@
             <div class="buttons">
                 <button type="submit" value="Submit">Submit</button>
                 <button type="reset">Reset</button>
+            </div>    
+        </div>
+                
+    </form>
+</div>
             <a href="{{ route ('albumEdit', $albumId)}}">
                 <button >Cancel</button>
             </a>
-            </div>    
-        </div>
-                    
 
 
 
 
-    </form>
-</div>  
+
+
 
 <script src="{{asset('js/previewPhoto.js')}}"></script>
 </x-head>
