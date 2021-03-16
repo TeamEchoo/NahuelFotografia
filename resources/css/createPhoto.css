@@ -93,7 +93,7 @@
 }
 
 /****RESPONSIVE****/
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 20vh) {
 
     .form1 {
         display: flex;
@@ -102,7 +102,14 @@
 
     }
 
-    
+    .inputs-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-right: 1vh;
+    }
+
     .buttons {
         display: flex;
         flex-direction: row;
@@ -112,30 +119,21 @@
     }
 
     .buttons a {
-        width: 130px;
+        width: 18vw;
     }
 
     .inputs {
-        max-width: 300px;
-        margin-top: 5px;
+        max-width: 3vw;
+        /* margin-top: 0.6vh; */
     }
 
     .inputs-container label {
         margin-top: 5px;
         margin-right: 8px;
     }
-
-    #picture-uploaded img {
-        display: flex;
-        justify-content: center !important;
-        align-content: center;
-        align-items: center;
-        margin-top: 10px;
-        margin-bottom: 15px;
-        max-width: 200px;
-        max-width: 150px;
-    }
-
-
     
+    .photo-preview__image {
+        display:none;
+        width:100%;
+    }
 }

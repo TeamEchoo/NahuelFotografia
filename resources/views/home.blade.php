@@ -11,7 +11,7 @@
 <div class="containerGalleryHome">
   <div class="photosHome">
       @foreach($photos as $photo)
-      <img class="myImg" alt="{{$photo->title. ' - '. $photo->link. ' - '. $photo->person. ' - '. $photo->epigraph }}" src="{{ $photo->filename }}" onclick="openModal();"/> 
+      <img class="myImg" alt="{{$photo->title. ' - '. $photo->link. ' - '. $photo->person. ' - '. $photo->epigraph }}" src="{{ $photo->filename }}" onclick="openModal()";/> 
       @endforeach
   <div>
     
@@ -24,20 +24,5 @@
   </div>
 
 
-  <script>
-    var modalEle = document.querySelector(".modal");
-    var modalImage = document.querySelector(".modalImage");
-    var captionText = document.querySelector(".caption");
-    Array.from(document.querySelectorAll(".myImg")).forEach(item => {
-      item.addEventListener("click", event => {
-          modalEle.style.display = "block";
-          modalImage.src = event.target.src;
-          captionText.innerHTML = event.target.alt;
-      });
-    });
-    document.querySelector(".close").addEventListener("click", () => {
-      modalEle.style.display = "none";
-    });
-</script>
-
+  <script src="{{asset('js/home.js')}}"></script>
 </x-head>
