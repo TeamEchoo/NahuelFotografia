@@ -1,5 +1,5 @@
 <x-head>
-    <x-logoAdmin />
+<x-navBar />
 
     @if(session('success'))
         <div class="alert alert-success">

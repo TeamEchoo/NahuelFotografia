@@ -113,10 +113,10 @@ class PhotoController extends Controller
                 
                 $photo->photoDeleteFromStore();
                 $image = time() . $request->file('filename')->getClientOriginalName();
-                $photo->filename=  '\storage\images/' . $image;
+                $photo->filename=  '/storage/images/' . $image;
                 $photo->save();
                 
-                $path = public_path() . '\storage\images/' . $image;
+                $path = public_path() . '/storage/images/' . $image;
                 Image::make($request->file('filename'))->save($path);
             }
             

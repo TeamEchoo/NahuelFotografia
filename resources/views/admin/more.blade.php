@@ -1,6 +1,5 @@
 <x-head>
-    <x-navBar />
-    <x-logoAdmin />
+<x-navBar />
     @if(session('success'))
         <div class="alert alert-success">
           {{ session('success') }}
