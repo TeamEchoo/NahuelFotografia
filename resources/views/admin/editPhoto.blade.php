@@ -1,5 +1,11 @@
 <x-head>
-<x-logoAdmin />
+<x-navBar />
+
+@if(session('success'))
+        <div class="alert alert-success">
+          {{ session('success') }}
+        </div> 
+        @endif
 
 <form action=" {{ route( 'photoUpdate', $photo->id ) }}"  method="POST" enctype="multipart/form-data">
         

@@ -1,12 +1,11 @@
 <x-head>
 <x-navBar />
-    
-
     @if(session('success'))
         <div class="alert alert-success">
           {{ session('success') }}
         </div> 
         @endif
+
     <h1 class="dash">MORE</h1>
     <div class="container">
         <div class="row">
@@ -19,7 +18,6 @@
                             <th>Cover image</th>
                         </tr>
                     </thead>
-                    
 
                     @foreach($albums as $album)
 
@@ -45,7 +43,7 @@
                     @endforeach
                 </table>
 
-                <a id="bottom" class="downButtons cancelButton" href="{{ route('albumCreate') }}">New Album</a>
+                <a id="bottom" href="{{ route('albumCreate') }}">New Album</a>
 
             </div>
         </div>
