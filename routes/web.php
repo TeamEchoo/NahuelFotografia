@@ -26,7 +26,8 @@ Route::post('/nahuel', [NahuelAdminController::class,'loginOk'])->name('loginOk'
 Route::get('/', [HomeController::class, 'home'])->name('home');
 Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
 Route::get('/gallery/{id}', [HomeController::class, 'gallery'])->name('gallery');
-Route::get('/Category/{category}', [HomeController::class, 'categoryAlbum'])->name('categoryAlbum');
+Route::get('/Editorial', [HomeController::class, 'editorial'])->name('editorial');
+Route::get('/More', [HomeController::class, 'more'])->name('more');
 
 
 //ADMIN VIEW

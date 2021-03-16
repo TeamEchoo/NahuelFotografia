@@ -57,24 +57,16 @@
             <div class="buttons">
                 <button type="submit" value="Submit">Submit</button>
                 <button type="reset">Reset</button>
+            </div>    
+        </div>
+                
+    </form>
+</div>
             <a href="{{ route ('albumEdit', $albumId)}}">
                 <button >Cancel</button>
             </a>
-            </div>    
-        </div>
-                    
 
 
-
-
-    </form>
-</div>
-
-<!--    
-    <div class="picture-uploaded">
-            <img src="https://images.unsplash.com/photo-1556103255-4443dbae8e5a?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8cGhvdG9ncmFwaGVyfGVufDB8fDB8&ixlib=rb-1.2.1&w=1000&q=80">
-    </div>
--->
 
 
 

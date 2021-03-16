@@ -13,10 +13,11 @@
     </a>
     </div>
     @endforeach
-
-    @foreach($photos as $photo)
-    <img src="{{ $photo->filename }}">
-    @endforeach
+    
+      @foreach($photos as $photo)
+        <img src="{{ $photo->filename }}">
+      @endforeach
+    
 </div>
 
 
