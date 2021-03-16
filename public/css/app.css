@@ -98,6 +98,25 @@ body {
     margin-bottom: 40px;
 }
 
+/**album**/
+.photosHome a:hover {
+    filter: opacity(50%);
+    transition: all 0.3s ease;
+  }
+
+.text1 {
+    position: absolute;
+    top: 50%;
+    left: 28%;
+
+    text-align: center;
+    color: blue;
+    justify-content: center;    
+}
+
+
+
+  
 /**********MODAL********************/
 .myImg {
     cursor: pointer;
@@ -157,14 +176,6 @@ body {
     max-width: 700px;
 
 }
-
-.titulo1 {
-    display: none;
-    color: red;
-}
-
-
-
 
 
 
