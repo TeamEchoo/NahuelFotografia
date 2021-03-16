@@ -2,29 +2,31 @@
 <x-navBar />
 
 <!--VISTA ÁLBUNES-->
-
 <div class="containerGalleryHome">
 
     <div class="photosHome">
         @foreach($albums as $album)
+            <a class="anchor1" href="{{ route('gallery', $album->id) }}">
 
-        <div class="albumCard">
-            <a href="{{ route('gallery', $album->id) }}">
-            <img class="photo1" src="{{ $album->getCoverImage()->filename }}">
-            <span class="text1">{{$album->title}}</span>
+              <div class="albumHover">
+                <img class="photo1" src="{{ $album->getCoverImage()->filename }}">
+                <h3 class="text1">{{$album->title}}</h3>
+              </div>  
+
             </a>
             @endforeach 
-        </div>  
     </div>
 
 
 
+  
     <div class="photosHome">
       @foreach($photos as $photo)
         <img class="myImg" src="{{ $photo->filename }}" >
       @endforeach    
-    </div>   
-</div>
+    </div>  
+</div>     
+
 
   
   <div class="myModal modal">

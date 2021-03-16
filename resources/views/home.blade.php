@@ -11,7 +11,7 @@
 <div class="containerGalleryHome">
   <div class="photosHome">
       @foreach($photos as $photo)
-      <img class="myImg" alt="{{ $photo->title }}" src="{{ $photo->filename }}" onclick="openModal();"/> 
+      <img class="myImg" alt="{{ $photo->title }}" src="{{ $photo->filename }}" /> 
       @endforeach
   <div>
     
@@ -22,6 +22,8 @@
       <div class="caption"></div>
     </div>
   </div>
+  
+</div>  
 
 
   <script>

@@ -13,14 +13,13 @@
     -moz-column-gap: 75px;
     column-count: 2;
     column-gap: 75px;
-    border: 2px solid rebeccapurple !important;
+    column-fill: balance !important;
 }
 
 .photosHome2 img {
     width: 100% !important;
     height: auto !important;
     margin-bottom: 40px;
-    border: 2px solid rebeccapurple !important;
 }
 
 

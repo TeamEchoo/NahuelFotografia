@@ -13,14 +13,14 @@
     -moz-column-gap: 75px;
     column-count: 2;
     column-gap: 75px;
-    border: 2px solid rebeccapurple !important;
+    -moz-column-fill: balance !important;
+         column-fill: balance !important;
 }
 
 .photosHome2 img {
     width: 100% !important;
     height: auto !important;
     margin-bottom: 40px;
-    border: 2px solid rebeccapurple !important;
 }
 
 
@@ -74,22 +74,26 @@ body {
 
 /********GALLERY************/
 .containerGalleryHome {
-    padding-left: 100px;
-    padding-right: 100px;
     display: flex;
     flex-wrap: wrap;
+    padding-left: 100px;
+    padding-right: 100px;
     margin-bottom: 20px;
     margin-top: 80px;
 }
 
 .photosHome {
     line-height: 0;
-    -webkit-column-count: 3;
+    -webkit-row-count: 3;
     -webkit-column-gap: 40px;
+    -moz-row-count: 3;
+    -moz-ro-gap: 40px;
     -moz-column-count: 3;
+         column-count: 3;
     -moz-column-gap: 40px;
-    column-count: 3;
-    column-gap: 40px;
+         column-gap: 40px;
+    -moz-column-fill: balance !important;
+         column-fill: balance !important;
 }
 
 .photosHome img {
@@ -99,19 +103,38 @@ body {
 }
 
 /**album**/
+.photosHome a {
+    text-decoration: none;
+}
+
 .photo1:hover {
     filter: opacity(50%);
     transition: all 0.3s ease;
   }
 
- .albumCard span {
+
+
+
+ .text1 {
     position: absolute;
-    justify-content: center; 
-    top: 50%;
-    left: 15%;
-    text-align: center;
+    align-self: center;
+    margin-top: 8%;
+    padding-left: 80px;
+    padding-right: 80px;
+
+    font-size: 30px;
     color: #000000;
-    font-size: 50px;
+    text-decoration: none;
+    background-color:rgba(255, 255, 255, 0.527);
+}
+
+
+
+.albumHover {
+    display: flex;
+    flex-direction: column;
+    -moz-column-break-inside: avoid;
+         break-inside: avoid-column;
 }
 
   
@@ -240,6 +263,8 @@ body {
         -moz-column-gap: 40px;
         column-count: 2;
         column-gap: 40px;
+        -moz-column-fill: balance !important;
+             column-fill: balance !important;
     }
 
     .modalImage {
@@ -256,6 +281,8 @@ body {
         -moz-column-gap: 40px;
         column-count: 1;
         column-gap: 40px;
+        -moz-column-fill: balance !important;
+             column-fill: balance !important;
     }
 
     #modalImage-container {
