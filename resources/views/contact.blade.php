@@ -15,7 +15,7 @@
                         <p>Nahuel Martinez</p>
                         <p> <a href="mailto:info@company.com">nahuel@nahuelmartinez</a></p>
                         <p>+49 (0)1637000359</p>
-                        <a href="https://www.instagram.com/nahhuelmarttinezphoto/"><img src="https://image.flaticon.com/icons/png/512/87/87390.png" width="8%"></a>
+                        <a href="https://www.instagram.com/nahhuelmarttinezphoto/"><img src="https://image.flaticon.com/icons/png/512/87/87390.png" width="5%"></a>
                     </div>
                 </div>
             </div>
