@@ -8,12 +8,12 @@
     <div class="photosHome">
         @foreach($albums as $album)
 
-        <div>
-          <a href="{{ route('gallery', $album->id) }}">
-          <img class="photo1" src="{{ $album->getCoverImage()->filename }}">
-          <p class="text1">{{$album->title}}</p>
-          </a>
-          @endforeach 
+        <div class="albumCard">
+            <a href="{{ route('gallery', $album->id) }}">
+            <img class="photo1" src="{{ $album->getCoverImage()->filename }}">
+            <span class="text1">{{$album->title}}</span>
+            </a>
+            @endforeach 
         </div>  
     </div>
 

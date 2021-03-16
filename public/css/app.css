@@ -99,25 +99,23 @@ body {
 }
 
 /**album**/
-.photosHome a:hover {
+.photo1:hover {
     filter: opacity(50%);
     transition: all 0.3s ease;
   }
 
-.text1 {
+ .albumCard span {
     position: absolute;
+    justify-content: center; 
     top: 50%;
-    left: 28%;
-
+    left: 15%;
     text-align: center;
-    color: blue;
-    justify-content: center;    
+    color: #000000;
+    font-size: 50px;
 }
 
-
-
   
-/**********MODAL********************/
+/*********MODAL******************/
 .myImg {
     cursor: pointer;
     transition: 0.2s;
