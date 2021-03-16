@@ -2,8 +2,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    
+    align-items: center;    
 }
 
 div#picture-uploaded   {
@@ -15,11 +14,22 @@ div#picture-uploaded   {
     max-width: 800px;
 }
 
+.form2 {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    max-width: 800px;
+}
+
 .inputs-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin-right: 40px;
+}
+
+.inputsGeneral {
+    display: flex;
 }
 
 .inputs-container label {
@@ -36,12 +46,34 @@ div#picture-uploaded   {
     margin-top: 60px;
 }
 
+.buttons2 {
+
+    align-self: center;
+    margin-top: 10px;
+
+}
+
 #picture-uploaded img {
     margin-top: 40px;
     margin-bottom: 15px;
     max-width: 300px;
     max-width: 250px;
 }
+
+#picture-uploaded1 {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+#picture-uploaded1 img {
+    margin-top: 5px;
+    margin-bottom: 15px;
+    max-width: 300px;
+    max-width: 250px;
+}
+
+
 
 .form-control1 {
     border-radius: 2px;

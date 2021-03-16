@@ -7,12 +7,22 @@ body {
 }
 
 #paddingContact {
-    padding-top: 10vh;
+    padding-top: 0vh;
     padding-left: 10vh;
 }
 
+.section-title img {
+    max-height: 250px;
+    object-fit: cover;
+}
+
+.section-title {
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+}
+
 #paddingContactImage {
-    padding-top: 8vh;
+    padding-top: 0vh;
 }
 
 #PaddingDescription {
@@ -48,7 +58,6 @@ body {
     word-wrap: break-word;
     background-color: #fff;
     background-clip: border-box;
-
 }
 
 .logForm {
@@ -102,10 +111,7 @@ body {
         padding-left: 50px;
         padding-top: 50px;
     }
-    #paddingContactImage {
-        padding-top: 40px;
-        padding-left: 60px;
-    }
+
     #contact button#submit {
         padding-left: 40px;
     }
