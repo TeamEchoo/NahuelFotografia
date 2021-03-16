@@ -714,8 +714,9 @@ button:hover {
     align-items: center;    
 }
 
-div#picture-uploaded   {
-    order: 2;}
+#picture-uploaded   {
+    order: 2;
+}
 
 .form1 {
     display: flex;
@@ -755,7 +756,6 @@ div#picture-uploaded   {
     margin-top: 60px;
 }
 
-<<<<<<< HEAD
 .photo-preview {
     width:300px;
     min-height:100px;
@@ -770,19 +770,11 @@ div#picture-uploaded   {
     color: #cccccc;
 }
 
-=======
 .buttons2 {
 
     align-self: center;
     margin-top: 10px;
 
-}
-
-#picture-uploaded img {
-    margin-top: 40px;
-    margin-bottom: 15px;
-    max-width: 300px;
-    max-width: 250px;
 }
 
 #picture-uploaded1 {
@@ -791,15 +783,12 @@ div#picture-uploaded   {
     margin-top: 30px;
 }
 
-#picture-uploaded1 img {
+/* #picture-uploaded1 img {
     margin-top: 5px;
     margin-bottom: 15px;
     max-width: 300px;
     max-width: 250px;
-}
-
-
->>>>>>> adb09d4315ab71e694fd9acdcafa15f2cb0ad3ac
+} */
 
 .form-control1 {
     border-radius: 2px;
