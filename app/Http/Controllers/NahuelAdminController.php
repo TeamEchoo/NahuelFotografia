@@ -33,10 +33,4 @@ class NahuelAdminController extends Controller
         return redirect()->route('album');
     }
 
-    // public function dashboard()
-    // {
-        
-    //     return redir('admin.dashboardCategory');
-    // }
-
 }

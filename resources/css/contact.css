@@ -105,6 +105,10 @@ body {
 #contact button#submit:hover {
     color: #ffd000;
 }
+#contact{
+    margin: 8vh;
+}
+
 
 @media only screen and (max-width: 768px) {
     #paddingContact {
@@ -122,4 +126,9 @@ body {
         margin-top: 8vh;
         margin-left: 2vh;
     }
+
+    .contact-container{
+        margin: 10vh;
+    }
+
 }
