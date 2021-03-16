@@ -48,21 +48,22 @@
             <div class="inputs">
                 <label for="filename">Photo:</label>
                 <input  type="file" style="width: 420px"  name="filename" accept="image/*" class="form-control1">
-            <div>
-    
+            </div>
 
-
-            <div class="buttons">
+            <div class="inputs">
                 <label for="cover_image">Cover:</label>
                 <input name="cover_image" type="checkbox" value=true>
+            </div>
+
+            <div class="buttons">
                 <button type="submit" value="Submit">Submit</button>
                 <button type="reset">Reset</button>
-                    
-                <a href="{{ route ('albumEdit', $albumId)}}">
-                     <button >Turn back</button>
-                </a>
+            <a href="{{ route ('albumEdit', $albumId)}}">
+                <button >Cancel</button>
+            </a>
             </div>    
         </div>
+                    
 
 
 

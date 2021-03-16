@@ -55,7 +55,7 @@ class HomeController extends Controller
         }
         
         else{
-        return view('album', ['albums' => $albums, 'photos' => $photos]);
+        return view('album', ['albums' => $albums->sortByDesc('created_at')->take(12), 'photos' => $photos]);
         }
         }
 
