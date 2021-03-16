@@ -26,13 +26,18 @@
         <input name="link" type="text" value="{{ $photo->link }}">
 
         <label for="filename">Photo:</label>
-        <input  type="file" style="width: 172px"  name="filename" accept="image/*" class="form-control1">
+        <input  type="file" style="width: 172px"  name="filename" accept="image/*" class="form-control1" value="{{$photo->filename}}">
 
         <label for="thumbnail">Actual Picture</label>
         <img src="{{$photo->filename}}" >
 
+        
         <label for="cover_image">Cover:</label>
-        <input name="cover_image" type="checkbox">
+        @if($photo->cover_image == true)
+            <input name="cover_image" type="checkbox" checked>
+        @else
+            <input name="cover_image" type="checkbox">
+        @endif
         
         
         <input type="submit" value="Save">
