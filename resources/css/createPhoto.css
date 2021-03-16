@@ -49,12 +49,7 @@ div#picture-uploaded   {
     font-weight: bold;
     color: #cccccc;
 }
-#picture-uploaded img {
-    margin-top: 40px;
-    margin-bottom: 15px;
-    max-width: 300px;
-    max-width: 250px;
-}
+
 
 .form-control1 {
     border-radius: 2px;
