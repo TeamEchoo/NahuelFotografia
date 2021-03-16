@@ -11,13 +11,11 @@ body {
   color: #000000;
   margin: 0;
   max-width: 100%;
-  display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
-  padding: 1.25rem;
-  padding-top: 35px;
-  position: relative;
+  padding: 2vw;
+  padding-top: 5vh;
 }
 
 .nav-header-logo {
