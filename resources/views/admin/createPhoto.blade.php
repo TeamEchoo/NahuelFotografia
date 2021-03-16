@@ -10,16 +10,16 @@
 <div class="createphoto-container">
     <h1>Create Photo</h1>
 
-
-
     <form class="form1" action=" {{ route( 'photoStore', $albumId ) }}"  method="POST" enctype="multipart/form-data">
             @csrf
     <div id="picture-uploaded">
-            <img src="https://images.unsplash.com/photo-1556103255-4443dbae8e5a?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8cGhvdG9ncmFwaGVyfGVufDB8fDB8&ixlib=rb-1.2.1&w=1000&q=80">
-        </div>
-
-
-
+        <label for="filename">Photo:</label>
+        <input type="file" style="width: 420px" name= "filename" id="inpPhoto" accept="image/*" class="form-control1">
+        <div class="photo-preview" id="photoPreview">
+            <img src="" alt="Photo Preview" class="photo-preview__image">
+            <span class="photo-preview__default-text">Photo Preview</span>
+        </div>        
+    </div>
 
         <div class="inputs-container">
             <div class="inputs">
@@ -40,11 +40,6 @@
             <div class="inputs">
                 <label for="epigraph">Epigraph:</label>
                 <input name="epigraph" type="text">
-            </div>
-
-            <div class="inputs">
-                <label for="filename">Photo:</label>
-                <input  type="file" style="width: 420px"  name="filename" accept="image/*" class="form-control1">
             </div>
 
             <div class="inputs">
@@ -70,4 +65,6 @@
 
 
 
+<script src="{{asset('js/previewPhoto.js')}}"></script>
 </x-head>
+

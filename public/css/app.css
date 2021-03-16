@@ -714,8 +714,9 @@ button:hover {
     align-items: center;    
 }
 
-div#picture-uploaded   {
-    order: 2;}
+#picture-uploaded   {
+    order: 2;
+}
 
 .form1 {
     display: flex;
@@ -755,18 +756,25 @@ div#picture-uploaded   {
     margin-top: 60px;
 }
 
+.photo-preview {
+    width:300px;
+    min-height:100px;
+    border: 2px solid #dddddd;
+    margin-top:15px;
+
+
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #cccccc;
+}
+
 .buttons2 {
 
     align-self: center;
     margin-top: 10px;
 
-}
-
-#picture-uploaded img {
-    margin-top: 40px;
-    margin-bottom: 15px;
-    max-width: 300px;
-    max-width: 250px;
 }
 
 #picture-uploaded1 {
@@ -775,19 +783,22 @@ div#picture-uploaded   {
     margin-top: 30px;
 }
 
-#picture-uploaded1 img {
+/* #picture-uploaded1 img {
     margin-top: 5px;
     margin-bottom: 15px;
     max-width: 300px;
     max-width: 250px;
-}
-
-
+} */
 
 .form-control1 {
     border-radius: 2px;
     color: black;
     border: none;
+}
+
+.photo-preview__image {
+    display:none;
+    width:100%;
 }
 
 /****RESPONSIVE****/
@@ -833,6 +844,9 @@ div#picture-uploaded   {
         max-width: 200px;
         max-width: 150px;
     }
+
+
+    
 }
 
 .picture{
