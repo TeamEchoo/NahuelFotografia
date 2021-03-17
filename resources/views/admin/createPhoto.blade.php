@@ -13,13 +13,13 @@
     <form class="form1" action=" {{ route( 'photoStore', $albumId ) }}"  method="POST" enctype="multipart/form-data">
     @csrf
     <div class="inputs-container">
-            <div id="picture-uploaded">
+            <div class="inputs" id="picture-uploaded">
                 <label for="filename">Photo:</label>
                 <input type="file" style="width: 420px" name= "filename" id="inpPhoto" accept="image/*" class="form-control1">
                 <div class="photo-preview" id="photoPreview">
                     <img src="" alt="Photo Preview" class="photo-preview__image">
                     <span class="photo-preview__default-text">Photo Preview</span>
-                </div>        
+                </div>
             </div>
 
             <div class="inputs">

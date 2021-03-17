@@ -31,6 +31,7 @@
 
 .inputsGeneral {
     display: flex;
+    justify-content: center;
 }
 
 .inputs-container label {
@@ -74,12 +75,12 @@
     margin-top: 30px;
 }
 
-/* #picture-uploaded1 img {
+#picture-uploaded1 img {
     margin-top: 5px;
     margin-bottom: 15px;
     max-width: 300px;
     max-width: 250px;
-} */
+}
 
 .form-control1 {
     border-radius: 2px;

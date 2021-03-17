@@ -35,10 +35,14 @@
                     <input name="link" type="text" value="{{ $photo->link }}">
                 </div>
 
-                <div class="inputs">
+                <div class="inputs" id="picture-uploaded">
                     <label for="filename">Photo:</label>
-                    <input  type="file" style="width: 172px"  name="filename" accept="image/*" class="form-control">
+                    <input type="file" style="width: 420px" name= "filename" id="inpPhoto" accept="image/*" class="form-control1">
+                    <div class="photo-preview" id="photoPreview">
+                        <img src="" alt="Photo Preview" class="photo-preview__image">
+                        <span class="photo-preview__default-text">Photo Preview</span>      
                 </div>
+            </div>
             </div>  
         
         
@@ -48,24 +52,24 @@
                 <img src="{{$photo->filename}}" >
             </div>    
         </div>
-
-
-            <div class="buttons2">  
-            
-            <label for="cover_image">Cover:</label>
-            @if($photo->cover_image == true)
-                <input name="cover_image" type="checkbox" checked>
-            @else
-                <input name="cover_image" type="checkbox">
-            @endif
-            
-            </div>    
-            <input type="submit" value="Save">
-            <a href="{{ route ('albumEdit', $photo->album_id)}}">
-            <button >Cancel</button>
-                </a>
+        <div class="buttons2">  
         
-    </form>
+        <label for="cover_image">Cover:</label>
+        @if($photo->cover_image == true)
+            <input name="cover_image" type="checkbox" checked>
+        @else
+            <input name="cover_image" type="checkbox">
+        @endif
+        
+        </div>    
+        <input type="submit" value="Save">
+        <a href="{{ route ('albumEdit', $photo->album_id)}}">
+        <button >Cancel</button>
+            </a>
+    
+</form>
 
 
+
+<script src="{{asset('js/previewPhoto.js')}}"></script>
 </x-head>

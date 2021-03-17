@@ -455,6 +455,19 @@ body {
     color: black;
 }
 
+.file_drag_area{
+    width:400px;
+    height: 200px;
+    border: 2px dashed #ccc;
+    line-height: 200px;
+    text-align: center;
+    font-size: 24px;
+}
+.file_drag_over{
+    color:#000;
+    border-color:#000
+}
+
 .form-container {
     display: flex;
     justify-content: center;
@@ -785,6 +798,7 @@ button:hover {
 
 .inputsGeneral {
     display: flex;
+    justify-content: center;
 }
 
 .inputs-container label {
@@ -828,12 +842,12 @@ button:hover {
     margin-top: 30px;
 }
 
-/* #picture-uploaded1 img {
+#picture-uploaded1 img {
     margin-top: 5px;
     margin-bottom: 15px;
     max-width: 300px;
     max-width: 250px;
-} */
+}
 
 .form-control1 {
     border-radius: 2px;

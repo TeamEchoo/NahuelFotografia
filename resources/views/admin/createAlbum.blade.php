@@ -31,6 +31,28 @@
             </div>
             </div>
 
+
+
+            <div class="container" style="width:700px;" align="center">
+                <h3 class="text-center">Fill your album</h3>
+                <div class="file_drag_area">
+                    <p>Drop your photos here</p>
+                </div>
+                <div id="uploaded_file"></div>
+            </div>
+            <?php
+                $output = "";
+                if(isset($_FILES['file']['name'][0]))
+                {
+                    foreach($_FILES['file']['name'] as $keys => $values)
+                    {
+                        if(move_uploaded_file($_FILES['file']['tmp_name'][$keys], 'upload/' . $values))
+                        {
+                            $output .= '<div class="col-md-3"><img src="upload/'.$values.'"class="img-responsive"></div>';  
+                        }
+                    }
+                }
+            ?>
             
                 <div class="imputs2">
 
@@ -48,5 +70,5 @@
             
 </div>
 
-
+<script src="{{asset('js/dragNDrop.js')}}"></script>
 </x-head>
