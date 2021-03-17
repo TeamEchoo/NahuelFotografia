@@ -5,7 +5,7 @@
     font-family: "Montserrat", sans-serif;
 }
 
-.photosHome2 {
+.photosAlbum {
     line-height: 0;
     -webkit-column-count: 2;
     -webkit-column-gap: 75px;
@@ -17,7 +17,7 @@
          column-fill: balance !important;
 }
 
-.photosHome2 img {
+.photosAlbum img {
     width: 100% !important;
     height: auto !important;
     margin-bottom: 40px;
@@ -30,6 +30,7 @@
     padding: 0;
     font-family: "Montserrat", sans-serif;
 }
+
 body {
     background-color: white;
 }
@@ -78,7 +79,6 @@ body {
     color: black;
 }
 
-/********GALLERY************/
 .containerGalleryHome {
     display: flex;
     flex-wrap: wrap;
@@ -108,7 +108,6 @@ body {
     margin-bottom: 40px;
 }
 
-/**album**/
 .photosHome a {
     text-decoration: none;
 }
@@ -116,25 +115,19 @@ body {
 .photo1:hover {
     filter: opacity(50%);
     transition: all 0.3s ease;
-  }
+}
 
-
-
-
- .text1 {
+.text1 {
     position: absolute;
     align-self: center;
     margin-top: 8%;
     padding-left: 80px;
     padding-right: 80px;
-
     font-size: 30px;
     color: #000000;
     text-decoration: none;
-    background-color:rgba(255, 255, 255, 0.527);
+    background-color: rgba(255, 255, 255, 0.527);
 }
-
-
 
 .albumHover {
     display: flex;
@@ -143,14 +136,11 @@ body {
          break-inside: avoid-column;
 }
 
-  
-/*********MODAL******************/
 .myImg {
     cursor: pointer;
     transition: 0.2s;
 }
 
-/* The Modal */
 .myModal {
     display: none;
     position: fixed;
@@ -165,7 +155,6 @@ body {
     background-color: rgba(255, 255, 255, 0.9);
 }
 
-/* Modal Content (image) */
 #modalImage-container {
     display: flex;
     justify-content: center !important;
@@ -173,8 +162,8 @@ body {
     align-content: center !important;
     flex-direction: column;
     margin: auto;
-    width: 700px;
-    height: 565px;
+    width: 36vw;
+    height: 80vh;
 }
 
 .modalImage {
@@ -186,10 +175,8 @@ body {
     max-height: 540px;
     margin-bottom: 0 !important;
     padding-bottom: 0 !important;
-
 }
 
-/* Modal Text */
 .caption {
     display: flex;
     align-self: flex-start;
@@ -201,12 +188,8 @@ body {
     height: 45px;
     width: 80%;
     max-width: 700px;
-
 }
 
-
-
-/* Add Animation */
 .modalImaget,
 .caption {
     -webkit-animation-name: zoom;
@@ -233,7 +216,6 @@ body {
     }
 }
 
-/* The Close Button */
 .close {
     position: absolute;
     top: 35px;
@@ -251,15 +233,6 @@ body {
     cursor: pointer;
 }
 
-/* 100% Image Width on Smaller Screens 
-@media only screen and (max-width: 700px) {
-    .modal-content {
-        width: 100%;
-    }
-}
-*/
-
-/*******RESPONSIVE*******/
 @media screen and (max-width: 975px) {
     .photosHome {
         line-height: 0;
@@ -275,7 +248,7 @@ body {
 
     .modalImage {
         max-width: 450px;
-    }    
+    }
 }
 
 @media screen and (max-width: 600px) {
@@ -297,10 +270,9 @@ body {
         padding: 0 !important;
     }
 
-
     .modalImage {
         max-width: 380px !important;
-    }  
+    }
 
     .logo h1 {
         font-size: 18px;
@@ -311,13 +283,14 @@ body {
     #logoAdmin {
         margin: 10vh 2vh;
     }
-    
+
     .logo h3 {
         font-size: 10px;
         margin-left: 25px;
         color: #706a5d;
     }
 }
+
 body {
     background-color: white;
 }
@@ -809,13 +782,12 @@ button:hover {
     margin-top: 60px;
 }
 
+
 .photo-preview {
     width:300px;
     min-height:100px;
     border: 2px solid #dddddd;
     margin-top:15px;
-
-
     display:flex;
     align-items: center;
     justify-content: center;
@@ -836,12 +808,23 @@ button:hover {
     margin-top: 30px;
 }
 
-/* #picture-uploaded1 img {
-    margin-top: 5px;
-    margin-bottom: 15px;
-    max-width: 300px;
+#picture-uploadedEdit {
+    display: flex;
+    flex-direction: column;
+    margin-top: 28px;
+}
+
+#picture-uploadedEdit img {
     max-width: 250px;
-} */
+}
+
+.editPhotoForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
 
 .form-control1 {
     border-radius: 2px;
