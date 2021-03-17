@@ -28,8 +28,8 @@
                         <option value="Pictures more section">Pictures more section</option>
                     </select>
                 </div>
+                <button class="saveButton" class="cancelButton" type="submit">Save</button>
     </div>
-                        <button class="saveButton" class="cancelButton" type="submit">Save</button>
 
                     </form>   
 
