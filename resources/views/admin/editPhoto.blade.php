@@ -7,7 +7,10 @@
         </div> 
         @endif
 
-<form action=" {{ route( 'photoUpdate', $photo->id ) }}"  method="POST" enctype="multipart/form-data">
+<div class="createphoto-container">
+    <h1>Edit Photo</h1>
+
+    <form class="form1" action=" {{ route( 'photoUpdate', $photo->id ) }}"  method="POST" enctype="multipart/form-data">
         
         @csrf
         @method('PUT')
