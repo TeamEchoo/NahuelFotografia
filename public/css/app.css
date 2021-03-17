@@ -756,10 +756,10 @@ button:hover {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;    
+    align-items: center;
 }
 
-#picture-uploaded   {
+#picture-uploaded {
     order: 2;
 }
 
@@ -798,17 +798,15 @@ button:hover {
 
 .buttons {
     align-self: center;
-    margin-top: 60px;
+    margin-top: 30px;
 }
 
 .photo-preview {
-    width:300px;
-    min-height:100px;
+    width: 300px;
+    min-height: 100px;
     border: 2px solid #dddddd;
-    margin-top:15px;
-
-
-    display:flex;
+    margin-top: 15px;
+    display: flex;
     align-items: center;
     justify-content: center;
     font-weight: bold;
@@ -816,10 +814,8 @@ button:hover {
 }
 
 .buttons2 {
-
     align-self: center;
     margin-top: 10px;
-
 }
 
 #picture-uploaded1 {
@@ -828,12 +824,21 @@ button:hover {
     margin-top: 30px;
 }
 
-/* #picture-uploaded1 img {
-    margin-top: 5px;
-    margin-bottom: 15px;
-    max-width: 300px;
+#picture-uploadedEdit {
+    display: flex;
+    flex-direction: column;
+    margin-top: 28px;
+}
+
+#picture-uploadedEdit img {
     max-width: 250px;
-} */
+}
+
+.editPhotoForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 .form-control1 {
     border-radius: 2px;
@@ -842,18 +847,16 @@ button:hover {
 }
 
 .photo-preview__image {
-    display:none;
-    width:100%;
+    display: none;
+    width: 100%;
 }
 
 /****RESPONSIVE****/
 @media only screen and (max-width: 20vh) {
-
     .form1 {
         display: flex;
         flex-direction: column;
         margin: auto;
-
     }
 
     .inputs-container {
@@ -878,17 +881,16 @@ button:hover {
 
     .inputs {
         max-width: 3vw;
-        /* margin-top: 0.6vh; */
     }
 
     .inputs-container label {
         margin-top: 5px;
         margin-right: 8px;
     }
-    
+
     .photo-preview__image {
-        display:none;
-        width:100%;
+        display: none;
+        width: 100%;
     }
 }
 
