@@ -58,17 +58,17 @@ class HomeController extends Controller
     {
         $albums = Album::where('category', 'More')->get();
         $albumMore = Album::where('category', 'Pictures more section')->first();
-        if(!isset($albums) && !isset($albumMore)){
+        if(isset($albums->photos)){
 
-           return 'There are no pictures, come back later';
+           $photos= $albumMore->photos;
         }
         
-        if(isset($albumMore)){
+        if(isset($albumMore->photos)){
             $photos= $albumMore->photos;
         }       
         
         else{
-            $photos = Photo::all();
+            $photos = [];
         }
         
       
