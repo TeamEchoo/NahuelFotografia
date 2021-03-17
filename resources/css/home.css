@@ -3,11 +3,11 @@
     padding: 0;
     font-family: "Montserrat", sans-serif;
 }
+
 body {
     background-color: white;
 }
 
-/*******LOGO*******/
 .logo {
     display: block;
     justify-content: flex-start !important;
@@ -45,7 +45,6 @@ body {
     color: black;
 }
 
-/********GALLERY************/
 .containerGalleryHome {
     display: flex;
     flex-wrap: wrap;
@@ -72,7 +71,6 @@ body {
     margin-bottom: 40px;
 }
 
-/**album**/
 .photosHome a {
     text-decoration: none;
 }
@@ -80,25 +78,19 @@ body {
 .photo1:hover {
     filter: opacity(50%);
     transition: all 0.3s ease;
-  }
+}
 
-
-
-
- .text1 {
+.text1 {
     position: absolute;
     align-self: center;
     margin-top: 8%;
     padding-left: 80px;
     padding-right: 80px;
-
     font-size: 30px;
     color: #000000;
     text-decoration: none;
-    background-color:rgba(255, 255, 255, 0.527);
+    background-color: rgba(255, 255, 255, 0.527);
 }
-
-
 
 .albumHover {
     display: flex;
@@ -106,14 +98,11 @@ body {
     break-inside: avoid-column;
 }
 
-  
-/*********MODAL******************/
 .myImg {
     cursor: pointer;
     transition: 0.2s;
 }
 
-/* The Modal */
 .myModal {
     display: none;
     position: fixed;
@@ -128,7 +117,6 @@ body {
     background-color: rgba(255, 255, 255, 0.9);
 }
 
-/* Modal Content (image) */
 #modalImage-container {
     display: flex;
     justify-content: center !important;
@@ -136,8 +124,8 @@ body {
     align-content: center !important;
     flex-direction: column;
     margin: auto;
-    width: 700px;
-    height: 565px;
+    width: 36vw;
+    height: 80vh;
 }
 
 .modalImage {
@@ -148,10 +136,8 @@ body {
     max-height: 540px;
     margin-bottom: 0 !important;
     padding-bottom: 0 !important;
-
 }
 
-/* Modal Text */
 .caption {
     display: flex;
     align-self: flex-start;
@@ -163,12 +149,8 @@ body {
     height: 45px;
     width: 80%;
     max-width: 700px;
-
 }
 
-
-
-/* Add Animation */
 .modalImaget,
 .caption {
     -webkit-animation-name: zoom;
@@ -195,7 +177,6 @@ body {
     }
 }
 
-/* The Close Button */
 .close {
     position: absolute;
     top: 35px;
@@ -213,15 +194,6 @@ body {
     cursor: pointer;
 }
 
-/* 100% Image Width on Smaller Screens 
-@media only screen and (max-width: 700px) {
-    .modal-content {
-        width: 100%;
-    }
-}
-*/
-
-/*******RESPONSIVE*******/
 @media screen and (max-width: 975px) {
     .photosHome {
         line-height: 0;
@@ -236,7 +208,7 @@ body {
 
     .modalImage {
         max-width: 450px;
-    }    
+    }
 }
 
 @media screen and (max-width: 600px) {
@@ -257,24 +229,23 @@ body {
         padding: 0 !important;
     }
 
-
     .modalImage {
         max-width: 380px !important;
-    }  
+    }
 
     .logo h1 {
         font-size: 12px;
         letter-spacing: 0.3px;
         margin-bottom: 0;
     }
-    
+
     .adminLogo {
         font-size: 15px;
         letter-spacing: 0.3px;
         margin-top: 10px;
         margin-bottom: 0;
     }
-    
+
     .logo h3 {
         font-size: 8px;
         margin-left: 25px;

@@ -2,7 +2,7 @@
 <x-navBar />
 
 <div class="containerGalleryHome">
-  <div class="photosHome2">
+  <div class="photosAlbum">
   @foreach($photos as $photo)
     <img class="myImg" src="{{ $photo->filename }}" >
     @endforeach

@@ -5,7 +5,7 @@
     font-family: "Montserrat", sans-serif;
 }
 
-.photosHome2 {
+.photosAlbum {
     line-height: 0;
     -webkit-column-count: 2;
     -webkit-column-gap: 75px;
@@ -16,7 +16,7 @@
     column-fill: balance !important;
 }
 
-.photosHome2 img {
+.photosAlbum img {
     width: 100% !important;
     height: auto !important;
     margin-bottom: 40px;

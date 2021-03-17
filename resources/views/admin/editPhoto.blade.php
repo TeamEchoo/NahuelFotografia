@@ -51,7 +51,6 @@
 
 
         <div class="buttons">
-
             <label for="cover_image">Cover:</label>
                 @if($photo->cover_image == true)
                     <input name="cover_image" type="checkbox" checked>
@@ -59,6 +58,7 @@
                     <input name="cover_image" type="checkbox">
                 @endif
         </div>
+
         <div class="buttons">
                 <input type="submit" value="Save">
                 <a href="{{ route ('albumEdit', $photo->album_id)}}">
