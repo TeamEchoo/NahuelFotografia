@@ -60,7 +60,7 @@ class HomeController extends Controller
         $albumMore = Album::where('category', 'Pictures more section')->first();
         if(isset($albums->photos)){
 
-           $photos= $albumMore->photos;
+           $photos= $albums->photos;
         }
         
         if(isset($albumMore->photos)){
