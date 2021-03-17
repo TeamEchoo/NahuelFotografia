@@ -47,9 +47,9 @@ body {
 
 .cardBody {
     display: flex;
-    margin-right: 8vh;
-    margin-top: 7vh;
-    size: 20vh;
+    justify-content: center;
+    margin: auto;
+    size: 30vh;
 }
 
 .cardLogin {

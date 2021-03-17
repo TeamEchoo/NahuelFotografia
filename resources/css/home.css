@@ -8,6 +8,11 @@ body {
 }
 
 /*******LOGO*******/
+#logoAdmin{
+    margin: 15vh 50vh 10vh 76vh;
+    z-index: 1;
+    
+}
 .logo {
     display: block;
     justify-content: flex-start !important;
@@ -34,6 +39,7 @@ body {
     margin-top: 10px;
     margin-bottom: 0;
 }
+
 
 .logo h3 {
     font-size: 10px;
@@ -263,20 +269,17 @@ body {
     }  
 
     .logo h1 {
-        font-size: 12px;
+        font-size: 18px;
         letter-spacing: 0.3px;
         margin-bottom: 0;
     }
     
-    .adminLogo {
-        font-size: 15px;
-        letter-spacing: 0.3px;
-        margin-top: 10px;
-        margin-bottom: 0;
+    #logoAdmin {
+        margin: 10vh 2vh;
     }
     
     .logo h3 {
-        font-size: 8px;
+        font-size: 10px;
         margin-left: 25px;
         color: #706a5d;
     }
