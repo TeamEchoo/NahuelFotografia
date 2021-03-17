@@ -48,15 +48,14 @@
             </div>
 
             <div class="buttons">
-                <button type="submit" value="Submit">Submit</button>
+                <button type="submit" value="Submit">Submit</button>    
                 <button type="reset">Reset</button>
+                <a href="{{ route ('albumEdit', $albumId)}}">
+                    <button type="button">Cancel</button>
+                </a>
             </div>    
         </div>
-                
     </form>
-    <a href="{{ route ('albumEdit', $albumId)}}">
-        <button >Cancel</button>
-    </a>
 </div>
 
 
