@@ -10,7 +10,7 @@
 
             <div id="paddingContactImage" class="wow fadeInUp contact-info" data-wow-delay="0.4s">
                     <div class="section-title">
-                        <img src="https://d2s22rn0thm1js.cloudfront.net/bT19YiUmtg7z-v0EcpAyidRkQqU=/958x1440/smart/http%3A%2F%2Fd2hl4mfiesch9e.cloudfront.net%2Ffreedombmx%2Fwp-content%2Fuploads%2F2019%2F07%2Fnahuel-martinez-photographer.jpg" width="50%">
+                        <img src="contactPhoto.jpg">
                     </div>
                     <div id=PaddingDescription>
                         <p>Nahuel Martinez</p>
