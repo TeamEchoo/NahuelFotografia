@@ -17,7 +17,8 @@
         "intervention/imagecache": "^2.5",
         "laravel/framework": "^8.12",
         "laravel/tinker": "^2.5",
-        "laravel/ui": "^3.2"
+        "laravel/ui": "^3.2",
+        "s-ichikawa/laravel-sendgrid-driver": "~2.0"
     },
     "require-dev": {
         "facade/ignition": "^2.5",

@@ -41,28 +41,16 @@
                     <input name="epigraph" type="text">
                 </div>
 
-                <div class="inputs">
-                    <label for="cover_image">Cover:</label>
-                    <input name="cover_image" type="checkbox" value=true>
-                </div>
+            <div class="buttons">
+                <button type="submit" value="Submit">Submit</button>    
+                <button type="reset">Reset</button>
+                <a href="{{ route ('albumEdit', $albumId)}}">
+                    <button type="button">Cancel</button>
+                </a>
             </div>    
-        </div>        
+        </div>
     </form>
-    
-    <div class="buttons">
-        <button type="submit" value="Submit">Submit</button>
-        <button type="reset">Reset</button>
-    </div>
-       
-    <a href="{{ route ('albumEdit', $albumId)}}">
-        <button >Cancel</button>
-    </a>
 </div>
-
-
-
-
-
 
 
 <script src="{{asset('js/previewPhoto.js')}}"></script>

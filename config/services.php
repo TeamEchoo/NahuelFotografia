@@ -23,6 +23,10 @@ return [
     'postmark' => [
         'token' => env('POSTMARK_TOKEN'),
     ],
+    
+    'sendgrid' => [
+        'api_key' => env('SENDGRID_API_KEY'),
+    ],
 
     'ses' => [
         'key' => env('AWS_ACCESS_KEY_ID'),
