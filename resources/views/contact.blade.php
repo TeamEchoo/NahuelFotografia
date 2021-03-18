@@ -1,5 +1,5 @@
 <x-head>
-<x-navBar />
+<x-nav-bar />
 ​
 ​
 <section id="contact" class="parallax-section">
