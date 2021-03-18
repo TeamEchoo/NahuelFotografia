@@ -15,6 +15,8 @@
 
                         <h2 class="categoryTitleOne1" for="title">Title:</h2>
                         <input class="inputTitle" name="title" type="text" value="{{$album->title}}">
+                        <h5 class="description">Description:</h5>
+                        <input name="description" type="text">
                 </div>
 
                 <div class='column'>

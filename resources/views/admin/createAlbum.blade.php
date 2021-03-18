@@ -18,6 +18,8 @@
                 <div>
                     <label for="title">Title:</label>
                     <input name="title" type="text">
+                    <label for="description">Title:</label>
+                    <input name="description" type="text">
                 </div>  
                 <div class="select">
                     <label for="category">Category:</label>

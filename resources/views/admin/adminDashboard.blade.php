@@ -17,6 +17,7 @@
                             <th>Title</th>
                             <th>Category</th>
                             <th>Cover image</th>
+                            <th>Description</th>
                         </tr>
                     </thead>
                     
@@ -27,10 +28,11 @@
                         <td> {{ $album->title }} </td>
                         <td> {{ $album->category }} </td>
                         <td>
-                        @if(isset($album->getCoverImage()->filename))
-                         <img src="{{ $album->getCoverImage()->filename}}" class="picture">
-                         @endif
+                            @if(isset($album->getCoverImage()->filename))
+                            <img src="{{ $album->getCoverImage()->filename}}" class="picture">
+                            @endif
                         </td>
+                        <td> {{ $album->description }} </td>
                         <td>
                             <a href="{{ route('albumEdit', $album->id) }}">
                                 <button type="submit"> <i class="far fa-edit"></i>
