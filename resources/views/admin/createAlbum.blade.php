@@ -18,7 +18,7 @@
                 <div>
                     <label for="title">Title:</label>
                     <input name="title" type="text">
-                    <label for="description">Title:</label>
+                    <label for="description">Description:</label>
                     <input name="description" type="text">
                 </div>  
                 <div class="select">

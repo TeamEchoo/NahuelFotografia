@@ -1,5 +1,5 @@
 <x-head>
-    <x-logoAdmin></x-logoAdmin>
+    <x-logo-admin></x-logo-admin>
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8">
