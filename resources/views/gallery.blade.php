@@ -1,5 +1,5 @@
 <x-head>
-<x-navBar />
+<x-nav-bar />
 
 <div class="containerGalleryHome">
   <div class="photosAlbum">

@@ -1,5 +1,5 @@
 <x-head>
-<x-navBar />
+<x-nav-bar />
     
 
     @if(session('success'))
@@ -16,6 +16,7 @@
                         <tr class="tr">
                             <th>Title</th>
                             <th>Category</th>
+                            <th>Description</th>
                             <th>Cover image</th>
                         </tr>
                     </thead>
@@ -26,10 +27,11 @@
                     <tr>
                         <td> {{ $album->title }} </td>
                         <td> {{ $album->category }} </td>
+                        <td> {{ $album->description }} </td>
                         <td>
-                        @if(isset($album->getCoverImage()->filename))
-                         <img src="{{ $album->getCoverImage()->filename}}" class="picture">
-                         @endif
+                            @if(isset($album->getCoverImage()->filename))
+                            <img src="{{ $album->getCoverImage()->filename}}" class="picture">
+                            @endif
                         </td>
                         <td>
                             <a href="{{ route('albumEdit', $album->id) }}">

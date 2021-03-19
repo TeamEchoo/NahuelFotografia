@@ -1,5 +1,5 @@
 <x-head>
-<x-navBar />
+<x-nav-bar />
 
 @if(session('success'))
         <div class="alert alert-success">
