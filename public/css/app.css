@@ -424,7 +424,9 @@ body {
     .contact-container{
         margin: 10vh;
     }
-
+    #contact .form-control {
+        width: 100% !important;
+    }
 
 }
 body {
