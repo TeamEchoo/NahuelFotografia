@@ -30,7 +30,7 @@
     <li class="main-nav-list-item"><a class="main-link main-list-link" 
     href="{{ route('more') }}">MORE</a></li>
 
-    <li class="main-nav-list-item"><a class="main-link main-list-link" href="https://www.etsy.com/es/shop/NahuelMartinezphoto">STORE</a></li>
+    <li class="main-nav-list-item"><a class="main-link main-list-link" target="_blank" href="https://www.etsy.com/es/shop/NahuelMartinezphoto">STORE</a></li>
 
     <li class="main-nav-list-item"><a class="main-link main-list-link" 
     href="{{ route('contact') }}">CONTACT</a></li>
