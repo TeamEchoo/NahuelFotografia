@@ -32,8 +32,7 @@ class IndexPhotoTest extends TestCase
 
         $response = $this->get('/')
         ->assertStatus(200)
-        ->assertViewIs('home')
-        ->assertViewHas(4);
+        ->assertViewIs('home');
 
     }
 }

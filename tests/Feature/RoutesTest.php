@@ -27,8 +27,8 @@ class RoutesTest extends TestCase
     public function test_assert_login_successfully()
     {
         
-        $response = $this->withSession(['is_admin' => true])->get('/album');
-        $response->assertStatus(200);
+        $response = $this->withSession(['is_admin' => true])->get('/admin');
+        $response->assertStatus(302);
 
     }
 
@@ -37,7 +37,7 @@ class RoutesTest extends TestCase
 
         $user = User::factory()->create();
 
-        $response = $this->actingAs($user)->get('/album');
+        $response = $this->actingAs($user)->get('/admin');
         $response->assertStatus(200);
     }
 
@@ -46,7 +46,7 @@ class RoutesTest extends TestCase
 
         $user = User::factory()->create();
 
-        $response = $this->actingAs($user)->get('/album');
+        $response = $this->actingAs($user)->get('/admin');
         $response->assertStatus(200);
     }
 
