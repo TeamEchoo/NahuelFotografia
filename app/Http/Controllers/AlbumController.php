@@ -45,7 +45,7 @@ class AlbumController extends Controller
         ]);
 
         $album->save();
-        return redirect()->route('album');
+        return redirect()->route('albumEdit', $album->id);
     }
 
     /**
