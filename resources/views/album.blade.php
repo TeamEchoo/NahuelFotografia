@@ -1,6 +1,5 @@
 <x-head>
-<x-nav-bar>
-
+<x-navBar />
 
 <div class="containerGalleryHome">
 
@@ -40,5 +39,4 @@
 
 
 <script src="{{asset('js/home.js')}}"></script>
-</x-nav-bar>
 </x-head>
