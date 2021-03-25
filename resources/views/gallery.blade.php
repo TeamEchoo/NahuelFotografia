@@ -1,5 +1,5 @@
-<x-Components.head>
-<x-Components.navBar />
+<x-components.head>
+<x-components.navBar />
 
 <div class="containerGalleryHome">
   <div class="photosAlbum">
@@ -20,4 +20,4 @@
 
 <script src="{{asset('js/home.js')}}"></script>
 
-</x-Components.head>
+</x-components.head>
