@@ -59,7 +59,7 @@ class PhotoController extends Controller
             'album_id' => $album
             ]);    
       
-        $path = '/storage/images/' . $image;
+        $path = storage_path() .'/storage/images/' . $image;
         Image::make($request->file('filename'))->save($path);
             
         $photo->save();
