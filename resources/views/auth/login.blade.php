@@ -1,4 +1,4 @@
-<x-components.head>
+<x-head>
     <x-components.logoAdmin></x-components.logoAdmin>
     <div class="container">
         <div class="row justify-content-center">
@@ -57,4 +57,4 @@
         </div>
     </div>
 
-</x-components.head>
+</x-head>
