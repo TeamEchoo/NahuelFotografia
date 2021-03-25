@@ -1,4 +1,4 @@
-<x-components.head>
+<x-head>
 <x-navBar />
     
 
