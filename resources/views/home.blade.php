@@ -1,5 +1,5 @@
 <x-Components.head>
-<x-Components.nav-bar />
+<x-Components.navBar />
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
