@@ -1,5 +1,5 @@
-<x-components.head>
-<x-components.navBar />
+<x-head>
+<x-navBar />
 
 @if(session('success'))
         <div class="alert alert-success">
@@ -67,4 +67,4 @@
 </form>
 
 
-</x-components.head>
+</x-head>

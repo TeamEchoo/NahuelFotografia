@@ -1,5 +1,5 @@
-<x-components.head>
-<x-components.navBar />
+<x-head>
+<x-navBar />
 
 @if(session('success'))
         <div class="alert alert-success">
@@ -63,5 +63,5 @@
 
 
 <script src="{{asset('js/previewPhoto.js')}}"></script>
-</x-components.head>
+</x-head>
 

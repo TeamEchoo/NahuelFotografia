@@ -1,5 +1,5 @@
-<x-components.head>
-<x-components.navBar />
+<x-head>
+<x-navBar />
     
 
     @if(session('success'))
@@ -51,4 +51,4 @@
 
             </div>
         </div>
-</x-components.head>
+</x-head>
