@@ -1,5 +1,5 @@
-<x-head>
-<x-nav-bar />
+<x-Components.head>
+<x-Components.nav-bar />
 ​
 ​
 <section id="contact" class="parallax-section">
@@ -50,4 +50,4 @@
     </div>
 </section>
 ​
-</x-head>
+</x-Components.head>

@@ -1,5 +1,5 @@
-<x-head>
-<x-nav-bar />
+<x-Components.head>
+<x-Components.nav-bar />
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -21,4 +21,4 @@
 
 
   <script src="{{asset('js/home.js')}}"></script>
-</x-head>
+</x-Components.head>
