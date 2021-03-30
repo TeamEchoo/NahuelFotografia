@@ -20,7 +20,7 @@ body {
 
 .nav-header-logo {
   display: inline-block;
-  font-size: 1.25rem;
+  font-size: 2vh;
   margin: 0;
 }
 
@@ -57,7 +57,7 @@ body {
 
 .main-menu-button {
   display: inline-block;
-  margin-right: 80px;
+  margin-right: 4vw;
 }
 
 
@@ -78,7 +78,7 @@ body {
   }
 
   .nav-header-logo {
-    font-size: 1.25rem;
+    font-size: 2vh;
     margin: 0;
   }
 
