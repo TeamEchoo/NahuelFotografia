@@ -115,9 +115,9 @@ body {
 
 @media only screen and (max-width: 768px) {
     #paddingContact {
-        margin: auto;
-        padding-left: 18vw;
-        padding-top: 5vh;
+        padding-left: 11vw;
+        padding-top: 3vh;
+
     }
 
     #contact button#submit {
@@ -136,6 +136,7 @@ body {
     }
     #contact .form-control {
         width: 100% !important;
+        padding: 5vw;
     }
 
 }
