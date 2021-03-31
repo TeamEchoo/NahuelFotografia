@@ -33,7 +33,7 @@ body {
   display: flex;
   align-self: flex-start;
   align-items: center;
-  margin-right: 69px;
+  margin-right: 4vw;
 }
 
 .main-nav-list {
@@ -74,7 +74,7 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: 20px;
+    padding: 3vh;
   }
 
   .nav-header-logo {
