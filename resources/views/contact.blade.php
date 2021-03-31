@@ -15,7 +15,7 @@
                     <div id=PaddingDescription>
                         <p> <a href="mailto:info@nahuelmartinez.com">info@nahuelmartinez.com</a></p>
                         <p>+49 (0)1637000359</p>
-                        <a href="https://www.instagram.com/nahhuelmarttinezphoto/"><img src="https://image.flaticon.com/icons/png/512/87/87390.png" width="6%"></a>
+                        <a href="https://www.instagram.com/nahhuelmarttinezphoto/"><img src="https://image.flaticon.com/icons/png/512/87/87390.png" width="25vw"></a>
                     </div>
                 </div>
             </div>
