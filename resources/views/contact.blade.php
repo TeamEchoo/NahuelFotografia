@@ -3,7 +3,6 @@
 ​
 ​
 <section id="contact" class="parallax-section">
-    <div class="container">
         <div class="row">
             <div class="col-md-5 col-sm-8">
 
@@ -46,7 +45,6 @@
                     </form>
             </div>
         </div>
-    </div>
 </section>
 ​
 </x-head>

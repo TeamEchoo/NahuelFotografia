@@ -315,7 +315,7 @@ body {
 
 #paddingContactImage {
     padding-top: 0vh;
-    padding-left: 18vw;
+    margin-left: 18vw;
     padding-right: 2vw;
 }
 
@@ -403,6 +403,7 @@ body {
 }
 
 
+
 @media only screen and (max-width: 768px) {
     #paddingContact {
         padding-left: 10vw;
@@ -421,9 +422,7 @@ body {
         margin-left: 2vh;
     }
 
-    .contact-container{
-        margin: 10vh;
-    }
+
     #contact .form-control {
         width: 100% !important;
         padding: 5vw;
