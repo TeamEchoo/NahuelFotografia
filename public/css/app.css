@@ -406,7 +406,7 @@ body {
 
 @media only screen and (max-width: 768px) {
     #paddingContact {
-        padding-left: 11vw;
+        padding-left: 10vw;
         padding-top: 3vh;
 
     }
@@ -924,7 +924,7 @@ body {
   display: flex;
   align-self: flex-start;
   align-items: center;
-  margin-right: 69px;
+  margin-right: 4vw;
 }
 
 .main-nav-list {
@@ -965,7 +965,7 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: 20px;
+    padding: 3vh;
   }
 
   .nav-header-logo {
