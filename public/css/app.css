@@ -5,6 +5,19 @@
     font-family: "Montserrat", sans-serif;
 }
 
+.album-title {
+text-align: center;
+font-size: x-large;
+font-weight: 400;
+margin: 2vh;
+}
+
+.album-description{
+    text-align: center;
+    font-size: large;
+    margin: 0 20vw;
+}
+
 .photosAlbum {
     line-height: 0;
     -webkit-column-count: 2;

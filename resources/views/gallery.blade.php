@@ -1,6 +1,7 @@
 <x-head>
 <x-navBar />
-
+<h1 class="album-title">{{ $album->title }}</h1>
+<p class="album-description">{{ $album->description }}</p>
 <div class="containerGalleryHome">
   <div class="photosAlbum">
   @foreach($photos as $photo)
